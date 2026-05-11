@@ -19,4 +19,6 @@ Thumbs.db
  
 
 *.csv.bak
-output.csv
+output.csvsrc/temp/
+src/pretrainedModels/googleNews-vectors-negative300.bin
+temp/

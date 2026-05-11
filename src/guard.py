@@ -15,7 +15,7 @@ def find_ansible_file(folder):
     file_list = []
     for root, dirs, files in os.walk(folder):
         for file in files:
-            if file.endswith(('.yml', '.yaml')):
+            if file.endswith(('.yml', '.yaml', '.tf')):
                 file_list.append(os.path.join(root, file))
     return file_list
 
@@ -48,14 +48,19 @@ def guard_file(filePath, smells):
         if '---' in row or not row.strip():
             continue
 
+        # if '#' in row:
+        #     divided = row.split('#', 1)
+        #     comment = divided[1].lstrip() if len(divided) > 1 else ""
+        #     line = divided[0]
+        #     commentPredict = modelComments.predict(comment)
+        #     if commentPredict > 0:
+        #         smells.append([filename, 'suspicious comment', line_number, row])
+        #         smell_detected = True
+        # else:
+        #     line = row.lstrip('-').lstrip()
+        
         if '#' in row:
-            divided = row.split('#', 1)
-            comment = divided[1].lstrip() if len(divided) > 1 else ""
-            line = divided[0]
-            commentPredict = modelComments.predict(comment)
-            if commentPredict > 0:
-                smells.append([filename, 'suspicious comment', line_number, row])
-                smell_detected = True
+            line = row.split('#', 1)[0]
         else:
             line = row.lstrip('-').lstrip()
 
@@ -91,8 +96,8 @@ def guard_files(output):
 
     loadtime = time.time()
     vectorizer = importlib.import_module("vectorizer")
-    modelComments =  SetFitModel._from_pretrained('./pretrainedModels/suspCommentsModel')
-    with open('./pretrainedModels/hardCodedSecretModel.pkl', 'rb') as f:
+    # modelComments =  SetFitModel._from_pretrained('./pretrainedModels/suspCommentsModel')
+    with open('./src/pretrainedModels/hardCodedSecretModel.pkl', 'rb') as f:
         modelSecrets = pickle.load(f)
     loadModelTime = time.time() - loadtime
 
@@ -132,6 +137,9 @@ def main():
     workingDirectory = './temp'
     
     try:
+        if os.path.exists(workingDirectory):
+            shutil.rmtree(workingDirectory)
+
         if args.folder:
             shutil.copytree(args.path, workingDirectory)
             if args.context:
