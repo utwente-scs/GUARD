@@ -10,6 +10,7 @@ GUARD is a machine learning-based tool for detecting security smells in Ansible 
 ThesisCode/
 ├── GUARD/                          # GUARD codebase (original + extensions)
 │   ├── src/
+│   │   ├── requirements.txt.       # All the required versions to run the python files successfully and not run into dependency issues
 │   │   ├── guard.py                # Main detection pipeline
 │   │   ├── contexualizationPhase.py # Variable reference resolution
 │   │   ├── vectorizer.py           # Word2Vec vectorization for key names
