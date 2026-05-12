@@ -30,7 +30,7 @@ def compute_metrics(y_test, y_pred):
 
 def main():
     # --- Configuration ---
-    dataset_path = "datasets/susp_comments_dataset.csv"
+    dataset_path = "susp_comments_dataset.csv"
     model_output_path = "src/pretrainedModels/suspCommentsModel"
     test_size = 0.2
     random_seed = 42
@@ -67,9 +67,10 @@ def main():
         print(f"  label {label} ({label_name}): {count} ({count/len(df)*100:.1f}%)")
 
     # --- Subsample for SetFit (few-shot learner, doesn't need 150k examples) ---
-    sampled = df.groupby("label").apply(
-        lambda x: x.sample(n=min(n_per_class, len(x)), random_state=random_seed)
-    ).reset_index(drop=True)
+    sampled = pd.concat([
+    df[df["label"] == 0].sample(n=n_per_class, random_state=random_seed),
+    df[df["label"] == 1].sample(n=n_per_class, random_state=random_seed),
+    ]).reset_index(drop=True)
     print(f"\nSubsampled to {len(sampled)} examples ({n_per_class} per class)")
 
     # --- Stratified train/test split on the subsample ---
@@ -84,11 +85,11 @@ def main():
     print(f"Holdout set (generalization test): {len(holdout_df)} examples")
 
     # --- Save splits for reproducibility ---
-    os.makedirs("datasets", exist_ok=True)
-    train_df.to_csv("datasets/trainingSetComments.csv", index=False)
-    test_df.to_csv("datasets/testSetComments.csv", index=False)
-    holdout_df.to_csv("datasets/holdoutSetComments.csv", index=False)
-    print("Saved splits to datasets/")
+    os.makedirs("datasets/new", exist_ok=True)
+    train_df.to_csv("datasets/new/trainingSetComments.csv", index=False)
+    test_df.to_csv("datasets/new/testSetComments.csv", index=False)
+    holdout_df.to_csv("datasets/new/holdoutSetComments.csv", index=False)
+    print("Saved splits to datasets/new/")
 
     # --- Convert to HuggingFace Datasets ---
     train_dataset = Dataset.from_pandas(train_df, preserve_index=False)
