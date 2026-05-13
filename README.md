@@ -33,6 +33,15 @@ ThesisCode/
    ```
 3. Download the external datasets (see below).
 
+## Model Reproduction
+
+The retrained SetFit suspicious comments model is not included in the repository due to size constraints.
+
+To reproduce the model:
+
+```bash
+python retrain_setfit.py
+
 ## External Datasets
 
 The evaluation datasets are too large to commit. Download them from the following sources and place them in the `datasets/` directory:

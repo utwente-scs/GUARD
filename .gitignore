@@ -1,4 +1,5 @@
-datasets/new
+datasets/puppet
+datasets/terraform
 
 GUARD/src/pretrainedModels/googleNews-vectors-negative300.bin
 GUARD/src/pretrainedModels/googleNews-vectors-negative300.bin.tar.gz
@@ -23,3 +24,4 @@ output.csvsrc/temp/
 src/pretrainedModels/googleNews-vectors-negative300.bin
 temp/
 nextsteps.txt
+src/pretrainedModels/suspCommentsModel/

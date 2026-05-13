@@ -8,14 +8,14 @@ import argparse
 import os
 import shutil
 import contexualizationPhase
-
+import numpy as np
 import time
 
 def find_ansible_file(folder):
     file_list = []
     for root, dirs, files in os.walk(folder):
         for file in files:
-            if file.endswith(('.yml', '.yaml', '.tf')):
+            if file.endswith(('.yml', '.yaml', '.tf', '.pp')):
                 file_list.append(os.path.join(root, file))
     return file_list
 
@@ -48,21 +48,21 @@ def guard_file(filePath, smells):
         if '---' in row or not row.strip():
             continue
 
-        # if '#' in row:
-        #     divided = row.split('#', 1)
-        #     comment = divided[1].lstrip() if len(divided) > 1 else ""
-        #     line = divided[0]
-        #     commentPredict = modelComments.predict(comment)
-        #     if commentPredict > 0:
-        #         smells.append([filename, 'suspicious comment', line_number, row])
-        #         smell_detected = True
-        # else:
-        #     line = row.lstrip('-').lstrip()
-        
         if '#' in row:
-            line = row.split('#', 1)[0]
+            divided = row.split('#', 1)
+            comment = divided[1].lstrip() if len(divided) > 1 else ""
+            line = divided[0]
+            commentPredict = modelComments.predict([comment])[0]
+            if commentPredict > 0:
+                smells.append([filename, 'suspicious comment', line_number, row])
+                smell_detected = True
         else:
             line = row.lstrip('-').lstrip()
+        
+        # if '#' in row:
+        #     line = row.split('#', 1)[0]
+        # else:
+        #     line = row.lstrip('-').lstrip()
 
         if ':' in line:
             key, value = line.split(':', 1)
@@ -79,7 +79,8 @@ def guard_file(filePath, smells):
                 smells.append([filename, 'weak crypto', line_number, line])
                 smell_detected = True
             else:
-                secretPredict = modelSecrets.predict([vectorizer.getVector(key)])
+                vec = vectorizer.getVector(key)
+                secretPredict = modelSecrets.predict(np.array([vec]))
                 if secretPredict > 0 and ('{{' not in value) and len(value) > 0:
                     smells.append([filename, 'hardcoded-secret', line_number, line])
                     smell_detected = True
@@ -96,7 +97,7 @@ def guard_files(output):
 
     loadtime = time.time()
     vectorizer = importlib.import_module("vectorizer")
-    # modelComments =  SetFitModel._from_pretrained('./pretrainedModels/suspCommentsModel')
+    modelComments =  SetFitModel._from_pretrained('/Users/mateuzas/Desktop/ThesisCode/GUARD/src/pretrainedModels/suspCommentsModel')
     with open('./src/pretrainedModels/hardCodedSecretModel.pkl', 'rb') as f:
         modelSecrets = pickle.load(f)
     loadModelTime = time.time() - loadtime

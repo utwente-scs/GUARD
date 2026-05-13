@@ -1,0 +1,3001 @@
+text,label
+#Path to error reports configuration file.,1
+#cases where command doesn't need any extra binaries which is not available in litmsuchaos/go-runner image,0
+#so this needs to run early.,0
+#variables are set in group_galaxy_config if they are variables used on all hosts or are sensible defaults,1
+#Assign range larger then total [ spines * total potential leafs * 2 ],0
+#unlike the other options does not attempt to manage package keys or add additional,1
+#as 50 seconds resulted on failed deployments due to:,1
+#timezone: {{ he_time_zone }}  TODO: fix with the right parameter syntax-,1
+#To protect a system from denial of service due to a large number of pending authentication connection attempts,1
+#the Free Software Foundation,0
+#docker run -t -P umd-ui ansible-playbook -i /etc/hosts/inventory all -m setup -c local,0
+#.. envvar:: rsyslog__default_configuration_sections [[[,1
+#1.1.14 Ensure nodev option set on /home partition,0
+#List of the external APT sources which should be enabled on hosts in,0
+#By default Vagrant managed different IPs for all boxes. But you can force it,1
+#storage parameters. The `filesystem` parameter is mandatory,0
+#max: 5,0
+#NOTE: we're installing with git to work around Galaxy being a huge PITA (https://github.com/ansible/galaxy/issues/2429),1
+#.. envvar:: avahi__daemon_conf_default_wide_area [[[,1
+#TODO: mongo suggests infinity here,0
+#Give the node three minutes to come back online.,0
+#debug: msg={{r__gcp_compute_instance_info.results}},1
+#.. _nscd__ref_defaults:,1
+#docker_registries:,0
+#Security configuration,0
+#The room IDs of the ban lists to honour. Unlike other parts of Mjolnir,0
+#start tests,0
+#and behave sanely for new installations by default.,1
+#cluster_name: my_other_cluster,0
+#https://github.com/redhat-openstack/ansible-role-tripleo-image-build/issues/15,1
+#name: Customize RStudio configuration,0
+#.. envvar:: users__group_groups [[[,0
+#.. envvar:: docker_registry__nginx__dependent_upstreams [[[,0
+#and that gives errors when OpenShift tries to create the ImageStream for a second time.,1
+#Directory ,0
+#Network related,0
+#.. envvar:: postfix_archive_subdomain,1
+#The settings are as follows;,0
+#https://releases.hashicorp.com/terraform/0.12.12/terraform_0.12.12_freebsd_386.zip,0
+#TODO(aopincar): Check executables path (which) and if missing or not before editing the file,0
+#By default,1
+#-> https://docs.gitea.io/en-us/config-cheat-sheet/repository-repository,0
+#kube version to use ,0
+#Default: 3600000,1
+#the role tasks and templates.,1
+#THE SOFTWARE IS PROVIDED AS IS,0
+#Only delete the databases we created (standby DB is not created,0
+#the templating and piping seems to happen regardless of whether or not the task was successful,1
+#.. envvar:: postldap__postfix__dependent_lookup_tables [[[,1
+#yarn.nodemanager.vmem-pmem-ratio: 2.1,0
+#GC Pauses greater than gc_warn_threshold_in_ms will be logged at WARN level,0
+#You can protect internal api to allow access from trusted ip's only. Open to the world by default,1
+#selector: image,0
+#actually implements authentication,0
+#Valid options: rhel7,0
+#TODO: Restore ceph_external when it is supported,0
+#tls_everywhere_undercloud_fqdn which defaults to ansible_facts['fqdn'],1
+#You must pass in the entire line that you are adding,0
+#Unless `matrix_synapse_workers_enabled_list` is explicitly defined,0
+#TO BE DONE should be fixable w/ansible 0.9,1
+#https://pagure.io/fedora-infrastructure/issue/6422-,1
+#prometheus_storage_tsdb_retention_time: 15d,0
+#2 means that uninstall failed because IPA client was not configured,1
+#The certificate is generated and placed in master_config_dir/,0
+#systemd-bus-proxy does not own any files so we're safe there,0
+#Kibana Space ID,0
+#.. envvar:: roundcube__ldap_binddn [[[,0
+#DMF tape archive,0
+#The user variables template to use,1
+#two_word_unknown_device: 0,0
+#Synced flush is deprecated (flush has the same effect as synced flush on Elasticsearch >= 7.6) and will be removed in ES 8.0.,1
+#https://github.com/rcbops/rpc-openstack/issues/1048-,1
+#name: Copy application config file,0
+#Set processor cores fact,0
+#https://releases.hashicorp.com/terraform/1.0.1/terraform_1.0.1_linux_386.zip,0
+#1945070 <https://launchpad.net/bugs/1945070>`__,1
+#metrics on (defaults to 0.0.0.0:6782),1
+#Requires mod-permissions >= 5.1.0,0
+#reusing channel 40 because of DFS-bug. AP1 and 4 have a 70m distance (and one building) in between so it should be fine ,1
+#2. Install the Operator,0
+#`standard_output` -(optional) Set the stdout of the service to go to a non default destination,1
+#{{ hostvars['app1']['reason'] }},0
+#Configuration for :ref:`debops.ferm` Tinyproxy role.,0
+#Some Zuul environments (such as OpenStack CI) use html based ara reports,0
+#arkcase,0
+#name: satellite-capsule-installation,0
+#:envvar:`cryptsetup__keyfile_shred_command`.,0
+#kubectl apply every file on this directory,0
+#action.,0
+#`transport`: transport option for the GlusterFS daemon (as of,0
+#name: Register satellite system to itself,0
+#interfaces {,0
+#'openstack-nova-api',0
+#* submit_job_id Job ID extracted from the job submit result,0
+#point on. Pinning can be done based on a package version,0
+#Title:         Cloudbox: SABnzbd Role                                 ,0
+#default is tower,1
+#inspector_ipa_ramdisk_upstream_url:,1
+#can be later dynamically enabled by the appliance.-,1
+#produce a single .coverage file at repo root,0
+#https://github.com/galaxyproject/galaxy/pull/9809/filesr461889109,0
+#update defaults/main.yml,1
+#port_value: 3000,0
+#we are not population kv_store with default ceph.conf AND there at least 1 nfs in nfs group AND host is the first nfs,1
+#.. envvar:: fail2ban_custom_actions [[[,1
+#serial: 1 would be the proper solution here,0
+#Can optionally wait for subsequent tasks if needed,0
+#/opt/cni/bin of host to /host/opt_cni_bin,0
+#lubridate  Tools that make working with dates and times easier.,0
+#7    6      M   PhD    66 Other      91   93   Full     0 11840.000,0
+#kubernetes_service_subnet: 10.96.0.0/12,0
+#Determines the address used when running mkdocs serve.,0
+#and fail when there is a mismatch,1
+#default value for undercloud_rpm_dependencies,1
+#file: roles/admin_server_config/handlers/main.yml,0
+#Server Certificate Key,0
+#Update scheduler,0
+#brokers. Role default is false.,1
+#TODO: This is temp fix to use deprecated all in one image.,1
+#Variable to define the location of the Embedded Rest Proxy for configuring RBAC. Defaults to kafka_connect_replicator_erp_host.,1
+#endpoint_mongodb_ip:     null,0
+#https://github.com/oVirt/ovirt-ansible-vm-infra,0
+#This role has no dependencies but requires parameters,0
+#alarm.  Defaults to 2 to allow for running the check locally for,1
+#Suffix of upstream Ironic deployment image files. Default is based on,1
+#OpenSSL is recommended due to issues with GnuTLS generation.,1
+#platform = Red Hat Enterprise Linux 8,0
+#TODO: disabled until cli is fixed,1
+#Process Archive File deployments,0
+#changes (e.g. new Selinux rules) get properly applied and propagated.,0
+#Restart shorewall. Configuration is validated in template.,1
+#log-level: debug-,1
+#Saving debug log to /var/log/letsencrypt/letsencrypt.log-,1
+#Configure vars and roles below to match your setup and environment,0
+#Install Helm Extract Source,0
+#for a connection to localhost.  This is a problem,1
+#Network,0
+#Setup BDR postgresql server.,0
+#Language code for user locale to be set by default,1
+#If your foodcoop uses a mailing list instead of internal messaging system,0
+#.. envvar:: snmpd_load_5min [[[,0
+#of Equals (SAE) has not been enabled by default. To warrant the test support,1
+#This playbook redeploys nodes by doing the following:,0
+#nodes in the cluster.  Any IPartitioner may be used,0
+#Enable debug output for selected components. To enable all selectors use [*]-,1
+#Hack for ocata placement section is mandatory in ocata-,0
+#The CNI plugin needs to get pods,0
+#Configure Server Profiles and Policies,0
+#Parent Host Daily performance chart layouts,1
+#controller_lvm_group_data_enabled:,0
+#TODO make checkout readable only by correct user,0
+#Ansible Tower default variables ,1
+#You need to create a GitHub app to enable this and fill in the empty variables below,0
+#type for macros added in 5.0,0
+#Not validating ksql truststore logic,0
+#For local setup,0
+#testing includes dev snapshots,0
+#If you have more than 1 theme dirs,0
+#The state could be 'present' or 'absent'.,0
+#Disable it here if you have similiar issues.,1
+#Enable or disable support for PKI infrastructure managed by :ref:`debops.pki`.,0
+#name: openstack_user_domain,0
+#kafka_broker:,0
+#Directory where the system wide Firejail configuration and profiles are,0
+#https://releases.hashicorp.com/terraform/0.14.4/terraform_0.14.4_darwin_amd64.zip,0
+#dm_password: {{ ipadm_password | default(omit) }},1
+#.. envvar:: libvirtd__default_configuration [[[,1
+#.. envvar:: netbox__config_email_from [[[,0
+#4.3 Ensure logrotate is configured,0
+#start at ``1000``,0
+#Finally,0
+#thin,0
+#permissions to do leader election.,1
+#name: Set up authorized_keys for {{ default_user }},1
+#logicalsize Logical size of the VDO volume.This value is 10 times,0
+#By default,1
+#Role includes for role sqoop,0
+#set utilitiesefi_overrides from standard netboot.xyz defaults for EFI utilities,1
+#ce_minvirtmem: 6144,0
+#When there is profile with disks,0
+#This assumes running in the default sample rook-ceph and rook-ceph-system namespaces.,1
+#Role includes for role antivirus,0
+#.. envvar:: apt__apt_preferences__dependent_list [[[,0
+#handlers file for roles/mailcatcher,0
+#Parent EmsCluster Hourly performance chart layouts,1
+#headers-more   NGINX Plus,0
+#Browbeat Workloads,0
+#DC1_L3LEAFS:,0
+#prefix. The same rule is not applied to Ansible specific parameters.,1
+#configuration file on Debian/Ubuntu hosts.,0
+#kube_router_advertise_cluster_ip: false,0
+#prompt is configured to reset that password. This playbook automates this for a ,0
+#set default secret names to be used if a backup dir and claim are provided (not a backup_name),1
+#add more products to this list to generate their index,0
+#The default list of SMTP servers where ``nullmailer`` forwards all mail,1
+#gpg: inserting ownertrust of 6,0
+#If you are attempting to set up GIEs on Mac OS X with Docker Desktop,1
+#Monitoring Module,0
+#Default to no extra limit zones. Specify any that apply in the relevant inventory file.,1
+#TODO(aschultz): evidently you can't delete ovn agents so we exclude them,0
+#advanced:,0
+#Set the etc dir path where tacker is installed.,0
+#Bootstrap Servers to CCloud Kafka,0
+#{ role: linux/rhel/rdo },0
+#Which packages do you want installed?,0
+#vdo_index_memory_size_mb: 256,0
+#filter:  { hostname: u18 },0
+#the seconds,0
+#Copyright (C) 2021-2021 DebOps <https://debops.org/>,0
+#json file shouldn't hold newlines,0
+#'password': root,0
+#enable_karbor: no,0
+#Use YAML references (& and *) and hash merge <<: to factor out shared settings,0
+#name: job_template name,1
+#superuser account ,0
+#receiver: AlertMail,0
+#List of host names which SSH host fingerprints should be scanned and added to,0
+#key: ostype,0
+#See: https://github.com/ansible-collections/community.general/issues/514,1
+#If a dump file contains the databases and they've also been created beforehand (see `matrix_postgres_additional_databases`),0
+#List of default host templates to use for a given host during registration.,1
+#If the find-task throws an error on /usr/bin/X11 like File system loop detected,1
+#Configure the federated directory into Web Runtime ldap.conf,0
+#The configuration set by default by the Debian package after installation.,1
+#modify the name,0
+#bodhi2/backend/files/koji-sync-listener.py,0
+#Restart lighttpd,0
+#tags: gateone_networking_check,0
+#Sets up a PostrgeSQL standby node,0
+#https://releases.hashicorp.com/terraform/0.14.0/terraform_0.14.0_windows_amd64.zip,0
+#This is currently in ceph-common defaults because it is shared with ceph-nfs,1
+#tasks file for save-templates-to-datasets,1
+#HWRaid repository GPG key,0
+#This is the default for rabbit,1
+#config_reverseproxy_federation_instance_id:,0
+#Time frame for old backups to keep,0
+#snmp topology defaults,1
+#wheezy,0
+#path_to_secrets: ../secrets,0
+#debops.opendkim default variables [[[,1
+#change default sftp chroot location,1
+#Misc workarounds for Vagrant boxes and Vagrant itself,1
+#Edit following parameters only if you are using non-default locations for nova configuration files,1
+#Use default network topology InternalApi,1
+#Tag of the exact Docker hub image to pull,0
+#container: with alpine/slim containers is not compatible with cache,0
+#https://stackoverflow.com/questions/52440546/create-user-on-keycloack-from-curl-command,1
+#restapi_port: 5000,0
+#.. envvar:: mailman__postfix__dependent_maincf [[[,1
+#.. envvar:: resources__group_templates [[[,1
+#Ensure specified packages are present [[[,0
+#TODO REMOVE CENTOS 5,0
+#Configure pipeline and SS,0
+#By default,1
+#GoDaddy machines need their host template updated for changes to /etc/hosts to persist,1
+#Allows alarms to be disabled in template rendering,1
+#marker: <!-{mark} ANSIBLE MANAGED BLOCK -->,0
+#contact_name: John,0
+#Defaults for role supervisor,1
+#environment:   List or mapping of environment variables,0
+#Name of the upload subdirectory located in the TFTP root directory which will,0
+#extension reports... each different extension may or may not have its own path ,0
+#libnetfilter-conntrack-dev,0
+#and to the :ref:`owncloud__ref_external_users` section for more details.,0
+#postfix_transport_maps_template: /path/to/transport.j2,1
+#4 GB RAM  (default),1
+#default in package is 7687,1
+#The port name used for federation in the nginx configuration.,0
+#postgresql_version: {{ postgresql_version | default('13') }},1
+#file: path=/mnt/koji/mash/updates state=directory recurse=yes owner=apache group=apache,0
+#.. _dhcpd__ref_defaults:,1
+#Default network interface to be used for nodes that do not have,1
+#are two nodes in the cluster,0
+#directory path that the provisioning role uses to capture various information (in JSON format) about the provisioned instance.,0
+#Default VPC creation boolean,1
+#UNIQUE,0
+#drain only if there is at least one worker node,0
+#hostname of the remote server (must be in the hostfile),0
+#SB Don't set software_to_deploy from here,0
+#Set the nova console type and port,0
+#If installing contrail_apt_repo entry,0
+#Other Defaults -,1
+#By default bind the solr jetty server to a single interface/IP for security,1
+#If StarlingX in OpenStack Nova VM(QEMU/KVM environment),0
+#creation in Kafka,0
+#The tasks below are a fix for an issue where Avahi service cannot start in an,1
+#TODO: Test splitting this into literal-,0
+#<title>\\(.*Test Report\\)</title><title>\\1 {{ test_suite_prefix }}{{ test_suite }}</title>' \,1
+#The defaults in the prometheus role are (30s 5m 3h),1
+#on the same box as openQA,0
+#V-71891,0
+#Matches nmcli output lines that look like these:,0
+#env_authorized_key: {{guid}}key,0
+#The role is assigned to the jenkins user,0
+#Variable to define the minimum amount of memory in MB required to run Rest Proxy. Calculated as default heap size plus 1GB for OS.,1
+#The problem arises if you are developing,1
+#StackedThreedColumn,0
+#will revert to disk scanning.,0
+#.. envvar:: resolvconf__combined_services [[[,0
+#NOTE(yoctozepto): backup node might not have keepalived yet ignore,0
+#readme file.,0
+#dest: '{{ misc_file_copy_location }}/apimcli.zip' },0
+#Remove all repos when using rhel_repos,0
+#mechanisms do (DeleteTaskAfter or ArchiveTaskAfter),0
+#.. envvar:: atd_deny [[[,0
+#checkcompose_amqp_mailfrom,0
+#Universal Tolerations. So by adding taints to Infra and other,0
+#If not required,0
+#TODO(vkhitrin): Consider resetting RPM DB after this task,0
+#the ldap section in the domain-specific configuration file.,0
+#name will be used,0
+#This role will create the DB for MS SQL ,0
+#cri-tools,0
+#This ensures that no servers are in a state other than PRIMARY or SECONDARY.  https://docs.mongodb.com/manual/reference/replica-states/,0
+#Minimum number of offsets topic (consider higher value for HA),0
+#debug mode,1
+#TODO Get the json files to an openshift-master and load them.-,0
+#Set the name of the project. Defaults to basename of the project directory.,1
+#The length of the password should be at least 5,0
+#efm_parameters:,0
+#List of DIB packages to install. Default is to install no extra packages.,1
+#PySpark submit args to be set as the env var SPARK_SUBMIT_ARGS,0
+#in directory {{ _certbot_remote_dir }}/.aws/credentials to manipulate,0
+#Note that this debugging markup will cause automated tests that directly,1
+#target: alias(timeShift($Cloud2.$Node2.$Node2_Process.io_octets.rx,0
+#neutron.services.vpn.plugin.VPNDriverPlugin,0
+#ptp,0
+#rgw_zonemaster: true,0
+#bridges_select.py,0
+#.. envvar:: etckeeper__base_packages [[[,0
+#us to do the final connection by hand,1
+#ignore_assert_errors: false,1
+#enable or disable hostkey checking,0
+#openshift_master_oauth_template is deprecated.  Should be added to deprecations,1
+#TODO: allow airgap to bypass version post-fix-,1
+#VirtualBMC be able to access the hypervisor where the VMs are located,0
+#Permit the servers id READ access to the optimized local adapter authorized service,1
+#/tests/,0
+#Default image: use GOLD if possible,1
+#To cover these three,0
+#paths: ['/home/analytics/sbin',0
+#tripleo_ha_wrapper_resource_name: The name of the ocf resource being used (e.g. galera),0
+#certificate and key.,0
+#Initialise the client git repository,0
+#_groupmepuppet_.*:{{ matrix_mx_puppet_groupme_homeserver_domain|regex_escape }}',0
+#.. envvar:: saslauthd__combined_instances [[[,0
+#latency of individual authentication attempts.,1
+#egg=vmware-nsx,0
+#If the above portscan command succeeded (return code 0),0
+#name: {{ ocp_username }},0
+#Filebeat Configuration ,0
+#used by: the tacc_protected template,1
+#Sensu enterprise credential,0
+#_horizon_lib_dir: {{ _horizon_bin | dirname }}/lib/python2.7/dist-packages,0
+#stored in vault must start with vault_ prefix (i.e. vault_netapp_backends).,1
+#debug: var=result,1
+#the device will be accepted or rejected (ignored).  Devices that,0
+#This enables to deploy cilium alongside another CNI to replace kube-proxy.,0
+#Only supported with the Murmur3Partitioner.,0
+#that errors are not caught during a subsequent,1
+#io.confluent.ksql.metrics:type=consumer-metrics,0
+#``debops.slapd`` role if a server is configured with it.,0
+#Installs Three unique Kafka Connect Clusters with unique connectors.,0
+#vivid,0
+#When MountFlags is set to shared,0
+#* Cell DB schema migrations,0
+#List of GPFS callhome packages to install,0
+#Play to test write speed of partition holding database,0
+#Ethernet Adapter,0
+#layers_store.CONFIG_RELOAD_WAIT: 12000000,0
+#prevents execution of evil code. CASSANDRA-9402 will fix this issue for Cassandra 3.0.-,1
+#By default the PowerDNS Recursor is installed from the os default repositories.,1
+#Even if your build fails,1
+#You most likely don't need to touch this variable. Instead,0
+#you can set the Kerberos realm,0
+#WN probes,0
+#Only perform the hack if Manage is being installed,1
+#and they are saved,0
+#file: roles/vpn/defaults/main.yml,1
+#Default filesystem created on block devices if none is specified.,1
+#standards,0
+#Use Composer global install.,0
+#Copyright 2017 Philip Freeman <elektron@halo.nu>,0
+#both in mgmt network,0
+#enable these policies. 'anti-affinity' will ensure that each VM is launched on a,0
+#command: restorecon -rv {{ item.item.base }},0
+#use_blkid_wiping.) Wiping each detected signature must be confirmed.,0
+#A list of strings containing additional configuration blocks to add to Hydrogen's server configuration (matrix-client-hydrogen.conf).,0
+#defaults file for postcheck,1
+#user: telegraf,0
+#output. Fields can be scalar values,0
+#and mode in config file to 'disabled' (will take effect next reboot).,0
+#name: Add Composite to four files,0
+#Larger chunk sizes may improve performance for plain thin volumes,1
+#https://github.com/ansible/ansible/pull/68136,0
+#defaults file for splunk_license_master,1
+#shell: oc apply -f {{role_path}}/templates/camelk-subscription.yml -n openshift-operators,1
+#Fixme: should probably use to_nice_yaml-,0
+#CentOS defaults),1
+#.. envvar:: resolvconf__original_interface_order [[[,0
+#Global options [[[,0
+#The data is populated at install time.,0
+#Override power_user and power_pass with --extra-vars if needed,0
+#Title:         Cloudbox: Community Role                               ,0
+#Default variables for configuration of api protection definitions,1
+#There are 3 pre-existing cluster role bindings by default,1
+#Ansible's blog documents this *without* the port,0
+#ansible-playbook mongo_4_0.yml -i any-cluster-ip -e@/path/to/edx.yml -e@/path/to/ed.yml --tags configure_replica_set,0
+#FIXME: Some tasks are not idempotent,0
+#spurious acceptance test failures.,1
+#Change to always to always lock the account when this playbook is run,0
+#Run Job template,1
+#For running with another webserver,0
+#disabled to ensure better service security.,0
+#.. envvar:: elasticsearch__node_data [[[,0
+#nova quota-show --tenant $TENANT_ID,0
+#Install ntp package,0
+#https://releases.hashicorp.com/terraform/0.12.28/terraform_0.12.28_SHA256SUMS,0
+#ufw includes sensible ICMP defaults.,1
+#NOTE(Gonéri): Workaround for https://github.com/ansible/ansible/issues/23733-,1
+#Grafana package is not downloaded from repository since it was not reliable (issue 2449)-,1
+#remove the '[]' above if you add tags to this list.,0
+#1848775 <https://launchpad.net/bugs/1848775>`__,1
+#https://doc.powerdns.com/authoritative/http-api/index.htmlenabling-the-api,0
+#debops.influxdata default variables [[[,1
+#as used by mongo_replica_set in the mongo_4_4 role.,0
+#Ctrl plane (apis),0
+#preferred availability zones in which to spin instances,0
+#parameters are correctly overridden by :program:`sysctl` command.,0
+#defaults file for cvp_configlet_upload,1
+#Usage: validate_login_vars.yml,0
+#Use a template from a URL,1
+#.. envvar:: foodsoft__mariadb__dependent_databases [[[,0
+#!].*$' /etc/ca-certificates.conf | sed -e 's/^!//' || true,0
+#check that iat (issued at) claim value is an integer,1
+#All variables within this role should have a prefix of tripleo_{{ role_name | replace('-',1
+#NetScaler module example,0
+#Visual Studio Community 2017 ,0
+#Github action to run Molecule for frontend,0
+#1. aws Login,0
+#will not be set,0
+#https://github.com/ansible/ansible/issues/15769,1
+#[TODO]: Add Terraform Google Cloud Platform provider support.,0
+#TODO: Make this conditional as well based on the prior variable-,0
+#str,0
+#TODO: This should probably be in groupvars for all and then overridden here,0
+#Default variables value for Kafka WS service,1
+#we only override variables with our default if they have not been specified already.,1
+#For every UUID get introspection data and search for mac address,0
+#RT would have been 20000 + 110.,0
+#containerName: fedocal,0
+#Core Interfaces Feature,0
+#To push to fedora 20:,0
+#.. envvar:: nginx_http_auth_users [[[,0
+#_certbot_production: {{ lets_encrypt_production|default(False)|bool}},1
+#NOTE(cfarquhar): The os_quota module is new in ansible 2.3. Use it instead,0
+#The following fact is allow start_config notifier to restart reverse proxy in question,1
+#k8s module appears to have issues with template objects-,1
+#than spending the time to determine if a host is a compute,0
+#health mon/osds check retries/delay:,0
+#failover speed directly. Default sysctl value is 15 which result in,1
+#serviceaccount,0
+#federation_sender_instances:,0
+#The name of the PowerDNS Recursor debug symbols package-,1
+#Dashboard API whitelist,0
+#hack hack hack! Switch to official once RH releases the packages:-,1
+#Persist new configuration data in sysinv database.,0
+#options here or by using the `setup` command.,0
+#Ansible master to the remote AIX machine,0
+#This file was generated automatically from conda-smithy. To update this configuration,0
+#https://releases.hashicorp.com/terraform/0.14.0/terraform_0.14.0_windows_386.zip,0
+#Default values for configuring an ipv4 address override as needed,1
+#Name or path to use as the volume for the docker registry. Default is,1
+#1888852 <https://launchpad.net/bugs/1888852>`__,1
+#'delete is,0
+#ansible-playbook -i test-inventory test.yml --skip-tags 'environment-setup',0
+#Vars for Debian OS Family,0
+#sets the number of unsuccessful attempts to communicate with the server that should happen in the duration set by the fail_timeout parameter to consider the server unavailable for a duration also set by the fail_timeout parameter. ,1
+#colums_as_rows: 0,0
+#name to lowercase.,0
+#openstack_branch:,0
+#.. envvar:: fail2ban_loglevel [[[,1
+#This file will contain the default values for the neutron ovs agent,1
+#apps/richie/templates/postgresql/ep.yml.j2,1
+#An override nameserver for CI,0
+#.. envvar:: librenms__database_name [[[,0
+#This file contains all variables you can influence via your inventory/variable files.,0
+#Access to middleware and gateway databases,0
+#Default values for opensds.,1
+#Memory and CPU to use for this VM.,0
+#infra_vm_lvm_group_data_lvs:,0
+#azure_csi_resource_group:,0
+#Configure Saved Query repo,0
+#canonical name for service,0
+#List of NFS RPMs to install,0
+#List of HDFS RPMs to install,0
+#.. envvar:: lxc__root_subuid_count [[[,0
+#masters: {{env_groups['limit']}}:&{{env_groups['masters']}},0
+#undercloud_admin_vip,0
+#debops.dnsmasq default variables,1
+#note: most likely the ip address of the instance on which to perform the backups,1
+#It also requires following env variables to be defined:,0
+#Using 70% autoextend threshold and 20% autoextend size,0
+#The Redis Server configuration options defined for hosts in a specific,0
+#user_install: True,0
+#SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.,0
+#ENSURE NEW TEST MEMBERS ARE ABSENT,0
+#name: redirect 80 port access to {{ http_port }} port,0
+#https://secure.php.net/manual/en/info.configuration.phpini.upload-max-filesize,0
+#Set overrides for horizon embedded policies,0
+#Version of the MariaDB upstream.,0
+#would overwrite existing keys,0
+#The rdn of the default virtual mail domain used by Postfix.,1
+#egg=networking-odl,0
+#Title:         Cloudbox: UnionFS | UnionFS Tasks                      ,0
+#FIXME: oc_route is not idempotent-,0
+#Set the prefix used in the index lifecycle write alias name. The default alias,1
+#DDNS updates fail to create or edit jnl files without this,1
+#* ardana_upgraded_pkgs list of upgraded packages,0
+#This playbook  deploys the mongodb configurationdb  servers,0
+#Title:         Saltbox: Settings | Migrator | 'adv_settings.yml' | Migration 01      ,0
+#Maximum number of datasets to create before flushing created,0
+#Name of the current OpenStack branch. Default is stable/xena.,1
+#.. envvar:: volkszaehler__php__dependent_packages [[[,0
+#contains the imagePullSecrets for the experiment pod,0
+#NOTE(mhayden): We skip this task when we're running the final,0
+#nova.tests.functional.regressions.test_bug_1679750.TestLocalDeleteAllocations.test_local_delete_removes_allocations_after_compute_restart,1
+#PROTOCOL,0
+#default minishift profile name,1
+#TODO: switch to the sefcontext module when we update Ansible to 2.2+-,0
+#By default,1
+#handlers file for vcd_vapp_vm_nic,0
+#Testcase OMNIA_1.1_US_CRD_TC_004,0
+#.. envvar:: rabbitmq_server__ssl_dhparam [[[,0
+#This workload supports either OpenStack or AWS EC2,0
+#to backup the databases,0
+#ansible-playbook recover-osds-after-ssd-journal-failure.yml,1
+#Set blank to disable derivative caching.,0
+#change auto to python for zoatrack,0
+#sshd,0
+#*  If no networks are using forward_mode: 'nat',0
+#debops.root_account default variables [[[,1
+#command.  Defaults to off.,1
+#active controller can be found,0
+#pub_key: /opt/ssh/id_ed25519.pub,0
+#ansible-zuul github app,0
+#https://github.com/coreos/prometheus-operator/issues/926-,1
+#stuff because of the debug log statement.,1
+#Installs the ownCloud personal cloud software.,0
+#External UI portal,0
+#.. envvar:: owncloud__mail_from_address,0
+#address 10.0.30.1/24,0
+#.. __: https://github.com/ansible/ansible/issues/36129,1
+#disk,0
+#target: alias(timeShift(averageSeries($Cloud1.$Node1.memory.memory-cached),0
+#asb_scheme specifies if the route for the broker is using http or https,0
+#id: default-ltpa,1
+#default: item3,1
+#dict_varname: Where we will store the secret.,0
+#If no skeleton theme,0
+#OpenIdMports,0
+#.. envvar:: apt_listchanges__apt_which [[[,0
+#This fails in LXC containers,1
+#refactor,1
+#TODO: this currently has a bug where hostnames are required,1
+#update all mirrors currently served by grokmirror,0
+#Used to determine which ignore_errors strategy to use. Defaults to true,1
+#default_container_healthcheck_interval: 30,1
+#the version an explicit action.,0
+#bind *:3307,0
+#Introspect SSL Enable/Disable,0
+#password and create an administrative UNIX account with :command:`sudo`,0
+#fail_ci_if_error: false,1
+#snapshot_operator_project: '{{ fuse_project }}-user{{ item }}',0
+#meta file,0
+#record & add labels to the log record if properly configured. This enables users,0
+#Whether or not the HTTP keytab must be created,0
+#--z --[[[2,0
+#A `dnf group upgrade base` which happens later in the testnodes role will-,1
+#2.1 Load default application workspace spec,1
+#but can't be used due to https://github.com/ansible/ansible/issues/9362,1
+#mysql_log_error: /var/log/mysql/mysql.err,1
+#You can use this playbook as-is to setup a full NetBox server,0
+#this db2 error code means something went wrong in rollforward command,1
+#Since there are no nic-configs for public-bond in the default,1
+#command-line interface for manipulating the firewall,0
+#Google Site Verification,0
+#Define temporary hash to be used when removing the SS_DB_URL line ,1
+#Fix the issue during startup the demo cluster like,1
+#Use dedicated namespace for logging charts such as filebeat in case of k8s as cloud service.,0
+#idr-redmine (internal direct),0
+#it should default to localhost,1
+#systemd_netdevs:,0
+#Once the swift cluster has been setup DO NOT change these hash values!,0
+#.. envvar:: pki_authority_preference [[[,0
+#We don't want to pollute the host by installing packages that,0
+#Name of the catalog containing the operator.,0
+#name: ironic-tempest-plugin,1
+#Set the docker api version. The default is false,1
+#the container for the packages that have,0
+#See http://www.postfix.org/postconf.5.htmlpostscreen_dnsbl_sites for more,1
+#Default: false,1
+#List of allow rules for specific hosts in the inventory. See,0
+#export name: {{ item }},0
+#--public-key-material $(cat ~/.ssh/id_rsa_xxx.pub)`.,1
+#system_master_memory_reserved: 256Mi,0
+#TODO(michaelgugino) remove this set fact.  It is currently necessary due to-,0
+#defaults for setting embedded ldap admin password,1
+#Comma separated list of columns to report for 'lvm devtypes' command in verbose mode.,0
+#Specify a partition recovery strategy (autoheal | pause_minority | ignore),0
+#firewallmode,0
+#.. envvar:: saslauthd__default_mechanism [[[,1
+#PartnerPropertyValue1,0
+#defaults file for roles/catalog_item,1
+#creator to subscribe to. The role default for this,1
+#kolla_seed_inventory_pass_through_host_vars_default:,1
+#Creating reverse records requires ansible_version.major >=2,0
+#when: patroni_dcs == consul and,0
+#.. envvar:: etherpad_disable_ip_logging [[[,0
+#There used to be some code here for updating workers one by one,0
+#Extra code hanging around to help if we ever need it,0
+#contributes negligible load on the cluster and may be manually,0
+#Some variables are deprecated but still present to allow for backwards,1
+#.. envvar:: postfix__host_maincf [[[,1
+#If your ECS comes with differing default credentials,1
+#rise               = number of consecutive health checks that must succeed,0
+#List of additional APT repositories for hosts in specific Ansible inventory,0
+#config_failover_cookie_filename: <fully qualified path>/{{ config_failover_cookie_id }},1
+#idrac_default_password:,1
+#UDP port-range to use for TURN,0
+#change the following value to a much lower one if you don't use GlusterFS,0
+#Add Plone site,0
+#https://docs.ansible.com/ansible/latest/dev_guide/developing_collections.htmlmeta-directory,0
+#either edit this file or define your own variables to override the defaults,1
+#current docker module has bug when bind file in volumes.,1
+#Service,0
+#Sometimes mongod pulls down a load of python2 stuff,0
+#name: install utils,0
+#Default is 0.  If the minimum kicks in,1
+#Setting as a fact so we can read it later out of this role-,1
+#hostvars[registered_masters[0]].repository_hostname,0
+#ram: 256,0
+#This is a horrible hack but it's what CP4D tells us to do :(-,1
+#List of (mailto:) URLs that the ACME server can use to contact you for issues-,1
+#.. envvar:: nginx_default_ssl_ciphers [[[,1
+#Use to populate the resource registry for nic configs,0
+#readme,0
+#Apache ,0
+#probably remove the retry once we switch to GitHub.,0
+#If on,0
+#name: Get Git Repo,0
+#Just load default variables from roles.,1
+#YARN,0
+#Some documents (like group and article PDFs) can include page breaks,0
+#String,0
+#Default is the files folder within the NGINX Ansible role.,1
+#Localpart template for per-user room grouping community IDs.,1
+#OPENSHIFT_DEFAULT_REGISTRY is deprecated keep until 3.11,1
+#Timeouts,0
+#Extra settings to add to site configuration for LMS,0
+#shared-agent.conf,0
+#/dev/sdd will have /dev/sdg2 as a journal,0
+#.. envvar:: kibana__dependent_configuration_filter [[[,0
+#name: debug CA certs variable-,1
+#which contain certs to connect with openshift master,0
+#We set the image registry to an empty directory for non-production clusters.,0
+#failed_when: 'JCL ERROR' in response.content | join,1
+#This is useful to catch unexpected internal cached volume group,1
+#disable this variable to not create additional level in the directory,0
+#Title:         Saltbox: Plex Auth Token | Default Variables            ,1
+#address 10.0.20.1/24,0
+#Only the first time.,0
+#setting `HAIRPIN_MODE=false`.,0
+#stripe.,0
+#and ipa images. You will need to define the images and,0
+#NOTE: This will cause RPM DB to be out of sync,0
+#V2WORK THIS SHOULD MOVE INTO THE ROLE,0
+#Basic input configuration setting,0
+#To configure multiple connect clusters,0
+#V-38468 compliant options SYSLOG|EXEC|SINGLE|HALT,0
+#remove Simply remove the faulty device and run without it.  If,1
+#Logstash should automatically be restarted by Elasticsearch via systemd,0
+#to copy the startup script manually,0
+#of the workflow status. Default is 5.,1
+#.. envvar:: mailman__core_group_configuration [[[,0
+#More information on fix :-,1
+#Force serial scheduling of workflows within the context of a,0
+#signing the SAML Responses from the corresponding entity,0
+#Should Ansible use become to gain elevated privileges (i.e.: root),0
+#the token ring; see http://wiki.apache.org/cassandra/Operations,0
+#Triggers the workflow on push or pull request events but only for the main branch,0
+#match: 'ping*',0
+#Path to the virtualenv where Home Assistant will be installed.,0
+#to run in production,0
+#name of this foodcoop,0
+#Social Sharing Related Settings,0
+#disclosure restricted by GSA ADP Schedule Contract with IBM Corp.,0
+#Neutron,0
+#http://rabbitmq.1065348.n5.nabble.com/Rabbitmq-boot-failure-with-quot-tables-not-present-quot-td24494.html,1
+#default site is removed,1
+#rhel8lab_device1: /dev/xvdb,0
+#See <http://elasticsearch.org/guide/en/elasticsearch/reference/current/index-modules.html> and,0
+#If enabled,0
+#path: {{ supervisord_log_dir }},0
+#1 (should work),0
+#.. envvar:: mariadb_server__tcpwrappers__dependent_allow [[[,0
+#content: Defaults:openshift !requiretty,1
+#Specify source install module for NGINX Open Source.,0
+#The addition of expiration date is a request that will be submitted upstream,0
+#unnecessary executions of the `kubeadm init phase ...` command.,0
+#only be run when config values are known to be good.,0
+#Set to 0 to disable udev synchronisation (if compiled into the binaries).,0
+#literal-array-hash,0
+#shell: oc apply -f {{role_path}}/templates/amqstreams-subscription.yml -n openshift-operators,1
+#default SQLite database,1
+#Boolean variable which must be set by the deployer. This identifies whether a,0
+#defaults file for ansible-role-tomcat7,1
+#et_xmlfile=1.0.1=py37_0,0
+#2 allow only user-space measurements (default since Linux 4.6).,1
+#http://lorem-rss.herokuapp.com/feed?unit=second&interval=60:,0
+#Hibernate,0
+#Minimum required versions.,0
+#Takes an <ip>:<port> or <port> value (e.g. 127.0.0.1:4050),0
+#src: {{ playbook_dir }}/{{ec2_name_prefix}}/{{ username }}-instances.txt,1
+#The following set_fact can be removed if five.z2monitor becomes py3-compatible,0
+#there being a timeout (rather than connection refused),0
+#temporarily needed,1
+#values here. We do it in the OSEv3 group vars. Do we need to add,0
+#filestore_xattr_use_omap: null,0
+#for metal-api development with kube-fwd,0
+#Template name. By default the template name is filebeat-%{[agent.version]},1
+#Apiserver resource requests and limits,0
+#ansible.builtin.command: |,0
+#used in the Ansible tasks and the configuration template.,1
+#host: {{ ansible_host | default(inventory_hostname) }},1
+#Create a new LDAP user with keystone account and sudo access. The playbook,0
+#TODO this is no longer supported,0
+#Set ceph_release to ceph_stable by default,1
+#List of default UNIX user accounts which are denied access to :command:`at` and,1
+#RemoteDesktopVNCSG,0
+#Supported choices: ``deb``,0
+#At the end of the role,0
+#installation hasn't happened yet so we install zap dependencies here.,0
+#first volume to use to store IMS datasets,0
+#2.1.1.2 Ensure systemd-timesyncd is configured,0
+#Default output_dir (this gets overridden by RHPDS),1
+#NOTE: most of these vars_path come from group_vars/fedocal* or from hostvars,0
+#novacompute nodes are added as compute for backwards compatibility,0
+#.. envvar:: libuser__base_packages [[[,0
+#Default variables for the Calico self-hosted upgrade.,1
+#!!!! BEWARE: This is to completely override everything passed into the service template for the docker run. DON'T EDIT THIS UNLESS YOU KNOW WHAT YOUR DOING!!!!!,1
+#This task can be removed once the RHEL-8.5 is not tested anymore,0
+#RDEFINE EJBROLE BBGZDFLT.zos.connect.access.roles.zosConnectAccess UACC(NONE),0
+#template: '$template LogglyFormat,1
+#Unsuccessful file modifications (open for write or truncate),0
+#Search query options for bugzilla bugs,1
+#Docker compose projects to be deployed by ansible,0
+#redundant to put it here ignore_errors: {{ ignore | default(yes) }},1
+#Use the NovaComputeCpuDedicatedSet parameter for all the versions in order to prevent confusion.,0
+#Deployment of Two Sigma's BeakerX Jupyter notebook,1
+#metric_labels:,0
+#tasks file for logrotate,0
+#hosts: copr-back:copr-back-stg,0
+#See https://github.com/matrix-org/synapse/issues/4632 for important privacy concerns,1
+#provisioned_throughput_in_mibps:   The throughput,0
+#TODO(yfried): fix relative link in index so they point to the right path and don't use gz files,1
+#defaults file for vqfx,1
+#regenerate_ca: false,0
+#https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-network.html,0
+#Application specific variables for Health,0
+#Some custom telegraf monitoring that's templated,1
+#other servers,0
+#localhost access and the check will fail.,1
+#this will surely fail one day,1
+#Copyright 2020 The SODA  Authors.,0
+#It's good practice to store login credentials in a secure vault and not,0
+#Require authentication from all users.,0
+#defaults file for adw,1
+#Change from overlay_controller.defaults.remote_switches to overlay_controller.defaults.uplink_switches,1
+#zlib=1.2.11=h7b6447c_3,0
+#Would be nice if we looked at existing users and permissions and made decisions of what to run,0
+#debops.postscreen default variables [[[,1
+#(including a full URL). See note above on the variable jenkins_version,1
+#storage_lvm_group_data:,0
+#and we will have stage1 and stage2 subdirectories to separate these different stages.,0
+#The spool file is a circular buffer,0
+#causes no undesirable side effects.,0
+#V3 is not used as we hit following issue: https://github.com/actions/labeler/issues/107,1
+#There is a bug with initializing multiple nodes in the HA cluster at once-,1
+#A list of URLs of files to download into the /etc/yum.repos.d directory to,1
+#.. envvar:: postgresql__keyring__dependent_apt_keys [[[,0
+#Install our shell role packages for all machines,0
+#* detach volume,0
+#NOTE(gyee) check to see what the current token provider is. If this is a new,0
+#https://github.com/pypa/setuptools/issues/1694issuecomment-466010982-,1
+#---------------------------------------,0
+#the consul master should use the dhcp provided DNS names,0
+#OS_BRANCH: stable/mitaka,0
+#https://bugs.launchpad.net/tripleo/+bug/1743749 is completely fixed.-,1
+#variables used to automatically create a connectstring,0
+#Use in conjunction with I(api_version),0
+#record: {{ workshop_prefix }}.tower.{{ dns_idx }}.{{ domain_name }},1
+#Directory where various scripts which don't or shouldn't be directly,0
+#List of APT packages to install for :program:`cron` support.,0
+#.. envvar:: lxc__containers [[[,0
+#ceph_install.yml (where packages get installed) only does so if cache > 600,0
+#schedule the chaos every hour at 30th minute,0
+#Override these vars to alter the memory allocated to map_hash,0
+#All variables within this role should have a prefix of check_uc_hostname,1
+#Select the default way the PHP-FPM master process will manage pool child,1
+#dependency variables. See :ref:`postgresql__ref_roles` for more details.,0
+#directories,0
+#Workaround for ovn-central being configured with the address of the bootstrap engine VM.,0
+#IPv6,0
+#The role also sets ``vim.basic`` as the default editor via,1
+#No auto configuration of prefixes by router advertisements,1
+#Configuration for :ref:`debops.ferm`,0
+#Mirror or Admin Host (CloudFrount),0
+#dashboard-configure,0
+#owner: '{{ item.name + gitusers_name_suffix }}',1
+#need to force 7.8 to make python3 packages available,0
+#default for NM (this might be considered a bug)-,1
+#stripesize: 64,0
+#append line in interfaces file for reading additional config files,0
+#List of sections defined in the :file:`/etc/elasticsearch/elasticsearch.yml`,0
+#A list of paths of dashboard xml.j2 templates.,1
+#the galaxy virtualenv. This will create a new issue if none exists,1
+#the chart,0
+#elasticsearch/logstash hosts,0
+#debug:-,1
+#.. _resolvconf__ref_defaults:,1
+#localhost connection and not use the external LB. If this parameter is,0
+#Default Cache-Control policy,1
+#The path for the wheel build venv.,0
+#TODO(pabelanger): Figure out why iosxr_user is broken.-,1
+#Control Plane listener enabled.,0
+#Use dedicated TMPDIR to avoid errors such as 'cannot create temp file for here-document: Read-only file system'.,1
+#https://github.com/dependabot/dependabot-core/issues/369,1
+#max_derived_cpu_available:Projected to hit available,0
+#name: modify and apply rook object-user.yaml for student,0
+#clair_ssl_enable: True,0
+#The actual items files here end in .j2 (they are templates),1
+#Set to true to use SSL for InfluxDB connections.,0
+#Only satellite is supported for RHEL 8,0
+#TODO(inc0): Gates don't seem to have ufw executable check for it instead of ignore errors-,1
+#allow older templates with Quantum in them.,1
+#yamllint disable-file,0
+#See http://wiki.apache.org/cassandra/HintedHandoff,0
+#protocol: http,0
+#automatically. If you change the GID,0
+#Linux Security Module (lsm),0
+#string AMQP broker URL for fedora-messaging result reporters.,0
+#to be the default on your web server comment this line out.,1
+#Device mappings for the docker container. E.g. To enable hardware transcoding:,0
+#make sure to only ever copy contents not dir,0
+#Remove external DNS of MySQL in OpenShift cluster private zone,0
+#There seems to an issue with using ansible 2.8.x and python <= 2.7.x when using the package module-,1
+#Testcase to verify ipa installation in manager node,0
+#This is the overall site playbook.,0
+#parameters,0
+#see Issues 541 and 548,0
+#Add new masters to oo_nodes_to_bootstrap when we are scaling up masters.,0
+#mountPropagation: None|HostToContainer|Bidirectional,0
+#.. envvar:: foodsoft__git_version [[[,0
+#horizon plugin but have a policy file. Override these when you have services,0
+#it will retry to reconnect to Kibana instead of exiting with an error.,1
+#Everything executed here is considered sensitive,0
+#Wait time between retries during leader elections. Default is 250ms.,1
+#Postfix,1
+#option to set job whiteboard message,0
+#sentinel down-after-milliseconds mymaster 2000,0
+#Copyright (C) 2015 Patryk Ściborek <patryk@sciborek.com>,0
+#to any interface.,0
+#hostname: vaterhaus-no,0
+#See bug 1513668 in Launchpad for more details.,1
+#example https location for /ws path: /etc/nginx/vhost_fragments/bie-test.ala.org.au/https_70_location_start_ws,0
+#RBAC with Connect Secret Registry,0
+#or ohai facts could be used to do this.,1
+#FIXME: To be integrated in the 'nfs' role,0
+#Decrease log verbosity to errors only,1
+#Configs System,0
+#disable_gravatar: true,0
+#to the URI,0
+#set on new thin snapshot LVs.,0
+#masters and infra are the same in CI,0
+#end of functions definition       ,0
+#nic: eth1,0
+#List of default RabbitMQ plugins enabled by this Ansible role.,1
+#https://review.openstack.org//c/414167/ has been merged.,1
+#adding chris-lea nodejs repo,0
+#.. envvar:: lxc__default_container_distribution [[[,1
+#failed_when: etherpad_api_calls_exec.rc != 0 or etherpad_api_calls_exec.json.code|d(),1
+#activedirectory_public_dns: ad.{{subdomain_base}}.,0
+#{{ hostname }},0
+#The variable which combines the group configuration from different source,0
+#git.zeus.gent (GitLab) ,0
+#Validate cert option from the module is also supported.,0
+#.. envvar:: gitlab_runner__group_tags [[[,0
+#postfix_aliases:,1
+#Ignore errors here incase the flavors already exist.,1
+#--------------------------------------------------------------,0
+#to schedule the BIOS update,0
+#release_overrides:,0
+#should ensure that in the future currently installed version of the APT,0
+#Set the scale_sshd_config_update to 'true' to update the sshd_config,0
+#Must not contain more than 2 consecutive characters that are identical,0
+#I/O errors on access.  You can instead use a device path,1
+#debops-contrib.fuse default variables [[[,1
+#With thin_check version 2.1 or newer you can add the option,0
+#pull may fail if upstream settings.py is modified,1
+#os_tempest setting,1
+#Docker namespace to use for Kolla images. Default is 'kolla'.,1
+#ansible-playbook -i inventories copy_fetch_data_set.yml,0
+#by default,1
+#name: PATRONI_KUBERNETES_POD_IP,0
+#default below results in no default job resubmission condition,1
+#.. Copyright (C) 2014-2016 DebOps <http://debops.org/>,0
+#Maximum number of times to retry connecting on connection error.,1
+#edgenodes:,0
+#Configure rabbitmq plugins,0
+#the new version `ec2_metadata_facts` that fails when the server is not,1
+#recoveryfile_dest: /u02/fra,0
+#OpenShift version this operator is installed on. If there is no matching,0
+#following tasks replace yum pulpcore repository base url from,0
+#again later.-,1
+#115 <https://github.com/dell/dellemc-openmanage-ansible-modules/issues/115>`_-,1
+#To enable this,0
+#CATALOG SOURCE,0
+#from_epkg_v:    False,0
+#.. envvar:: foodsoft__group [[[,0
+#Use the generated mongodb configuration,0
+#name: LOW | V-38662 | The operating system must employ cryptographic mechanisms to prevent unauthorized disclosure of data at rest unless otherwise protected by alternative physical measures.,0
+#cloud: default,1
+#available in ansible 1.9,0
+#<cut>Handlers are run in the order they are listed,0
+#agent_certificate_path: '',0
+#By default install rhel and xpaas streams on enterprise installs,1
+#OVNKubernetes (requires OCP 4.6 and newer),0
+#user: {{ bitbucket_username | b64decode | replace('\n',0
+#.. envvar:: backup2l__max_level [[[,0
+#Define cluster templates to create. It should be list of,1
+#Version of CUDA to install.,0
+#Deploy an Openstack environment with public TLS for the undercloud and overcloud,0
+#``ifupdown__*_interfaces`` variables if necessary.,0
+#--force-confdef and --force-confold will ensure updates are applied,0
+#puppeting User level + logging in with a Telegram account.,0
+#default generate csr,1
+#create repository name; empty suffixes are permitted.,1
+#dependencies according to these files,0
+#localpath..,0
+#It is planned to be removed from Kubernetes in the version 1.23.,0
+#permission issue:,1
+#activedirectory_public_dns: ad.{{ subdomain_base }}.,0
+#Variable to define the minimum amount of memory in MB required to run zookeeper.  Calculated as default heap size plus 1GB for OS.,1
+#This is a hack to allow us to update various components without restarting-,1
+#Do a commit here so that we can later print done :-)-,1
+#Virtual IP address of OpenStack internal API. Default is the vip_address,1
+#ip: 172.29.236.100,0
+#version.,0
+#.. envvar:: postfix__group_maincf [[[,1
+#RHEL/CentOS only. Set a repository to use for PostgreSQL installation.,0
+#.. envvar:: postfix_archive_method,1
+#schedule: 24 hours,0
+#that the hostname is specified first to avoid any issues with name-,1
+#'sql_ascii',0
+#All default values here based on usage within,1
+#neutron-client,0
+#Ansible had trouble templating the above command straight to the shell module hence the var,1
+#10-base-config.rules,0
+#Fully Qualified Domain Name (FQDN) of OpenStack internal API. Default is the,1
+#This configuration extends the default starting configuration (`matrix_mautrix_facebook_configuration_yaml`).,1
+#When near the GBIF building (e.g. in Europe) the GBIF nexus will likely be fastest ,0
+#To avoid this problem we create the directories before starting IPA.,1
+#well as caches.  Experiments show that JEMAlloc saves some memory,0
+#Otherwise,0
+#OpenStack API addresses.,0
+#You can customize it by controlling the various variables inside the template file that it references.,1
+#error_log: ,1
+#cmd: {{ scale_command_path }}mmces node list|grep {{ item }},0
+#\n].*)NOPASSWD(.*)',0
+#Shift the start of an aligned PV data area based on sysfs information.,0
+#pgbouncer_auth_query: SELECT usename,0
+#This playbook shrinks the Ceph monitors from your cluster,0
+#as with before,0
+#ACS defaults,1
+#Docker defaults,1
+#by reviewing the Fact setting section of this playbook,1
+#LDAP enabled toggle,0
+#List of default kernel parameters to append for baremetal PXE boot.,1
+#vbm1,0
+#DO NOT MODIFY VALUES changing them will cause an error,1
+#check_migrate_tools: false,0
+#DHCP configuration folder,0
+#Playbook to ingest config manager args into ios provider specific args,0
+#Default: 'irc_$SERVER_$CHANNEL',1
+#Determine the folder name for 'sysconfig/defaults' files,1
+#that: (failed_user_result.resources | length) == 0,1
+#.. envvar:: ldap__default_tasks [[[,1
+#Please add the L3RouterPlugin to the neutron_plugin_base list,0
+#====================================,0
+#Also affects sslterminator,0
+#if for whatever reasons the content of your ceph configuration changes,0
+#maas_heat_cfn_scheme: https,0
+#itself. We override these in  $repo/ansible/inventory/group_vars/nameserver.yml,0
+#Example configuration:,0
+#might install dependencies ad-hoc.,0
+#in the galaxy virtualenv. This will create a new issue if none exists,1
+#tasks file for psm postinstall,0
+#Enable safe mode,0
+#templates by OS version,1
+#No copies of VG metadata are stored on the PV. This may be,0
+#This samle will:,0
+#the OS type and platform directory.,0
+#debug: var=output-,1
+#devshop/core + tools to use any Ansible role at runtime.,0
+#default                            = yum upgrade,1
+#\\{systemProperties\\['user.home'\\]\\}/.arkcase/acm/private/encryption-keystore,0
+#List of the preseed configuration entries defined on all hosts in the Ansible,0
+#These tasks attempt to mirror the same tasks generated by,1
+#_TAG_REDIR_ERR: txt,0
+#clickhouse_tcp_secure_port: 9440,0
+#All variables within this role should have a prefix of kubeinit_libvirt_,1
+#present: default value,1
+#overrides:,0
+#Podman on centos-7 cannot run as non-root and kernel.unprivileged_userns_clone is missing from its kernel,0
+#index.indexing.slowlog.threshold.index.info: 5s,0
+#environment i.e. running virtualised,0
+#(b) merge site and ardana tips,0
+#Activation grace period (in hours).  Activation is not forced (login,0
+#Virtual memory regions protection | sysctl-32,0
+#Set this to a byte value (e.g. 134217728),0
+#vars file for oem,0
+#startingCSV: prometheusoperator.0.37.0,0
+#to the databases from ad hoc reporting environment,0
+#For multiple workers not handling the SSO endpoints properly,0
+#NRPE Agent will be installed on clients only,0
+#not supported. The workflow definition file,0
+#value: '1',0
+#10 minutes,0
+#rule 803 {,0
+#we'd fail generating the registration.yaml file with a non-helpful error.,1
+#Load application default variables if not already defined,1
+#FLOW,0
+#If JVM memory consumption exceeds container memory limit,0
+#The default of standard will install the kernel module,1
+#https://engineering.indeedblog.com/blog/2019/12/cpu-throttling-regression-fix/-,1
+#hosts along with Icinga. See :ref:`icinga__ref_custom_files` for more,0
+#Holds the final matrix-registration configuration (a combination of the default and its extension).,1
+#azure_subscription_id:,0
+#Prevent accidental updates to 'locked' packages,0
+#.. envvar:: avahi__default_services [[[,1
+#{{ data_path }}/authentication_keys/*,0
+#* If you add services to this file please do so in alphabetical order.,0
+#handlers file for oso_monitoring_tools,0
+#TODO: This should probably be in groupvars for all and then overridden here-,0
+#match the order of PYTHON_REQ_FILES in edx-platform/pavelib/prereqs.py.  (Also check the,0
+#Remove when fixed (https://github.com/ansible/ansible-modules-core/issues/4318)-,1
+#docker_registry_port:,0
+#65304 <https://github.com/ansible/ansible/issues/65304>`_).-,1
+#package is available. If it is,0
+#Set verbosity level and run playbooks with -vvv option to display custom debug messages-,1
+#.. envvar:: environment__placement [[[,0
+#Certain components (like matrix-synapse,0
+#postgresql_backup_active_dir: zfsdump-{{ galaxy_toolshed_instance_codename }}toolshed@westvleteren.galaxyproject.org:/zones/westvleteren/backup/{{ {{ galaxy_toolshed_instance_codename }}toolshed/postgres/active,0
+#OpenStack Swift configuration.,0
+#Cleanup purged datasets/histories/etc >60 days old,0
+#Is it right the default route for external registry?,1
+#List of systemd services that matrix-mautrix-facebook.service wants,0
+#This file is part of Ansible,0
+#Open Firewall Port 9100 for current session by adding,0
+#otherwise the role will fail to create hosts.,1
+#msg: Software tasks Started,0
+#if not set the sendmail default port (25) is used,1
+#Ref: https://bugzilla.redhat.com/show_bug.cgi?id=132608c4,1
+#TODO: remove myhosttypes not defined and replace json_query    {{ cluster_hosts_state | json_query(\[?tagslabels.lifecycle_state!='current' && ('\+ myhosttypes|default('') + \' == ''  ||  contains(['\+ myhosttypes|default('') + \'] tagslabels.hosttype))].name\) }}-,1
+#from re-installing the default config.,1
+#Which branch or tag should be used?,0
+#safety: Create DNS only when GUID is included in the extradns,0
+#ocp4_installer_url: https://mirror.openshift.com/pub/openshift-v4/clients/ocp-dev-preview/latest-4.6/openshift-install-linux.tar.gz,1
+#Volume directory used with default podman compose file,1
+#See: https://github.com/adoptium/infrastructure/issues/1472,1
+#NOTE(aschultz): 0.16.0 requires ansible 2.4.5 which we may not have in older,0
+#Default htpasswd file used for global HTTP Basic Auth accounts.,1
+#agnosticd_dynamic_git_executable: ...,0
+#name: Create a new user,0
+#network_bridge_suffix_ovs:,1
+#todo: needed?,1
+#role / scenario definition,0
+#Hack to get correct changed/ok status-,0
+#omero_server_dbpassword:,0
+#engine_api_db_auth_user: asterisk,0
+#offender taken from ``whois``,0
+#Write lock acquisition errors to log file and stderr,1
+#os_distro: fedora-atomic,0
+#There is a bug w/ virt_net and RHEL where the network xml,1
+#The installed :command:`memcached` version. This variable is autodetected,0
+#label: ubuntu-trusty,0
+#dest: /home/nehakalathia/mytemplate.j2,1
+#ocp3docker-registry.default.svc:5000,1
+#and retry until all events are published.  Set max_retries to a value less,0
+#TODO Tests without auth before here?-,0
+#summary of changes or link to Git issue pull request-,1
+#default False,1
+#https://github.com/ComplianceAsCode/content/issues/5530,1
+#The prefix for commands. Only required in non-management rooms.,1
+#By default no acclerated,1
+#debug: var=upgrade_result.output-,1
+#devices/global_filter.,0
+#.. envvar:: apt_install__update_cache [[[,0
+#.. envvar:: locales__group_list [[[,0
+#Write error and debug log messages to a file specified here.-,1
+#.. envvar:: slapd__dhparam_file [[[,0
+#Command prefix,1
+#For a more advanced customization,0
+#.. envvar:: icinga_web__current_groups [[[,0
+#idrac_default_ip:,1
+#elasticsearch heapsize,0
+#Render template,1
+#'64045' is used for debian based distros. It must be set to 167 in case of rhel based distros.,0
+#.. envvar:: phpipam__git_version [[[,0
+#r/defaults/main.yml,1
+#4 program or service status is unknown,0
+#For some other reason this task does not always work,0
+#If url previews should be generated. This will cause a request from Synapse to,1
+#It does not change that often (in fact,0
+#If keys_under_root and this setting are enabled,0
+#sudoers_template: '99-edxapp-manage-cmds.j2',1
+#Multiple host names are separated by a comma,0
+#ex: scylla_version: 2019.1.9 or 3.2.1,0
+#defaults file for bastion,1
+#DONE,0
+#Path to the contivk8s cni binary,0
+#!/usr/sbin/ansible-playbook ./script.yml -vvvv,0
+#Configuration option devices/data_alignment.,0
+#Skipping linting as no situation where this can't run (lint error 301),1
+#MaaS network statistics check error rates,1
+#e_wink,0
+#For eBPF mode,0
+#tasks file for auth_proxy,0
+#cluster username,0
+#stage: CentOS8_Ansible_latest,0
+#handlers file for roles/composer,0
+#Set permissions for pipeline serviceaccount to the API projects:,0
+#List your role dependencies here,0
+#name: GenericLinux,0
+#service as active even if the NFS server is not running; work around it by,0
+#WARNNING: The EC2 api in the nova tree has been deprecated. To consume this API you'll need to,1
+#provision_config,0
+#V-71985,0
+#A list of roles/users to avoid creating when importing (or upgrading) the database.,0
+#.. envvar:: ferm__log_target [[[,0
+#the num of audit logs to retain,0
+#tasks file for vcd_vapp_vm_snapshot,0
+#Add token.dat file,0
+#see https://github.com/ansible/ansible/issues/13592issuecomment-178008852-,1
+#debops.apt_install default variables [[[,1
+#Project Directory,0
+#A dict containing values to be removed from tempest.conf,1
+#TODO(fabianvf) determine why token is not being rejected maybe add more info to return-,0
+#Due to a bug in ansible include_role is failing when add a contidional as a workaround-,1
+#kuberenets_api_server default,1
+#name: start webrouter container,0
+#/usr/share/openstack-tripleo-heat-templates/roles/CephStorage.yaml,1
+#Root directory with files served over TFTP.,0
+#.. envvar:: ldap__combined_urn_patterns [[[,0
+#lxc_cache_download_template_options: >,1
+#alignment_offset exposed in sysfs. This offset is often 0,0
+#Used to login for the openshift client login,0
+#src: {{ galaxy_dynamic_job_rules_src_dir }}/total_perspective_vortex/default_tool.yml.j2,1
+#.. __: https://github.com/debops/debops/issues/1233-,1
+#below.  Note I can also declare tags at this time.,0
+#hypervisor_hosts:,0
+#Attempt to help with long lines > 160 issues,1
+#APT packages,0
+#NTP pool list to replace package defaults,1
+#libdevmapper.  Useful for debugging problems with activation.,1
+#vars specific to any rhel 8.x version,0
+#With the to_json fix for Python2:,1
+#executable: /usr/bin/pip2,0
+#Enables profiling via web interface on /debug/pprof handler.,1
+#are more inputs than compatible datasets in the history. When false,0
+#seed_hypervisor_libvirt_pool_owner:,0
+#Keepalived scripts may rely upon additional packages.,0
+#possible for achieving such isolation,0
+#guid: {{guid}},0
+#grep log_file /etc/audit/auditd.conf,0
+#Title:         Cloudbox: Remote Role                                  ,0
+#Ensure servers are compliant to templates.,1
+#?\s*dcredit',0
+#not exist then the default files will be sourced from the,1
+#A pip bug prevents us to use the pip module for the python3 venv creation.,1
+#Ensure that all rabbitmq containers get a fixed mac address,1
+#Variable which combines all Metricbeat configuration variables and is used in,0
+#https://gerrit.suse.provo.cloud/3745/ is merged.,0
+#PREV___image: rhel-server-7.7-update-2   red,0
+#to catch any errors on deploy before they are available to the web,1
+#hard coded to /opt/solr,0
+#kind: {{ item.type }},0
+#download backup file to ansible-client node,0
+#These are the default variables specific to the license role,1
+#https://github.com/bioconda/bioconda-recipes/issues/11583,1
+#only place this ssh-keys,0
+#wait this long before attempting to restart it,1
+#messages are forwarded to AMQP.,0
+#When these variables are defined we will create the ObjectStorageCfg resource,0
+#Section 5 PAM config,0
+#fetch master to install the plugin,0
+#https://releases.hashicorp.com/terraform/1.0.2/terraform_1.0.2_darwin_amd64.zip,0
+#See https://github.com/adoptium/infrastructure/issues/1106-,1
+#LVM block devices or other storage. See :ref:`mount__ref_devices` for,0
+#A system group,0
+#.. envvar:: core__admin_public_email [[[,0
+#failed_when: volume_status.stderr != ,1
+#defaulting to log collection in syslog,1
+#Converts the expected state options to functional states when,0
+#1. Log file buffers are flushed faster.,0
+#the system can't find the modules and iptables rules can't be,0
+#Set this variable to customize the Linux Group that the Kafka Connect Service user belongs to. Default group is confluent.,1
+#fonts needed by openstreetmap-carto fonts-noto-cjk fonts-noto-hinted fonts-noto-unhinted fonts-hanazono ttf-unifont,0
+#postfix_spamassassin_user: spamd,1
+#be done via `ownCloud config.php configuration`_.,0
+#examples/ICsp,0
+#will override this variable automatically. Only one server at a time is,0
+#see packages.yml for x11vnc package installation,0
+#raw: (echo {{ smb_password }}; echo {{ smb_password }}) | smbpasswd -s -a {{ smb_username }},0
+#Server Packages\n%packages\n@base\n@console-internet\n@core\n@debugging\n@hardware-monitoring\n@large-systems\n@network-file-system-client\n@performance\n@perl-runtime\n@server-platform\n@server-policy\npax\noddjob\nsgpio\ncertmonger\npam_krb5\nkrb5-workstation\nperl-DBD-SQLite\n%end\n\n\n,1
+#:file:`config/app_config.yml.SAMPLE`.,0
+#postgres user,0
+#name: admin,0
+#'service_name:blackbox_exporter_module:endpoint' for example:,0
+#Maximum percentage of CPU load average boundary.,0
+#States,0
+#Example: `matrix_synapse_container_extra_arguments: ['--mount type=bind,0
+#so that the content is never shown on screen but always logged,0
+#All variables within this role should have a prefix of kubeinit_validations_,1
+#user public_ip from top level to grab eip TODO-,0
+#-H unix://,0
+#package from https://github.com/jthornber/thin-provisioning-tools.,0
+#centos,0
+#certificate and private key files,0
+#Please provide ST2_API_KEY using st2 apikey create -k,0
+#[TLS] parameters used in the apache2 & nginx templates,1
+#filebeat.registry.flush: 0s,0
+#OPTIONAL: If GossipingPropertyFileSnitch in use,0
+#OCP Nodes Master instance id,0
+#name: Enable Ansible repo,0
+#.. envvar:: netbox__config_maps_url [[[,0
+#Container group real time performance chart layouts,1
+#name: Add tower inventory,0
+#Type of database (RAC,0
+#.. envvar:: pdns__backends [[[,0
+#If you don't want this functionality,0
+#Ideally for toy deployment 12-16 chars,0
+#!<geary:condition.chance>,0
+#The incoming TCP/UDP port used for remote logging.,0
+#1    System continues to run issues a warning and audit stops.-,1
+#Error detaching interface from router ***: Client Error for url: ***,0
+#[ 'mounted',0
+#command: /usr/bin/python2 /usr/share/fedocal/fedocal_createdb.py,0
+#duration: 10s,0
+#Non-mandatory changes,0
+#See :ref:`lxc__ref_configuration` for details.,0
+#flag to delete or retain the chaos resources after completions of chaosengine,0
+#URL will be set and uncommented.,0
+#gitlab_runner_skip_package_repo_install: true,0
+#is_recovery}}Back to normal{{/is_recovery}} @slack-hq-ops,0
+#Disallow forwarding IPv4/IPv6 source routed packets on all interfaces,0
+#if another process is listening on the cni-server socket,0
+#Exists Checker,0
+#debops.lldpd default variables,1
+#the OS distributions.,0
+#target: errors,1
+#icinga2 database host,0
+#to not require this step,0
+#Last UID/GID which is considered to be managed by the LDAP directory and not,0
+#by default this playbook runs in the staging environment,1
+#builds only need to optimize the build duration and also add it with ci tag,1
+#Optional checksum. It should be safe to omit as long as you never,0
+#XDebug Display Settings,1
+#The password for the Kafka Connect Replicator Producer TLS truststore.  Defaults to match kafka_connect_replicator_truststore_storepass.,1
+#Override system default for storage driver,1
+#This task is a workaround for rbd-mirror not starting after reboot,1
+#Firewall settings,0
+#LDAP BaseDN of the host account used to bind to the server.,0
+#dangerous,0
+#postgres superuser,0
+#name: Installing ACS sensors,0
+#started,0
+#Using a different cluster name could cause problems with SELinux.,1
+#Change Default GUI User Password Policy,1
+#by ``debops.sysctl``.,0
+#Get cluster profile,0
+#UnionFS Edits,0
+#attack. A Smurf attack relies on an attacker sending large amounts of ICMP broadcast,0
+#TODO refactor katello_provisioning so that it does not run installer it should only seed stuff installer should be customized from playbook using foreman_installer's role variables-,1
+#Default to re-using the IBM entitlement key if we do not provide a specific one for AppConnect,1
+#you probably want to leave these blank.,0
+#localectl behavior note:,1
+#Clear the top links and metadata (They will be set later),1
+#defaults file for idrac_lifecycle_controller_job,1
+#Title:         Saltbox: Nvidia | Kernel Tasks                         ,0
+#need to start nginx as quickly as possible for minimal downtime,0
+#IBM Python is the first choice,0
+#TODO: fix add conditional for gitea or gitlab-,1
+#set_repositories_satellite_ca_rpm_url: CHANGEME     URL to download the Katello/Satellite CA certificate configuration RPM,1
+#Works in 2.0,0
+#changing zuul and breaking jobs via inheritance.,0
+#it is used as default for kolla_internal_vip_address if it is not set.,1
+#tarball enforces this mode,0
+#Is an escaped backslash,0
+#net.ipv4.conf.default.rp_filter = 1,1
+#List of RPMs to install on all nodes,0
+#If this is true,0
+#target: alias(timeShift(averageSeries($Cloud1.$Node1.cpu-*.cpu-softirq),0
+#disable this feature.,0
+#Typically these would not need to be available on servers as shell access,0
+#Set the cinder_ceph_client role default,1
+#OPTIONAL,0
+#Define default variable values for the kafka service,1
+#some ansible variable precedence issues with-,1
+#Machineset Groups to be set up,0
+#Specify the branch of sr_cyberglove_config for cyberglove configuration,0
+#Database tables and users for Stepup applications,0
+#one elasticsearch ingest node or smart loadbancer use comma delimation to,0
+#These lists can be used to manage custom files (by default scripts) on the,1
+#Ref.: https://github.com/openstack/openstacksdk/blob/e0372b72af8c5f471fc17e53434d7a814ca958bd/openstack/cloud/_floating_ip.pyL733,0
+#Kafka Connect Custom arguments.,0
+#scanning rows in key order,0
+#.. envvar:: ipxe__bootloaders [[[,0
+#regex match very specific by using the following:,0
+#failed.  Change wait_for_node_deploy to true to cause bifrost to wait for,1
+#total_replicas_max: 5,0
+#These are lists of hashes in the same format as galaxy_mutable_configs that can be used to cause extra files and,0
+#to run before the playbook is executed if needed,0
+#Password used for iSCSI session authentication on all hosts,0
+#Configs Sapi Cli,0
+#Specifies one resolver to translate the identifier in the URL to an image,1
+#random network issue with missing flannel.1 IP address,1
+#Default: 1000,1
+#These files are created in $pwd and will be combined final_cert,0
+#For some reason,0
+#to clean 'etcd' nodes,0
+#This task is used to set very simple firewall rules,0
+#If you install mavin as step-by-step programmatically,0
+#The primary testing and deployment environment is Python 3 but Python 2,0
+#for mod-search,0
+#Endpoints of the selected pods to be monitored,0
+#failures. In order for the hang to occur,1
+#The version of MinIO Client to download from upstream on a given host. You,1
+#Used to filter GlusterFS volumes for share creation.,0
+#important mappings for events and user puppeting configurations.,0
+#see: https://stackoverflow.com/questions/35488433/ansible-copy-a-directory-content-to-another-directory,1
+#*/} >> $GITHUB_ENV,0
+#location,0
+#namespace of the zookeeper,0
+#SECTION 4: Automatically populate entries in the hosts file and in the muchos.props file,0
+#There seems to be no way to specify the salt (except using a custom script).,0
+#kubelet fails even if ansible_swaptotal_mb = 0,1
+#restart kong if it has died for some reason',0
+#Git Source for python2-lxc library,0
+#The default policy,1
+#.. envvar:: imapproxy__default_configuration [[[,1
+#Basic set of tempest tests to validate undercloud,1
+#https://releases.hashicorp.com/terraform/0.12.29/terraform_0.12.29_freebsd_386.zip,0
+#.. envvar:: cryptsetup__keyfile_group [[[,0
+#Our old integration tests fail under newer Python versions.,1
+#account activations,0
+#FIXME: Change the deprecated image to new st2-docker-,1
+#By default,1
+#become necessary.,0
+#TODO: run setup only once   should fix ANSIBLE0012 warning,1
+#which makes matrix-registration choke on it later on when comparing dates.-,1
+#apiVersion: storage.k8s.io/v1,0
+#NOTE: should be renamed to ansible-cloud-vmware-lab in,0
+#be corrected later at which point Apache will trigger an-,1
+#https://releases.hashicorp.com/terraform/1.1.8/terraform_1.1.8_darwin_amd64.zip,0
+#Enable or disable support for DebOps PKI. If disabled,0
+#last possible match,0
+#note: kept around for when we need packages from u-t,1
+#https://github.com/ansible/ansible/issues/32750. Set this variable to False to disable,1
+#Router: 10.230.192.192/26,0
+#Users have the following properties:,0
+#compile custom configMaps,0
+#A templates for mapping file exists in omnia/examples and is named as host_mapping_file_os_provisioning.csv,1
+#type: text,0
+#postfix_header_checks_template: /path/to/header_checks.j2,1
+#as per https://access.redhat.com/documentation/en-us/red_hat_gluster_storage/3.3/html/container-native_storage_for_openshift_container_platform/ch06s03,0
+#Enable or disable support for local host and network database management.,0
+#handlers file for ims_dataset_services,0
+#known swift data as provided by swift stat. If you wish to set either of these,0
+#[required],0
+#applications (services/volumes/configMap & related templates) and store those,1
+#error_message: ResourceQuota quota does not have 20Gi Memory requests in namespace backend,1
+#until loop not supported over include statement (nor block),0
+#copy: src={{ private }}/files/taskotron/certs/{{ inventory_hostname }}/{{ inventory_hostname }}.key dest=/etc/pki/tls/private/{{ inventory_hostname }}.key,0
+#acme_directory:                   https://acme-v02.api.letsencrypt.org/directory,0
+#Systemd likes to do frustrating things with networking,1
+#Dictionary for release to default SSH jail name mappings.,1
+#stable-2.10,0
+#sudo_user: {{ jenkins_user }},0
+#TODO: I think I can get rid of this pvs because I do it later,1
+#Other options [[[,0
+#Needed gxadmin graphs,0
+#Waiting for rhel7 python3 and reinstall,0
+#There is an inherent race in the dmeventd failure handling logic,1
+#Fix details into the galaxy server dirs,0
+#tmpfs can be resized using the size={size} parameter in /etc/fstab or on the Options,0
+#Default acl_type is standard,1
+#openqa_email,0
+#Ansible become method for Windows systems.,0
+#doesn't notify any handlers,0
+#SecOps user,0
+#main task for generating self signed certificates,0
+#STORAGE PARAMS  -CLOUD PROVIDER,0
+#default 600,1
+#name: host-jenkins-server,0
+#known bug in powershell.,1
+#Would differ from vpc_project_id if Shared VPC is in use,0
+#Disabling it will result in larger (but fewer) network packets being sent,0
+#The app cache stores to the filesystem by default.,1
+#The full path and filename of the upgrade_data file.,0
+#Generated columns,0
+#debug: var=ctp_created_application-,1
+#include: barbican-post-upgrade.yml,0
+#It is the python-tempestconf profile which also consumes tempest-deployer-input file,1
+#NOTE: These values MUST be base64 encoded.,0
+#https://github.com/ansible-collections/community.kubernetes/issues/296-,1
+#Octavia Options,0
+#collections from galaxy. https://github.com/pre-commit-ci/issues/issues/55,1
+#This mode prevents you from filling out the 'devices' variable above.,0
+#This list will be updated with issues as they are discovered and reported.-,1
+#Packages (default fallthrough),1
+#roles/hcl/component-pack,0
+#directory on the Galaxy server after the job completes. This is,0
+#The publish jobs use kerberos/openafs roles in pre/post,0
+#delete-ova ,0
+#this conversion at the moment,0
+#The `synchronize` module is suggested as an alternative,0
+#you can use these options.  This also makes VMs survive reboots \o/,0
+#Caution should be taken on increasing the size of this threshold as it can lead to node instability.,0
+#om_rpc_transport: amqp,0
+#Elasticsearch is preferred,0
+#To have similar configuration for both distros (with logrotate),0
+#This is useful in the oz/imagefactory context for debugging,1
+#ap3: kirche 5ghz,0
+#'rbd_client_directory_mode: 0755',0
+#biotools_service_cache_lock_dir: biotools/locks,0
+#api:,0
+#Removed from the dockerfile need to move them back later-,1
+#wwc.*:SELECT,0
+#Enable Kata Containers as additional container runtime,0
+#For more details see https://github.com/rook/rook/issues/2417-,1
+#not installed by default in Debian Buster,1
+#.. envvar:: redis_server__maxmemory_multiplier [[[,0
+#varnish_vhosts:,0
+#Geerlingguy.postgresql roles doesn't support F34,0
+#postfix_recipient_canonical_maps:,1
+#Enable the following section if LVM cache is to enabled,0
+#for creation,0
+#AWS_credentials,0
+#PUBLISH command is used. The default value is list.,1
+#reCAPTCHA API for validating registration attempts,1
+#This JJB template is intended to provide a way to install 'cinch' on RHEL7,1
+#for setting up custom certificate request.  Set to template name to enable,1
+#Do not restart masters when master or etcd certificates were previously expired.,0
+#storage_lvm_groups:,0
+#false to avoid random issue No route to host even when firewalld service is disabled-,1
+#cookie-flag   NGINX Plus,0
+#Default value of horizon_virtual_env is ' /openstack/venvs/horizon*',1
+#.. envvar:: roundcube__imap_server [[[,0
+#ceph_gnocchi_keyring: ceph.client.gnocchi.keyring,0
+#mode: '0700',0
+#db:,0
+#Specify port number,0
+#Rate Limit for packets with RST flag set,0
+#toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_sorted_uniq/1.0.0,0
+#.. envvar:: minio__etc_services__dependent_list [[[,0
+#see https://github.com/ansible/ansible/issues/13592issuecomment-178008852,1
+#Dummy variable to avoid error because ansible does not recognize the,1
+#This file contains commonly used overrides for convenience. Please inspect,1
+#Determine any sizing we need to calculate templates,1
+#File: defaults/main.yml Default variables for Consul,1
+#Refer to the `man mmchconfig` man page for a list of available configuration,0
+#(michchap) I don't think this is needed because Ironic adds a gateway to the,0
+#Elasticsearch will determine who the master should be.,0
+#You would use a commone like the following to run the play.,0
+#rhsm_pool_ids:,0
+#Use VLV controls to list groups,0
+#php_error_reporting: E_ALL & ~E_NOTICE,1
+#.. envvar:: mosquitto__websockets [[[,0
+#.. _nginx__ref_defaults:,1
+#tf-packet-ubuntu16-default:,1
+#Where should the resolver implementations go?,1
+#Timeout waiting for resource records changes to be applied: Waiter ResourceRecordSetsChanged failed: Rate exceeded,1
+#mng,0
+#Default variables for deletion of access control attributes,1
+#postgres has been dumped into a single file in custom format,0
+#Initial attempt to add subnet may occur before the install creates the subnet,1
+#it can be removed when we use ansible-lint 4.3.0 as that contains a fix-,1
+#url: {{ omit }}  Omit in order to use default update center,1
+#type: clusterrole,0
+#Ansible playbook for an Apache Solr server.,0
+#https://github.com/openfun/arnold/issues/118,1
+#.. envvar:: backup2l__size_units [[[,0
+#Name of the group of Ansible facts relating this Java installation.,0
+#https://github.com/systemd/systemd/issues/2376 has been-,1
+#Set this variable to customize the directory that the Schema Registry writes log files to. Default location is /var/log/confluent/schema-registry. NOTEschema_registry.appender_log_path is deprecated.,1
+#This is a workaround for now,1
+#with something that ensures NetworkManager is enabled.,0
+#Workaround (3) for Set-Service:,0
+#clone over ssh for public repositories without any,0
+#HAProxy doesn't currently support included configuration,0
+#Defaults to 200,1
+#You can select any of the dynamic modules listed below. Beware of NGINX Plus only dynamic modules (these are marked).,0
+#Task that prints variable debug information.,1
+#/opt/kube/bin,0
+#synchronize doesn't work at lockbox due to some rsync/scp error,1
+#letsencrypt.yml,0
+#ems_cluster-Vm Top CIs/hour chart layouts,0
+#using the ctrl_data_ip defined per host using the logic below:,0
+#string password for wikitcms_user,0
+#The defaults is registry key defines common values that to be applied,1
+#Title:         Feeder: Start Services Task                            ,0
+#zlopez stg,0
+#Memory settings,0
+#Set default_store to swift if using Cloud Files or swift backend,1
+#bastion_instance_type: 2c2g30d,0
+#TODO(hxr): implement validation that checks that every destination-,0
+#kolla_bifrost_inspector_extra_kernel_options:,1
+#and the play should fail so we won't manage this case here -,1
+#name: router.vm.netsoc.co,0
+#minimal,0
+#:command:`nfsstat` command to diagnose possible issues and adjust this number-,1
+#Create Controller Template,0
+#Keystone packages that must be installed before anything else,0
+#.. envvar:: postfix_mynetworks,1
+#Pre-upgrade checks,0
+#The variable that combines all of the FreeRADIUS configuration lists and is,0
+#lenovo-throttling-fix configuration-,1
+#Lists of PHP-FPM pools managed by the ``debops.php`` role. Each PHP-FPM pool,0
+#Because cassandra 3.7 is not compatible with other latest java versions,0
+#* `DownloadStrategy` will download it to a temporary file,1
+#Enable or disable HTTP Basic Authentication in the webserver frontend.,0
+#schedule is fed directly to cron,0
+#debops.apt default variables [[[,1
+#By default the configuration will be derived from the host.,1
+#conjunction with systemd-machined and libvirt.,0
+#Dynamic DNS Properties,0
+#set_mapping_rule_upload_filename or set_mapping_rule_content:,0
+#Admin user,0
+#This is the monit role to install monit service,0
+#Print database operations to the server log (warning,1
+#You would think this ansible_python_interpreter=/usr/bin/python3 is already the default,1
+#Default variables for the IBM Spectrum Scale (GPFS) common role -,1
+#.. envvar:: nginx_ocsp_resolvers [[[,1
+#defaults file for roles/simple_annotation,1
+#Default: public.,1
+#merged https://github.com/ansible/ansible/issues/13262-,1
+#Acknowledgement,0
+#name: Generate Diffie-Hellman parameters with the default size (4096 bits),1
+#description: >-,0
+#Controller node configuration.,0
+#https://releases.hashicorp.com/terraform/0.12.8/terraform_0.12.8_linux_386.zip,0
+#区分多个instance的VRRP组播，同网段不能重复，取值在0-255之间,0
+#Centralized Logging enablement,0
+#config.testing.p2pTestMode = true,0
+#Size (in KB) of each copy operation when mirroring,0
+#Sets Kafka Connect Replicator to enable monitoring intercepotors for monitoring in Control Center.,0
+#.. envvar:: firejail__combined_fix_for_users [[[,1
+#.. envvar:: prosody__config_virtual_hosts [[[,0
+#name: easy access to the postgresql databases,0
+#https://github.com/matrix-org/synapsehelp-synapse-eats-all-my-ram,0
+#Since flush handlers does not support conditionals,0
+#bind-specific packages,0
+#See https://github.com/CodeCrafter47/BungeeTabListPlus/wiki/MultipleTablists,0
+#https://bugzilla.redhat.com/show_bug.cgi?id=1631300,1
+#set to 'false' if there is no replication,0
+#Setup the cron jobs,0
+#Slack integration stuff,0
+#Default value: none,1
+#__rsyslog_default_pki_cert_name,1
+#Configure block device readahead,0
+#the tls connection.,0
+#Common Ceph Overrides,0
+#Neither os_network nor openstack.cloud.network ansible modules,0
+#Deactivated due to https://github.com/tikitu/jsmin/issues/33-,1
+#Node play that need to be run after platform updates.,0
+#Data containers don't need to be running to be utilized.,0
+#and dnsmasq does not support ipv6,0
+#it contains experiment tunables,0
+#Persistent volume claim size for the RabbitMQ data store,0
+#Directory having template overrides for the login/error pages.,1
+#`HeapCache`,0
+#service_node_port_range: 30000-32767,0
+#not using easy_install due to problems similar to https://github.com/pypa/pip/issues/4596,1
+#FIXME: this breaks zerg mode-,0
+#.. envvar:: logrotate__default_options [[[,1
+#platform = Red Hat Enterprise Linux 7,0
+#vars file for MongoDB,0
+#.. envvar:: volkszaehler__config_user [[[,0
+#rules directories specified with -r. There is no need,0
+#Added to prevent test failures in CI.,1
+#spot_price: 0.05,0
+#zuul/stack user home directory. By default for ci use case we utilize tht ci/network_data.yaml:-,1
+#file: roles/znc/tasks/install.yml,0
+#command: does not work here somehow the parameters don't get passed properly,0
+#https://github.com/mozilla/server-side-tls/issues/198-,1
+#defaults file for roles/approvals,1
+#1.7.2 Ensure local login warning banner is configured properly,1
+#Variables to accompany `wordpress_env_defaults` in `group_vars/all/helpers.yml`,1
+#Holds the final Dimension configuration (a combination of the default and its extension).,1
+#field_name: 'uuid',0
+#Only relevant for gateway hosts.,0
+#Author(s):        salty,0
+#name: Verify if argocd pods has successfully started,0
+#registry value as the key followed by a custom IP address or domain,0
+#Module enable/disable process is only functional on Debian,0
+#./generate_merges.py --osmium --pbf,0
+#YUM repository installation method,0
+#libuuid=1.0.3=h1bed415_2,0
+#See https://github.com/CodeCrafter47/BungeeTabListPlus/wiki/Configuration-Basics-Part-4---Player-sets,0
+#name: AGENT_TOLERATION_KEY,0
+#we want to know which Python's pass and which fail,1
+#Router,0
+#trigger random fences if something fails (especially if this playbook is,1
+#Container service hourly performance chart layouts,1
+#controller_lvm_groups:,0
+#defaults,1
+#tools that can run on both multi and Bridges,0
+#see https://docs.microsoft.com/en-us/windows/win32/perfctrs/limited-user-access-support,1
+#setup.template.name: filebeat-%{[agent.version]},1
+#The 'good' cipher suite from the `NCSC-NL TLS Guidelines v2.1`__.,0
+#The users for tempest to use,1
+#Dictionary or list with custom :program:`mysqld` options.,0
+#Are the volumes we want to use managed by the storage management subsystem (SMS)?,0
+#string hostname of openQA server to connect to (if not set,0
+#Mirror logs and images will always use different PVs.,0
+#IOS 15.1(2)T5.txt,0
+#shell: /opt/python{{ python_version }}/bin/pyvenv-{{ python_version_major_minor }} python-data-science-environment chdir=/home/vagrant,0
+#All variables within this role should have a prefix of tripleo_container_tag,1
+#requires --extra-vars=target='host1;host2;group etc' package='somepackage',0
+#https://fedorahosted.org/fedora-infrastructure/ticket/5152,1
+#The OpenPGP key used to sign Yarn repository.,0
+#-e initial_backup_dir=/home/sysadmin,0
+#Deploy control plane. For upgrade jobs this is the previous release.,0
+#TODO: fix add conditional for gitea or gitlab-,1
+#monasca global conf,0
+#Checks for current SDN Deployment,0
+#ocp4-workload-metering,0
+#was too fragile,0
+#pod_max_mem: 2Gi,0
+#A list of additional python packages to install into galaxy's virtual environment,0
+#.. warning:: This can write significant amount of data into the,1
+#* nova-compute,0
+#https://releases.hashicorp.com/terraform/0.12.29/terraform_0.12.29_windows_amd64.zip,0
+#create session,0
+#that is too small can result in more overhead trying to manage the,0
+#Default machinectl template options,1
+#Location of the Minishift binary if not retrieving from GitHub,0
+#hyperlinks for example.,0
+#owner_tag: owner  owner| Owner (Azure),0
+#based on the contents of `:envvar:`postfix__combined_maincf` variable. It's,1
+#.. envvar:: postfix_purge_packages,1
+#jitsi-videobridge https://github.com/systemli/ansible-role-jitsi-meet/issues/33,1
+#and to use its own control group. When this option is disabled,0
+#pylint library/* -d logging-format-interpolation -d global-statement ,0
+#Identifies the application version that is being deployed (optional),0
+#controller_validate_certs:,0
+#'toolshed.g2.bx.psu.edu/repos/devteam/emboss_5/EMBOSS: tranalign100/5.0.0',0
+#files are changed. When setting up AIDE,0
+#.. envvar:: lxc__default_container_architecture [[[,1
+#https://releases.hashicorp.com/terraform/0.12.7/terraform_0.12.7_freebsd_arm.zip,0
+#Set socket timeout for streaming operation.,0
+#Milliner default config,1
+#defaults file for idrac_import_server_config_profile,1
+#kolla_bifrost_inspector_rules:,1
+#FROM ubuntu or centos,0
+#Additional properties: 'serveradmin,0
+#https://cloudera.github.io/cm_api/apidocs/v13/path__cm_config.html,0
+#List of columns to sort by when reporting 'pvs --segments' command.,0
+#Default application spec for Assist,1
+#BUG: On Ubuntu 14.04 when first installed redis will be started-,0
+#--Generate node certificate (each node has its own) ---,0
+#If the host is already enrolled,0
+#A domain will be created in MySQL with this name,0
+#configure a SNAT firewall rule using the primary IP address of the default,1
+#default vars for ec2 AMIs (ec2_info) located in Ansible workshop provisioner,1
+#looking for a small set of tempest tests to validate,1
+#Ensure ownership of the venv_destination_path directory,0
+#When we are running the setup-playbook,0
+#The template for amtool's configuration,1
+#in order to restart the application with the new certificate,0
+#containerd_max_container_log_line_size: -1,0
+#.. envvar:: mosquitto__broker_cafile [[[,0
+#uid/gid,0
+#The GECOS field set on the MinIO UNIX account.,0
+#this uses the file we deployed earlier on,0
+#The port used by the return server,0
+#* 4 -16 seconds (minimal allowed),0
+#This playbook can be used to mass update NVMe card firmware.,0
+#vif 40 {,0
+#Default TLS/SSL certificate used for internal traffic to host.,1
+#Title:         Cloudbox: Watchower Role                               ,0
+#configure / overrules following defaults in osa's user config,1
+#clair_database_admin_password: ,0
+#feel free to override these in vars/,0
+#openstack_master_flavor: m1.xlarge,0
+#network_flat_networks: flat,0
+#with_items: my_role_s3fs_mounts,0
+#ansible-vault to do this.,1
+#monitor-perf-lpa,0
+#.. envvar:: dokuwiki__default_plugins [[[,1
+#ssl_key_password: keypass,0
+#First install required repositories with oVirt.repositories role,0
+#Get user's API Key from https://src.fedoraproject.org/settingsnav-api-tab,0
+#tasks file for db2_post_graphql_discovery,0
+#Specify the default LXC container template to use if none is defined. By,1
+#TODO fix idempotency,1
+#'toolshed.g2.bx.psu.edu/repos/devteam/emboss_5/EMBOSS: trimseq103/5.0.0',0
+#.. _icinga_db__ref_defaults:,1
+#HTPASSWD Identity Provider,0
+#Install and execute tempest,1
+#name of the template file.,1
+#Configuration option global/cache_dump_executable.,0
+#Linklight` comes with its OWN deployer which AAD simply wraps,0
+#external_chown_script: null,0
+#TODO: Most of these tasks should be split out into their-,0
+#TODO: stop ignoring errors when the node_exporter_install script fix is available in all actual versions,1
+#Specify how changes in PKI should affect prosody,0
+#ROKS specific,0
+#This is shipped in the package but leaks stg and prod,0
+#NOTE: if we don't wait we will attempt to copy config to ansible host,1
+#This should be ran once until bug is fixed,1
+#Define minimal parameters for additional Redis Sentinel instances with,0
+#Add default users (andrew,1
+#Monitor logins and block suspect IP addresses.,0
+#APT preferences lists [[[,0
+#openstack_glance_pool:,0
+#AWS is always used for the managed cluster's DNS entries,0
+#.. envvar:: rspamd__combined_local_configuration [[[,0
+#example https location for /ws path: /etc/nginx/vhost_fragments/bie-test.ala.org.au/https_73_location_ws,0
+#enable_elasticsearch: {{ 'yes' if enable_central_logging | bool or enable_osprofiler | bool or enable_skydive | bool or enable_monasca | bool or (enable_cloudkitty | bool and cloudkitty_storage_backend == 'elasticsearch') else 'no' }},0
+#Please Note: ,0
+#Command 2,0
+#List of the Redis Sentinel monitors defined on hosts in a specific Ansible,0
+#playbook: network_backup.yml,0
+#Configuration option devices/ignore_lvm_mirrors.,0
+#The value for 'key' can be a pre-generated key,0
+#To be deprecated,1
+#.. envvar:: postfix__pki [[[,1
+#1. Provide Debug information-,1
+#Upgraded to ansible 2.2 and issue was resolved.-,1
+#Playbook to carry out post-upgrade actions for each osconfig,0
+#Installing auditd sometimes fails in post-inst: https://bugs.launchpad.net/ubuntu/+source/auditd/+bug/1848330,1
+#By default only MAS core will be installed,1
+#database_engine_version: You should use either or standard or the newest possible,0
+#Default DNS domain used to create Certificate Signing Requests. It will be,1
+#This fix block does not check for those methods. i.e.-,1
+#azure_vmtype: standard,0
+#can be used to exclude certain files or directories from the archive.,0
+#in the list must be a domain name or IP address.,0
+#doesn't fail when FRE.audit.dir is not set.,1
+#this will fail if not run on localhost; it's only a logging format.,1
+#ceph_installation_dir: /path/to/ceph_installation/,0
+#do not use always tag in role to avoid issues when including other roles in a playbook-,1
+#Title:         Saltbox: Deluge Role                                   ,0
+#https://github.com/ansible/ansible-lint/issues/371,1
+#116 <https://github.com/ansible-network/network-engine/pull/116>`_.,0
+#Due to https://github.com/ansible/ansible/issues/64957-,1
+#which should be present on hosts in the specific Ansible inventory group.,0
+#Disabled by default from ussuri,1
+#restart the systemctl command is used with,0
+#* Ubuntu Focal,0
+#so we directly call sysvinit,0
+#displayName: my display name,0
+#SKS Keyserver network,0
+#when retrieving the SSL certificates for `<your-domain>`.,0
+#/properties/specification/properties/components/properties/load_balancer/properties/snapshot_name,0
+#This would be a good candidate for a custom module.,0
+#The absolute path where the Docker Registry upstream binary will be installed,0
+#Restart rsyslog,0
+#work around systemd bug 10032-,1
+#.. envvar:: rsyslog__logfiles [[[,0
+#First -a sanity check.  We want this to fail and stop the playbook if,1
+#192.168.1.1:80,0
+#role: powerline,0
+#.. envvar:: fail2ban_dependent_jails [[[,1
+#FIXME: This does not really fix the issue; it's possible that system-,1
+#Check trunk support,0
+#Install in an alternate directory,0
+#2. Set CP4D Route (cp4d_host) info from OpenShift into Facts,0
+#we need to\,0
+#monitor.jvm.gc.ParNew.debug: 400ms-,1
+#freeze on child jobs such as *-ussuri-ansible-2.11 etc.,0
+#The option of glusterfs share layout can be directory or volume,0
+#Shortcuts,0
+#https://releases.hashicorp.com/terraform/1.1.8/terraform_1.1.8_linux_386.zip,0
+#Name of the system group account for Etherpad.,0
+#we recommend to use https,0
+#infranodes: {{env_groups['limit']}}:&{{env_groups['infranodes']}},0
+#Valid items: rke2-canal,0
+#url: http://localhost:8800,0
+#path: /var/tmp/ansiblerun.log,0
+#DOCKER_HUB_PASSWORD,0
+#Whether or not to use /sync to get presence,0
+#cluster for the first time and often when adding capacity later.-,1
+#name: make sure packages required are installed on this control node,0
+#Default variable values for the persister service,1
+#The CAC rule audit_rules_time_settimeofday uses additional parameters compared to the CIS benchmark and so is not used here. As a result,0
+#Restrict coredns to 1 pod (simplex system),0
+#Used for tagging resources,0
+#fails on issue described at https://github.com/nose-devs/nose/issues/680-,1
+#TODO: Evaluate if it's feasible to do an automated check for this,1
+#docker容器存储目录,0
+#.. envvar:: icinga_web__mariadb__dependent_users [[[,0
+#ensure that we have the directorys that we need,0
+#This can be one of 'p_combined' or 'ssl_combined' by default. If you,1
+#Optional. The IPv6 prefix to use for generating unique addresses for each,1
+#packer direct download URL,0
+#Default ACS user password,1
+#touch /etc/containers/nodocker,0
+#As of 2016-12-06,0
+#-i ,0
+#Define one or more of these variables to post install JSON to Okapi. They are posted in the order listed here.,0
+#name: test-aws-Centos6-sonarqube,0
+#src: manifests/templates/template-configmap-envoy.yml.j2,1
+#test create list value ,0
+#Based on featureset003,0
+#.. envvar:: rspamd__default_override_configuration [[[,1
+#further process the packet(s).,0
+#Absolute path of the X.509 certificate to use.,0
+#The user for whom the npm packages will be installed.,0
+#For simple configuration,0
+#Deploy Prometheus operator,0
+#Client certificate used by libvirt for live migrations,0
+#Deploy an HA OpenStack environment with an IPA server.,0
+#Composer,0
+#Hash table which specifies aliases for groups of recipients from,0
+#handlers file for remote_mount,0
+#Prepare the machine to run the edX Analytics Data Pipeline. The pipeline currently installs itself,0
+#reconnect for this server will be handled every reconnectIntervalMs ms using,0
+#6. Provide debug information to the user,1
+#Arguments to pass to pip when installing into the venv,0
+#openstack_release: ,0
+#Due to not having some Ansible modules for IPA,0
+#any update takes place,0
+#information about this kind of setups.,0
+#Related issue (most probably): https://github.com/ansible/ansible/issues/64169-,1
+#vdo_check_point_frequency: 0,0
+#you make a request,0
+#after_targets:,0
+#to the the real client IP address (and not just an upstream proxy),0
+#particularly useful with parameterized tests,0
+#*PermitRootLogin',0
+#This role install MySQL ,0
+#Defaults for role go-agent-docker-server,1
+#Whether to run the cni plugin in debug mode-,1
+#lacp-rate:,0
+#This contains the actual name of the iptables command which differs from distro to distro.,0
+#users_default:,1
+#Does coreos need auto upgrade,0
+#name: Apply PSU to GI (v11.2) (Master node),0
+#prefix: prod.grafana.%(instance_name)s,1
+#.. _foodsoft__ref_defaults:,1
+#provide a high performance deployment option. The next logical step,1
+#.. envvar:: nginx_default_satisfy [[[,1
+#for up to 10 minutes before failing.,1
+#Mirror FQDN for Yum EPEL repos. Default value is,1
+#All variables within this role should have a prefix of tripleo_ceph_client,1
+#Disable kdump service only if not started yet to save time in later part. It starts even when disabled so masking is used.,1
+#are added in the same order as the repo_all inventory,0
+#Only used if DYNAMICALLY_RESERVE_PORTS=yes,0
+#debops-contrib.firejail default variables [[[,1
+#.. envvar:: libvirtd_qemu__base_packages [[[,0
+#Configure alternative event field names used to compute the hash value.,0
+#name: Open port in Firewall ,0
+#the default value is no.,1
+#Tracked in https://bugzilla.redhat.com/show_bug.cgi?id=1715175,1
+#openshift_portal_net,0
+#virt-resize needs target file with expected size to already exists,0
+#Wait a couple of seconds to allow the old pods to at least get to Terminating state,0
+#PHPMyAdmin default configuration,1
+#Permit the servers id READ access to the IFAUSAGE services (PRODMGR),0
+#Specify the URL of the (existing) Spectrum Scale GPFS YUM repository,0
+#learn more about managing LDAP infrastructure with DebOps,0
+#This will match the prior behavior of when a Heat,0
+#Fail if any files are found,0
+#from the included .dist versions. To fix this:,1
+#and Stepup-RA.,0
+#Apt repositories,0
+#:file:`/etc/hosts` if the local domain configuration is enabled.,0
+#password: changeme,0
+#this could also be changed to a import_task with loop.,0
+#The account used when Samba shares are accessed. Shouldn't need to change this unless you want to,0
+#running on the undercloud and pointing to the host via libvirt/ssh,0
+#aap_ee_fix_username: {{ username }}   COMMENTED OUT,1
+#2python dependencies (pip packages),0
+#{{ rabbitmq_users_default }},1
+#User to run ansible-pull as from cron,0
+#containerd_debian_repo_base_url: {{ ubuntu_repo }}/containerd,0
+#GitLab application Client ID,0
+#Saw a bug with ansible 2.0,1
+#True to listen for Ident requests and respond with the,0
+#{{ rabbitmq_users | default([]) }},1
+#This uses variables from the other set_fact task,0
+#Reset the variable to make sure it is empty by default,1
+#--The package manager installed psycopg2 release 2.8.8 on Fedora 33 is not compatible with postgres < 10,0
+#.. envvar:: java__packages [[[,0
+#TODO: install more packages (copy from jenkins-cloud.yml)-,0
+#if the edx-testcourses-course repo has been updated,0
+#Copy SSL CA Cert onto Container/BareMetal,0
+#Host Daily performance chart layouts,1
+#playbook is executed. The playbook relies on the role default variables,1
+#handlers file for precheck,0
+#The key size in bits to use when generating realm RSA keys.,0
+#Controls whether Synapse starts a replication listener necessary for workers.,0
+#: Enable for debug logging level-,1
+#username: root,0
+#name: Debug enable ssh-agent-,1
+#Control processor microcode application,0
+#defaults file for y86,1
+#AWS ubuntu images generally have a default user (ubuntu) and wont let this be run as root.,1
+#storage_mgmt_net_name:,0
+#``options``: SSH ``authorized_keys`` options to set for a given key,0
+#79 <https://github.com/infobloxopen/infoblox-ansible/issues/79>`_-,1
+#.. envvar:: gitusers_default_home_mode [[[,1
+#rabbitmq TCP configuration,0
+#retrieve arkcase from GitHub (github) or SFTP (sftp),0
+#sed -i 's/^Port.*21$/Port  990/g' /etc/proftpd.conf,0
+#authority: Specifies the level of authority the user is to have in the group.,0
+#Certified Content for IBM Z.,0
+#The default for the cluster name is {{ kubeinit_cluster_distro + 'cluster' }},1
+#Compute LVM volume group for data. See mrlesmithjr.manage-lvm role for,0
+#hosts in the Ansible inventory.,0
+#lxc_container_caches:,0
+#Galaxy can upload user files in chunks without using nginx. Enable,0
+#For Fedora 5,0
+#azurekeyvault seal,0
+#name: Provision Solution Explorer,0
+#https://github.com/pypa/virtualenv/issues/596-,1
+#This dashboard should only contain OpenStack Compute Node processes,0
+#Validates that Confluent CLI is installed.,0
+#These facts are used in tempest.conf.j2; we set an empty string if it is not,1
+#Defaults for role ad_hoc_reporting,1
+#the number of retries to perform when waiting for the entitlement,0
+#Supermicro BMCs but could easily be adapted for other manufacturers.,0
+#missing fact during vagrant provisioning ,0
+#handlers file for SysdigTeam,0
+#...if installing from OS packages failed,1
+#.. envvar:: postfix__mailname [[[,1
+#hsha  -> Stands for half synchronous,0
+#FIXME: problems while parsing number.-,1
+#parameter: Access-Control-Expose-Headers,0
+#kolla_enable_horizon_solum:,0
+#the dpdk socket file. The feature is enabled by default,1
+#Glance has multiple files,0
+#the vhosts:,0
+#Uncomment to for the settings file to be updated,0
+#so it can create the mds pools for cephfs,0
+#Enable IPv6 support (disabled by default),1
+#BrowserSync default port,1
+#The URL to the collection issue tracker-,1
+#server_notices:,0
+#db,0
+#error logging,1
+#Disk Group policy,0
+#custom installer case,0
+#Roundcube source directory on the host.,0
+#on PHP's garbage collection for clearing sessions,0
+#unified_job_template : Can be a job template,1
+#IP address range for evpn loopback for all switches in fabric,0
+#Specify the time of the automatic reboot instead of ``now``.,0
+#.. envvar:: resolvconf__default_services [[[,1
+#NetworkManager-wireless is required for wireless connections,0
+#ServicesDefault: (list) optional default list of services to be deployed,1
+#Execute ib_facts.yml with valid IP and incorrect credentials,1
+#NOTE: We are using 'network' service provided by 'network-scripts' (initscripts),0
+#log_events: false,0
+#Usage: promtail_image.yml,0
+#`nodes` and `etcd`) groups must be exclusive.,0
+#Disable EC2 facts https://bugzilla.redhat.com/show_bug.cgi?id=1842520,1
+#password: xxxxx               (a hash created with: mkpasswd),1
+#used in a shared (active/active) fashion in a cluster.,0
+#The hostname of your Homeserver.,0
+#system (e.g.,0
+#tasks file for ansible-ansible-openshift-ansible,0
+#32GB.,0
+#http://tracker.ceph.com/issues/20533-,1
+#ENDBLOCK  NiFi TLS,0
+#Temporary work around for issue with lxc_host where on second run after-,1
+#Example: LVs are mirrored between two sites within a single VG.,0
+#NOTE(noonedeadpunk): We run this twice because of the ansible bug:-,1
+#Docker images which could be deployed using autodeploy.,0
+#problem trying to mount it into the pod. If there are-,1
+#notification_templates_started: []   optional,1
+#.. envvar:: icinga_web__default_director_cfg [[[,1
+#Restrict FIFO special device creation behavior,0
+#TODO: Reconsider this later,1
+#Non-SSL vs SSL Public API Endpoints\\\\n[Browbeat](https://github.com/openstack/browbeat)\\\\n\\\\n[Rally Authenticate.validate_neutron](https://github.com/openstack/rally/blob/master/rally/plugins/openstack/scenarios/authenticate/authenticate.pyL125),0
+#It takes * to signify bind on all interfaces (0.0.0.0 is IPv4-only).,0
+#rabbitmq_ip: 127.0.0.1,0
+#YtxPigJKx89YutBeSMlA//UMprT9NjNb45Y8xlVzGgPJs89nuHeLWRre6JNWjtuc,0
+#required for the carto binary (but too old ...),0
+#https://releases.hashicorp.com/terraform/0.12.24/terraform_0.12.24_freebsd_amd64.zip,0
+#Preference will go to radosgw_address if both radosgw_address and radosgw_interface are defined.,0
+#.. _journald__ref_defaults:,1
+#dest: /etc/containerd/config.toml,0
+#Slogan of your ownCloud. This is shown by default on the bottom of the login page.,1
+#List of custom :file:`/etc/services` to configure for the debops.etc_services_,0
+#TODO(maximb): Fix the behavior of the multiple floating ips fetch.-,0
+#ansible bug: get_url fails to retrieve https url through http proxy so just use command-,1
+#to 50% of the JVM heap size. When this option is undefined the playbook will,0
+#load_restrictor must be set to none so we can load patch files from the default overlay,1
+#Neutron security group setup,0
+#if left empty logstash will be used,0
+#directory which contains the real program so that the symlink pointing to,0
+#https://wiki.mozilla.org/Security/Server_Side_TLSRecommended_configurations,0
+#tower_organization:,0
+#{ name: 'vdo_sdd',0
+#(jhrozek): Disabled because the compliance operator does not have the permissions,0
+#This list specifies what inventory hostnames the node considers as its own.,0
+#KakfaSource parameters,0
+#Variables for OpenID Connect Configuration https://kubernetes.io/docs/admin/authentication/,0
+#debops.influxdb default variables,1
+#Kolla options,0
+#set_access_control_policy_attributesrequired:,0
+#doing this we avoid breaking every time one of them does,0
+#This condition has been added to not fail when 'epicli upgrade' is run for Epiphany v0.4 cluster.,1
+#Enable E-mail notifications in Spectrum Scale GUI,0
+#Deploy does change file system rights,0
+#python_prefix: /edx/app/edxapp/venvs/edxapp/bin/python,1
+#Changes to files in these directories could indicate that an unauthorized user is attempting to modify access controls and change security contexts,1
+#Default is 8 as of Nextcloud 12+.,1
+#https://github.com/lavabit/robox/issues/11-,1
+#Clone trafficgen repo https://github.com/atheurer/trafficgen,0
+#be extended to 1.44G,0
+#ignore_errors: {{ ansible_check_mode }},1
+#then a .ssh/config file will be created and an entry mapping the ansible_host to that,0
+#Help contact name,0
+#When `false`,0
+#These variables define the contents of the :file:`/etc/postfix/main.cf`,1
+#TODO(pabelanger): Remove once https://review.openstack.org/558938 is merged,1
+#This is disabled by default.,1
+#Also see thin_pool_autoextend_percent.,0
+#Default value of dmapi_workers is 16,1
+#Require there be a word boundary at the end of the name(s). }\,0
+#the new lvm2 on-disk metadata format.,0
+#is 2048.,0
+#ipa_build_dib_git_elements_default and ipa_build_dib_git_elements_extra.,1
+#Additional variables are supported,0
+#CSP directives to append to all policies. This can be used to set the,0
+#Define these for static settings.  These defaults are for Sepia.,1
+#Tendrl repo,0
+#performance issue. So let's only get the ansible facts for the ifcfg,1
+#Extra user variables files can be loaded into /etc/openstack_deploy by,0
+#Authorization,0
+#set-locale,0
+#Set the list of allowed Message Authentication Codes (MACs) for ssh.,0
+#FORUM_NEW_RELIC_APP_NAME: sandbox-${dns_name}-forums,0
+#JVM_OPTS=$JVM_OPTS -XX:+PrintGCDetails(.*)',0
+#The contents of the Certbot configuration file defined by the user.,0
+#find_iso_mount_dir possible mount location (/media/cdrom,0
+#aws_ebs_csi_extra_volume_tags: Owner=owner,0
+#If docker_options are provided we should fail. We should not install docker and ignore,1
+#Size: 50,0
+#taints:,0
+#executable: /bin/bash,0
+#.. envvar:: postfix_smtpd_relay_restrictions,1
+#]?REPMGRD_ENABLED=no,0
+#name: BROKER,0
+#/pulsar/galaxy_eu_gpu,0
+#HXR: Ensure user is part of ssl-cert group and will have access to that data.,0
+#Cloudkitty options,0
+#0. No debug printing.-,1
+#NOTE(pas-ha) these correspond to settings for the libvirt network created by default,1
+#One can also override the default installed version,1
+#pyyaml=5.1=py37h7b6447c_0,0
+#before trying to execute other provisioning scripts that might fail because,1
+#name: Run bower install,0
+#We need to do this instead of registering the output of the above,1
+#tls:,0
+#service using a LoadBalancer or a public IP.,0
+#name: gi-opatch | Remove old OPatch,0
+#support_instance_count: 1,0
+#WK: No longer necessary when running on Orange,0
+#Limit memory only if <4GB memory on host. 0=unlimited,0
+#alternatively,0
+#Enable or disable support for managing the ``/proc`` ``hidepid=`` option,0
+#By default,1
+#.. envvar:; unbound__default_zones [[[,1
+#TODO discuss: should it be dependent on scale_zimon_collector?-,0
+#tower-copy-ssh                  ;;; specific to dark-tower,0
+#This cleanup is required,0
+#The default list of excluded file paths defined by the role.,1
+#package: state=present name=/root/openstack-utils-2014.2-1.el7.centos.noarch.rpm,0
+#as per the guide here https://docs.mongodb.org/v3.0/release-notes/3.0-upgrade/ and,1
+#backup_schedule: * */4 * * *,0
+#Availability Zone Daily performance chart layouts,1
+#TO DO:,0
+#name: restart libvirt ,0
+#Ansible v2 has an expect module which could be used probably to do this better.,1
+#systemd module does not support --runtime option,0
+#to avoid 'Read-only file system' error,1
+#and add necessary list items.,0
+#include_tasks: verify-kafka.yml  todo change testing kafka to bash or remove it? (since we test it using serverspec)-,1
+#CentOS,0
+#disks from the root volume.  By default,1
+#.. envvar:: roundcube__ldap__dependent_tasks [[[,0
+#index.indexing.slowlog.threshold.index.warn: 10s,0
+#Used in Docker build or image build process,0
+#but that also failed.),1
+#Docker Image:  portainer/portainer                                    ,0
+#target the ec2 instances with matching tag,0
+#$ ansible-playbook myplaybook.yml --ask-vault-pass,0
+#ref: ${{ github.ref }},0
+#FWaaS Plugin Configuration,0
+#More Kafka Connect Replicator variables are defined in the variables role,0
+#name: setup tower strong password on localhost,0
+#Bring up Helm,0
+#Default settings are TLS v1,1
+#Create p12 to avoid missing ciphers issue.,1
+#create temp file,1
+#defaults file for pulp_api,1
+#ansible.builtin.copy module`_.,0
+#there may be the issue with notty as well.-,1
+#characters. Maximum 20 tags per role.,0
+#.. envvar:: samba__workgroup [[[,0
+#TODO: Fix error during installation on Ubuntu-,1
+#reached,0
+#idp_sso_endpoint: {{ keystone_service_publicurl_v3 }}/OS-FEDERATION/saml2/sso,0
+#.. envvar:: postgresql_server__hba_public [[[,0
+#../prometheus,0
+#all interfaces may present a security issue,1
+#It seems that you can publish directly without creating,0
+#image: geerlingguy/docker-centos7-ansible is for linux/amd64,0
+#Flughafen got following prefixes:,1
+#Indent messages according to their severity.,0
+#the contents and is read-only,0
+#do,0
+#If Accessing/Client Cluster dont have GUI,0
+#GCP compute Persistent Disk CSI Driver credentials and parameters,0
+#nova_conductor_workers: 16,0
+#alert-name-aggregatedapierrors,1
+#Create profiles for the optimized local adapter authorized service,1
+#transport is used. They are similar to rpc_min_threads and rpc_max_threads,0
+#openstack credentials example,0
+#Database user to use for volkszaehler.,0
+#PROD,0
+#Corresponds to CollectdSQLAlchemyBindHost in THT,0
+#Variable which specifies what Dovecot version is installed on the host. It is,0
+#Some default switches,1
+#Note: this is actually 6 attempts (the original attempt + PACKAGE_RETRIES attempts),1
+#By default,1
+#the administrator did not intend to expose. Previously,0
+#something other than the next branch or using something other,0
+#vars file for idrac_ldap role,0
+#registry.access.redhat.com/openshift3/jenkins-slave-maven-rhel7,0
+#Over the course of the lifetime of a project,0
+#running multiple Galaxy instances and want to segment statistics,0
+#5050 and 8080 should only be open to the proxy server,0
+#CLONE BRANCH ',0
+#relabel_config',0
+#Whether a 'data' LVM volume group should exist on the seed. By default this,1
+#1864615 <https://bugs.launchpad.net/kolla-ansible/+bug/1864615>`__-,1
+#defines extra args for the undercloud deploy command,0
+#category: Subject,0
+#If you set rbd_client_directory_mode,0
+#Note that using skip: true is deprecated,1
+#hxr.monitor-email,0
+#Tasks for ensuring the correct CFME templates are landed on the remote system,1
+#all the virthosts.  If you run this once,0
+#localhost being a different host than the managed host,0
+#https://releases.hashicorp.com/terraform/0.12.24/terraform_0.12.24_darwin_amd64.zip,0
+#This playbook redeploys Lets Encrypt certificates for master API and apps (router),0
+#if inputs are given and rsyslog_enabled is true,0
+#debug: var=inventory_hostname-,1
+#7  mesos,0
+#.. envvar:: slapd__log_dir [[[,0
+#Ec2MultiRegionSnitch:,0
+#labelSelector:,0
+#'ignore_errors' is true because test results evaultion isn't done here,1
+#Allow ping requests,0
+#PDP_HOST,0
+#Extend the build-deploy configuration for the production environment.,0
+#file: src=/usr/share/zoneinfo/{{ timezone|default(UTC\n) }}  dest=/etc/localtime state=link force=yes,1
+#path: grafana.db,0
+#disable it if the docker excluder is enabled,0
+#TODO: why does this take so long on the first task?,0
+#Container image to use,0
+#Loadbalancer source IP ranges,0
+#Telegraf configuration file [[[,0
+#This variable is used to define the default e-mail address to which Monit,1
+#pop3s_banner:,0
+#compute the number of api workers to use.,0
+#.. envvar:: monit__group_config [[[,0
+#generate using echo password | mkpasswd -s -m sha-512,0
+#format:,0
+#Verify ACME / Let's Encrypt request,0
+#TODO(yoctozepto): no need to do --by-service if ironic not used-,1
+#.. envvar:: apparmor__mail_body [[[,0
+#Seems that there is currently a bug in the version include in Debian Jessie-,1
+#* hours and 5 minutes  will run it every hour at past 5 minutes.,0
+#shell: {{ bin_dir }}/ctr -n=k8s.io images import /opt/kube/images/{{ metallb_offline }},0
+#of the remote host rather than from the system running Ansible,0
+#.. envvar:: roundcube__ldap_port [[[,0
+#GCC_VERSION: default,1
+#see vbmc add --help,0
+#Title:         Saltbox: Media Server | Default Variables               ,1
+#Title:         Feeder: Feeder Mount Tasks                             ,0
+#timeperiod.1 = timeperiod array,0
+#Comment to post when marking an issue as stale.-,1
+#name: Create gluster volumes,0
+#most users should never need to adjust this.,0
+#}},0
+#See :ref:`libvirtd__ref_configuration_sections` for more details.,0
+#vars for service: emi_dpm_mysql,0
+#Storage leaf 1,0
+#JVM_OPTS=$JVM_OPTS -XX:+PrintPromotionFailure(.*)',0
+#dest: ez_setup.py,0
+#timeout 10min to not wait indefinitely in case of a problem-,1
+#deployed after kuryr is up and running. This can be done with oadm,0
+#5.2.16 Ensure SSH warning banner is configured,1
+#save_changes_to_startup: is a boolean flag. By default,1
+#Set this variable with a comma seperated list of Topics for Kafka Connect Replicator to replicate from.  This is a mandatory variable.,0
+#resource records,0
+#less useful for virtual machines that are re-imaged before each job,0
+#``scripts``: configure phpipam-scripts,0
+#NOTE(yoctozepto): setting vars as facts for all to have them around in all the plays,0
+#src={{consul_kv_template}},1
+#description: HTTP Egress Isolated,0
+#check that aud (audience) claim matches audience,0
+#This workflow will upload a Python Package using Twine when a release is created,0
+#rabbitmq SSL configuration,0
+#properly to avoid security issues.,1
+#Note: We cannot use `systemd-path search-binaries-default` because,1
+#.. _freeradius__ref_defaults:,1
+#dia                 Required by javapackages-tools ticket 4279-,1
+#name: Installing Pipelines,0
+#templates:,1
+#Default: x86_64,1
+#Keystone,0
+#Boolean for TLS Encryption option to provide own Host Keystores.,0
+#add /usr/share/collectd/haproxy-types.db,0
+#broadcast-ping disable,0
+#handlers file for tito,0
+#enablerepo: codeready-builder-for-rhel-8-x86_64-rpms,0
+#.. envvar:: journald__default_configuration [[[,1
+#So the following will happen:,0
+#Title:         Saltbox: Authelia | Default Variables                   ,1
+#Container replicator hourly performance chart layouts,1
+#check_load validation,0
+#These tasks restore the etcd database.,0
+#begin with.,0
+#60GB.,0
+#The backup objectstorage secret in this status can be referenced when restoring,0
+#ssh_key_path:                 {{ terraform_working_dir }}/{{ workshop_prefix }}-key,1
+#Keep a history of systemd journals on disk after reboots,0
+#Query SCI,0
+#kafka_connect_replicator_consumer_ssl_key_password: keypass,0
+#Print a useful warning,1
+#those directories and causing the nginx service to fail. The following three steps,1
+#{mark} ANSIBLE MANAGED BLOCK BACKEND ZIPKIN CONTEXT,0
+#defaults file for manage_dbserver,1
+#1. ensure that dns servers are inserted properly,0
+#Refer to the `Apache LogFormat directive documentation`_ for details.,0
+#that there will be at least 5 seconds between restart attempts due to,1
+#user-lists section,0
+#1900160 <https://bugs.launchpad.net/kolla-ansible/+bug/1900160>`,1
+#Path to the haproxy.cfg file,0
+#d) opendistro_security.ssl.transport.pemtrustedcas_filepath replace demo root CA with the dual root CA file,0
+#Optional Settings ,0
+#List of default packages to install for PowerDNS Authoritative Server,1
+#.. envvar:: dhparam__suffix [[[,1
+#Timeout of hardware inspection on overcloud nodes,1
+#and only wish authentication to happen through them.,0
+#the key rotation script will not be able to copy the,0
+#Warning: Before using this playbook,0
+#parameters).,0
+#toolshed.g2.bx.psu.edu/repos/devteam/vcftools_annotate/vcftools_annotate/0.1,0
+#The purpose of this task file is to take in a list of configmap files provided,0
+#TripleO settings,0
+#Enable or disable usage report to 'usage.projectcalico.org',0
+#the LibreNMS application directory.,0
+#Do not count these as changed ever,0
+#To enable all selectors use [*]. Examples of other selectors are beat,0
+#multimedia file manager (is file system by default),1
+#Create or clean up State,0
+#.. envvar:: ipxe__debian_netboot_firmware_mirror [[[,0
+#Good practice: The var files are provided in cleartext. They should be edited and encrypred using:,0
+#Clients {{{,0
+#Bug 1547542 Older versions of the keystone role would deploy a blank,0
+#type: Git,0
+#into /opt/platform/config directory and it will be installed to controllers,0
+#Setup pgpoolII user authentication,0
+#completely redefining `matrix_client_hydrogen_configuration_default`.,1
+#Do not restart nodes when node certificates were previously expired.,0
+#variables common to the tableau_de role,0
+#auto-activation. An LV that is selected by this list for,0
+#self:,0
+#name: {{ sysb_name_v }},0
+#Plugin configuration,0
+#the playbooks requirments,0
+#PHP 7.4.,0
+#V2 api config,0
+#This is the name of the IBM Cloud account,0
+#This configuration extends the default starting configuration (`matrix_mx_puppet_slack_configuration_yaml`).,1
+#This is needed for some fresh versions of CentOS8 where this issue is met:-,1
+#Allows the user to override the rh_biotac_mapping_script_type (if empty,0
+#memtable_cleanup_threshold defaults to 1 / (memtable_flush_writers + 1),1
+#This configuration extends the default starting configuration (`matrix_bot_mjolnir_configuration_yaml`).,1
+#file: roles/admin_server_prep/handlers/main.yml,0
+#over-ride via -e which has precedence over -e @file,0
+#default these hints will be disabled,1
+#/usr/share/openstack-tripleo-heat-templates/roles/Controller.yaml,1
+#automatically installs Tower to control node,0
+#This playbook originally comes from @jborean93 (https://github.com/jborean93/ansible-win-demos),0
+#The compression ratio used when creating the container cache rootfs archive,0
+#Remove old Directory Detect Plugin files for 2.X to 3.0 upgrade only,0
+#CHANGE HBACRULE WITH ALL MEMBERS,0
+#Title:         Saltbox: Settings | Migrator                           ,0
+#https://ibm.github.io/z_ansible_collections_doc/ibm_zos_core/docs/source/release_notes.html,1
+#Send cron output to these emails (space is the separator),0
+#inspector_rule_save_data:,1
+#TODO: re-enable this once the metrics deployer validation issue is fixed,1
+#Validates super users are present.,0
+#Find object rpms,0
+#All other settings have defaults,1
+#This solves problem with containerd.io versioning,1
+#command: ['do',0
+#Browbeat integration test,0
+#Skip DNS entries creation,0
+#template_name: default ims_sp mq_sp cics_sp,1
+#is configured on the host. Otherwise the support will be disabled since it's,0
+#validate_certs: yes,0
+#despite possibly failing installing ip6tables...,1
+#ansible_network_os: vyos,0
+#defaults file for prep_onlyoffice,1
+#3. Check systemctl status of rsyslog as well as error or specific message in,1
+#and this is just a regular task line from a playbook,0
+#disableStatusState: false,0
+#Name of the Ansible inventory host group which should be used by the role to,0
+#Push out any new badge stuff.,0
+#The permissions for the test tables are lowered to easily set up  schemes,0
+#List of kubeadm init phases that should be skipped during control plane setup,0
+#maas_octavia_scheme: https,0
+#240 <https://github.com/ansible-collections/community.zabbix/issues/232>`_).,1
+#delius-new-tech-sbx all.yml,0
+#.. Copyright (C)      2020 Robin Schneider <ypid@riseup.net>,0
+#Yoda environment: development,0
+#https://bugzilla.redhat.com/show_bug.cgi?id=1591617,1
+#mirroring matrix membership lists to IRC. Default: 172800 (48 hours),1
+#Source: openebs/templates/clusterrole.yaml,1
+#China (Zhejiang University),0
+#{{ dlrn_hash|default(dlrn_hash_tag) }},1
+#issue_tracker_url: http://example.com/issue/tracker,1
+#defaults file for dbserver,1
+#https://releases.hashicorp.com/terraform/0.12.23/terraform_0.12.23_windows_386.zip,0
+#that are commented out. Some commented lines may be preprended with spaces,0
+#rwr-r--,0
+#Set MTU for the Wireguard tunnel device.,0
+#switch_auth_admin_group: [],0
+#sudo yum install perl-devel perl-CPAN && curl -L http://cpanmin.us | perl --sudo App::cpanminus,0
+#items to something else define these variables.,0
+#Start Plexdrive and Docker containers when snapshot is enabled,0
+#Run newrelic against a set of machines by tag.,0
+#4. Create self-signed certificate for Db2u SSL,0
+#deploying kafka,0
+#List of DomainKeys which should be present on hosts in specific Ansible,0
+#Storage leaf 3,0
+#timeout_override: ${CURATOR_TIMEOUT},0
+#``From:`` header of the NetBox e-mail messages.,0
+#tower_hostname:,0
+#location and CN settings for the self signed certificate,0
+#FIXME GUNDALOW: This file will need work once we have defined the Git Tag & branch strategy-,0
+#Enable systemd modifications,0
+#Automate Simulation,0
+#Set the `rsyslog_client_user_defined_targets` to define specific log targets.,0
+#monitor.jvm.gc.young.debug: 400ms-,1
+#defaults file for isam-local-bootstrap,1
+#defaults.rgw.buckets.index:,1
+#fails on issue described at https://github.com/nose-devs/nose/issues/680,1
+#expressed as a double which represents a percentage.  Thus,0
+#Testcase OMNIA_CRM_US_AWXD_TC_009,0
+#[.]启用容器仓库镜像,0
+#Defining configMapOverrideName will cause templates/alertmanager-configmap.yaml,1
+#values:,0
+#Presenting a warning message prior to the normal user login may assist in the prosecution,1
+#not working right now possible bug or mis-use of module-,1
+#Cancel Ad Hoc Commands,0
+#Let's Encrypt Certificates on Ingress Controllers,0
+#.. envvar:: root_account__enabled [[[,0
+#Title:         Cloudbox: Plex Auth Token | Default Variables           ,1
+#Test role idempotence.,0
+#the previous task when the problem has been addressed in current,1
+#App environment,0
+#Update users and pubkeys by default (this is changed to False during the play if keys_repo_head.stdout == sentinel_sha1.stdout),1
+#when the package that provides that service is upgraded. A service that,0
+#name: name,0
+#defaults file for icinga2-nrpe-agent,1
+#tower_version: 3.7.0-4                   Ansible Tower version,0
+#On primary we want to make a /mnt/koji link to /mnt/fedora_koji/koji,0
+#docker_image_tag is set to the dlrn hash but uses the tag,0
+#TODO -do any DB maintenance steps we need to do here..-,1
+#record_lvs_history: 0,0
+#More information on fix :,1
+#Specify the password required for authentication to Redis.,0
+#image of the chaosexperiment,0
+#Restore the outreach OMERO database and data directory,0
+#description: Udp from bastion,0
+#quota_num_instances: 15,0
+#tensorflow-arm64-release-build-v2.1.0-py37,0
+#Enable HAProxy to manage Load Balancing,0
+#https://github.com/kubernetes-incubator/cri-o/issues/528,1
+#alert-name-nodefilesystemspacefillingup,0
+#Start and enable repmgr service,0
+#This is a symlink that has to exist because,0
+#System UNIX group used by the volkszaehler middleware.,0
+#version: 1,0
+#.. envvar:: roundcube__sieve_srv_rr [[[,0
+#Restrict ability to modify csf config from the csf UI,0
+#.. envvar:: gitlab_runner__default_instances [[[,1
+#Monitors ConfigMap changes and POSTs to a URL,0
+#If set to False,0
+#Private token that must be sent as part of the request to,0
+#Temporary hack for Manage,1
+#from a nested VMI can be intercepted by the local vrouter agent.,0
+#expire time of static files,0
+#Need to set galaxy_config_default[galaxy_app_config_section] dynamically but Ansible/Jinja2 does not make this easy,1
+#ocp_clientvm_tkn_version: '0.6.0',0
+#Provision Master,0
+#NOTE: The below defaults should supress any false positives on a Ubuntu,1
+#run_as_root:,0
+#Ensure the default sub-domain is set:,1
+#For a more advanced customization,0
+#See Kolla Ansible docs RabbitMQ section for details.,0
+#TODO (vkhitrin): Attempt to utilize https://raw.githubusercontent.com/ansible/ansible/devel/contrib/inventory/openstack_inventory.py-,1
+#Default 404 backend,1
+#The default configuration of the ``[publish]`` section.,1
+#ieee80211w: 1,0
+#hadoop-common/defaults/main.yml,1
+#https://github.com/dokku-community/dokku-acl/issues/34-,1
+#ephemeral = ephemeral disk not EBS,0
+#In this example,0
+#name of the ssm docs,0
+#additional lists used in Postfix main.cf configuration file. This variable,1
+#For example: --limit mariadb-staging1.princeton.edu,0
+#admin_pwd: {{ item.admin_pwd }},0
+#{CLUSTER_ID},0
+#smolt::proxy -note going to do this.  smolt is dead.  long live smolt.,1
+#e.g key: AQDC2UxZH4yeLhAAgTaZb+4wDUlYOsr1OfZSpQ==,0
+#temporary fix for rhel 8.2 dnf substitution,1
+#Decrease the default loglevel for easier log parsing by humans,1
+#by applying security configurations from the STIG. Hardening is enabled by,0
+#.. envvar:: dhcp_probe__lib [[[,0
+#file: oracle-java/tasks/debug.yml-,1
+#inspection_net_name:,1
+#should be ready for atleast 20 seconds before the container is considered available. This will allow us,0
+#note this will fail if modules are already hooked up how to make idempotent?,1
+#ec2-linux,0
+#auto Use default value chosen by kernel.,1
+#215 <https://github.com/ansible-network/network-engine/pull/215>`_.,0
+#openstack server add volume node2 disk3,0
+#Ironic inspector map from hostname to network interface name on which to,1
+#Example read-write git checkout from github,0
+#-p ROUTER_ADDRESS={{ ocp_apps_domain }},0
+#Configure performance collection,1
+#NOTE: oc_adm_policy_user does not support -z (yet),0
+#delete_mgmt_root_file_instance_id:,0
+#Ingress-nginx Defaults,1
+#by arnold for the namespace.,0
+#This will move a /etc/hosts in place if it's setup in files for that host/domain,0
+#metallb_layer2_ips: 10.100.200.10-10.100.200.250,0
+#Configure custom Containerd Registry additional configuration,0
+#see the 'fail' message below before modifying this command,1
+#defaults file for splunk_monitor,1
+#By default there is no log file.,1
+#error exit,1
+#The rsh-client package contains the client commands for the rsh services.,0
+#Register a persistent pending system reboot action for this node if,0
+#defaults file for zcee_create_format_zfs,1
+#FLUXCD CONTROLLERS,0
+#reusing channel 40 because of DFS-bug. AP1 and 4 have a 70m distance (and one building) in between so it should be fine-,1
+#list of paths to run composer (@see http://docs.ansible.com/composer_module.html),0
+#Copy hypervisor's key into UC root and also for undercloud_user as we need this user since next hosts task update inventory,0
+#it may be desirable not to include the default security sources.,1
+#accessible.,0
+#Block tasks are needed for shade >= 1.24.0,0
+#A dump file containing the overrides data is used here to solve this inconsistency issue.-,1
+#eossh running-config | include interface| access-group,0
+#value: /,0
+#/.tox/,0
+#handlers file for ansible-keylime,0
+#Implication is that if the image tag referencing registry.local was present,0
+#Absolute path to the :command:`mcli` Go binary installed on the host.,0
+#ocp4_installer_use_dev_preview: False,1
+#Set to the location of your TLS KeyStore when configuring TLS using Keystores and TrustStores for Kafka Connect Replicator Producer.,0
+#K8s v1.19.15 Epiphany 1.3 (transitional version),0
+#this workarounds it until Ansible resolves the issue:,1
+#NOTE: Do not use easy_install for RedHat. There is a bug that might cause-,1
+#Format: IP address/netmask,0
+#will not be removed from the groups dialout and wheel.,0
+#?      staticsite,0
+#is not claimed incorrectly by other tools because of old signatures,1
+#Default value,1
+#If you do not use Thrift at all,0
+#of extra templating and restarting,1
+#To use blackfire you need to define blackfire keys and tokens (see ansible/playbook/roles/devtools/defaults/main.yml for reference),1
+#VIuoHGGVkvPWBpv/8OcCaY1c8d0V0uDb1ygozNRv3q4qa4i/kppzQl4Sd9SeaxLi,0
+#inzwischen 16000?,0
+#TODO write sops for anitya and the-new-hotness,0
+#.. envvar:: mariadb_server__max_connections [[[,0
+#Postfix service to access the LDAP directory.,1
+#with_fileglob: [ '../templates/etc/postfix/hash_aliases/*.j2' ],1
+#https://github.com/ansible/ansible/issues/64852,1
+#metadata_folder: path/to/metadata/folder,0
+#[ See github.com/ansible/ansible/issues/27299 for reason for  '| to_json | from_json' ],1
+#See also playbook remote_mount_cli.yml,0
+#entries to the certificate,0
+#pool: when Octavia is available,0
+#ansible_default_ipv4 so,1
+#to avoid playbook errors when the shared dir is a symlink,1
+#Title:         Cloudbox: Heimdall Role                                ,0
+#Right now the following disk part only works to expand existing disks,0
+#:file:`/etc/systemd/journald.conf.d/ansible.conf` which controls the,0
+#Controls whether to send a Permissions-Policy interest-cohort=(); header along with all responses for all vhosts meant to be accessed by users.,0
+#.. envvar:: cryptsetup__keyfile_source_dev [[[,0
+#following format:,0
+#We comment `tempest_git_repo` so that we do not attempt to build the wheel from this repo/branch.,1
+#for further details.,0
+#NOTE: Admin endpoint may not be accessible from internal nodes,0
+#.49 gw,0
+#This is redundant with non-root + disallow privilege escalation,0
+#_id : VBrbor2QTuGpsQyTCdfzqA,0
+#name: Create secrets file,0
+#considered before applying the default deny.,1
+#Tasks related to setting up matrix-synapse-admin,0
+#TODO: addon requirements,0
+#Disabled because the output is not interesting but very verbose.,0
+#docker_http_proxy: {{ ansible_env.http_proxy|default('') }},1
+#organization: test,0
+#Data management uses the value you specify as a default unless it is preempted by a higher priority default,1
+#inventory_file_name provide option for overwrite default value for inventory file name. hosts file is created from,1
+#The Redis connection timeout in seconds. The default is 5 seconds.,1
+#Builds directory,0
+#A note about device filtering while lvmetad is used:,1
+#apt based distros,0
+#Config for AzureMFA component,0
+#The executor used by the runner.,0
+#changes in Preview mode.,1
+#verbosity of output (error 0,1
+#with_redis_commander: false,0
+#https://github.com/TPC-Council/HammerDB/issues/163-,1
+#Add the official docker apt repository,0
+#3. Provide debug information-,1
+#places where config might need to be tweaked.,0
+#Defaults to /dev/urandom for speed considerations.  If you prefer /dev/random,1
+#If you would like LMS to use a different CDN or path,0
+#Place where logs will be keepped,0
+#Legacy 'debops.redis' configuration file,0
+#metadata,0
+#URL of IPA builder source repository.,0
+#Design note: These tasks are included from main.yml because it allows us to use 'with_items' on more than one task.,1
+#The expected location of the amtool configuration file,0
+#TODO: List of comma delimited emails that will be made admin and developer,0
+#needed in templates,1
+#Install galera,0
+#version: {{ arkcase_version }},0
+#Do not add tests here. This test is run twice and confirms idempotency.,0
+#Configuration for creating an Ingress that will map to each Alertmanager replica service,0
+#Define the controller node and compute nodes.,0
+#File: tasks/backend_tls.yml Backend TLS tasks for Vault,0
+#Boolean to configure Telemetry on Schema Registry. Must also set telemetry_api_key and telemetry_api_secret,0
+#Default configuration for pxe_server role,1
+#Prepare the NFS server and loopback disks,0
+#defined it will enable nfs shares as mounted directories. The,0
+#authorized_keys_exclusive: yes,0
+#when: kubeinit_submariner_is_secondary|bool,0
+#postgres settings,0
+#List of the default APT packages to install for InfluxDB Server support.,1
+#concurrent_reads + concurrent_writes.,0
+#we do include_vars twice so that we can have default values,1
+#If not set by a CLI flag or in the configuration file,0
+#Variable names must be prefixed by the role name <role name>_<variable>.,1
+#for checking (openshift) app parent resources if they are eligible chaos candidates,0
+#commands = [/usr/bin/monitor-condor-utilisation],0
+#All variables within this role should have a prefix of tripleo_ceph_distribute_keys,1
+#enable is not a key of st2_rbac because the defaults would be lost if any key in the dictionary is changed,1
+#Default umask for new home directories created by the ``pam_mkhomedir`` PAM,1
+#Base DN for LDAP machine accounts.,0
+#command: ansible-playbook /root/breakfix1/node-install.yml,1
+#This makes it even harder to pick a correct value. Such a 10 second gap and a waiting time of 20 seconds will,0
+#defaults file for eos_snapshot,1
+#Persistent paths [[[,0
+#should move to individual distro-version files when,0
+#mode: 0644,0
+#NOTE: Grafana will fail to start if the value for ldap.toml is invalid,1
+#Keep the snapshot-controller image in sync with the one provided at:,0
+#fail during testing when not defined,1
+#Redirect specific websites from fedoraproject.org to getfedora.org,0
+#Based on: https://github.com/docker/distribution/blob/master/cmd/registry/config-example.yml,0
+#address 10.0.20.52,0
+#New Relic Infrastructure agent tarball version to download. (Linux only),1
+#Ansible playbook for a LAMP server.,0
+#mount_inst_v:   False,0
+#idr-ftp.openmicroscopy.org: S3 read-write /idr-upload only,0
+#interfaces detected by the role.,0
+#.. Copyright (C) 2014      Nick Janetakis <nick.janetakis@gmail.com>,0
+#tasks file for nextcloud,0
+#UPGRADE,0
+#Extras version from Debian,0
+#Integreatly Inventories,0
+#Monasca options,0
+#.. envvar:: librenms__config_installation [[[,0
+#.. envvar:: gitlab_group [[[,0
+#Copyright 2022 Red Hat,0
+#2FA will be enabled only if email notification is working using SMTP.,0
+#This sets it to the container management network based on how you setup,0
+#TODO: What happens if master is failed to be attached,1
+#layers_store.GRID_BUFFER_SIZE=4096,0
+#new instackenv file,0
+#Title:         Saltbox: Error Pages | Default Variables                ,1
+#only when there seems to be a problem.,1
+#Git settings.,0
+#python-devel,0
+#Name of the configmap that will be used when spawning a notebook for the single user,1
+#oadp_operator_ui_cluster_api_endpoint:,0
+#If your K8s cluster is only 1 node,0
+#1. if the host (in [contrail-analytics] group) has ctrl_data_ip specified,0
+#scala 2.11.0 returns error 1 even there is no error. Ignore the error.,1
+#Client ID on the GitHub App page,0
+#nl_NL: 'Registratie bij voorbeeld GSSP is mislukt. Probeer het nogmaals.',0
+#ref: https://github.com/EMCECS/ECS-CommunityEdition/issues/75,1
+#unless we create a .pinned file for the plugin.,0
+#do a hash update method with the provided user parameters to create,0
+#Before we unpack the dependencies and liferay itself,0
+#Console will be accessible.,0
+#TODO: remove this debug comment once we are happy this mechanism-,1
+#Title:         Saltbox: Cloudflare | Page Rules Task                  ,0
+#By default,1
+#Place any additional configuration section to add to the default config-haproxy.cfg,1
+#controller_sysctl_parameters:,0
+#postfix_mailbox_command: /etc/strobot_zijn_haar.sh -a \$EXTENSION\,1
+#Usage: infiniband_container_image.yml,0
+#upgrade from 2.0.x to 2.1.x to 2.2.x to 2.3.x to 3.0.x. While this is a tedius,0
+#Default SSL ECDH curve used on servers,1
+#@todo Craig Brandt changing the default ids_install role values in the file until role PR is accepted,1
+#repo: https://opendev.org/openstack/designate-tempest-plugin for installing the plugin from sources,1
+#Default variables for create ssl certificate database,1
+#Debug log level,1
+#e.g. apps.cluster-GUID.example.opentlc.com,0
+#description:    {{ lxc.description | from_yaml | to_nice_yaml }},0
+#defaults file for PostgreSQL,1
+#Configure grafana dashboard to import,0
+#will always be bind-mounted into the node for system containers (atomic).,0
+#cert_id:    {{ item.cert_id }},0
+#requested for installation. This list is exposed in the defaults so that you,1
+#any_errors_fatal: true makes sure the run stops if any problems happen.,1
+#fields in the output document instead of being grouped under a fields,0
+#Each entry in the list a YAML dictionary with parameters known by the ``gem``,0
+#mentioned in the enable_list:,0
+#TODO: name: install Mac OS X dependencies-,0
+#Elasticsearch ,0
+#https://github.com/ansible-collections/kubernetes.core/issues/147,1
+#configurations.,0
+#Defines when to trigger flood proctection,0
+#Specify the default filesystem type,1
+#local_repo_location:     default /tmp ,1
+#this was designed to be used in dev where there is no global proxy,0
+#dependent on the used webserver (:program:`nginx` should have the option disabled,0
+#If versions do not match,0
+#Zabbix postgres database user (CREATE ROLE zabbix WITH LOGIN NOSUPERUSER,0
+#don't install rhos-release. Just if installed outside of IR,0
+#https://github.com/ansible/ansible/issues/56636,1
+#MySQL Configuration.,0
+#End of test fix for https://github.com/freeipa/ansible-freeipa/issues/409-,1
+#Default ssl verify client.,1
+#Enable or disable purging of the Python 2.7 packages in the raw mode. This,0
+#1886615 <https://bugs.launchpad.net/kolla-ansible/+bug/1886615>`__,1
+#grep 'net.ipv4.tcp_invalid_ratelimit' /etc/sysctl.conf /etc/sysctl.d/*</pre>,0
+#.. _system_groups__ref_defaults:,1
+#retries 10,0
+#engine_api_listen_address: 127.0.0.1,0
+#pem server packages,0
+#vars file for day4assign,0
+#This is also used in the SSO configuration!,0
+#To run on multiple nodes at a time,0
+#define the tasks that are part of this play...,0
+#image gets promoted from candidate-registry to registry.,0
+#TODO: should be using a repo which only provides prerequisites,0
+#debops.minio default variables,1
+#default password is 'cobbler' change it in a secrets repo!,1
+#this is not found then the automatic detection will fail back to,1
+#Replications,0
+#tasks file for zcee_start_server,0
+#paths: {{ pki_path }}/sa,0
+#`overcloud_nodes` is defined the template depends on the,1
+#List of systemd services that matrix-mautrix-telegram.service wants,0
+#Requires an MSC3231 token for registration. Note that `matrix_synapse_enable_registration` must be set to `true`.,0
+#more of a problem than the latter in most cases so the default is-,1
+#back end for this container.,0
+#FIXME: This does not really fix the issue; it's possible that system,1
+#status_code: 204,0
+#someName: someValue,0
+#If kubernetes_master group is non-empty then we assume the kubeconfig file comes,0
+#with_items: {{ ocp_user_groups }},0
+#when confirmations are on,0
+#See: https://github.com/dimagi/commcare-cloud/pull/2901pullrequestreview-250517794,1
+#policy for data disk failures:,1
+#Directory where chrom len files are kept,0
+#max_connections: 0,0
+#tool_dependency_cache_dir: null,0
+#cell_proxy_loadbalancer.yml due to a weird issue seen on Ansible 2.8. If-,1
+#.. Copyright (C) 2015-2019 DebOps <https://debops.org/>,0
+#it'll be read from the deployment host,0
+#Not implemented as yet.,0
+#-tests packages which contains tempest-style tests,1
+#Route 53 entries for automatic validation by Let's Encrypt,0
+#Only install Monitor if a channel has been chosen,0
+#cloud operator (os admin user),0
+#for Grafana in keys `user` and `password`.,0
+#enable_script_security,0
+#Default dir to copy scripts into,1
+#host: db_container.ansible_facts.docker_container.NetworkSettings.IPAddress,0
+#change for the desired logical interconnect name,0
+#openshift_master_defaults_in_use is a workaround to detect if we are consuming,1
+#1964013 <https://bugs.launchpad.net/kolla-ansible/+bug/1964013>`__-,1
+#Delete the volume groups and physical volumes,0
+#Define the networks that should be created on the overcloud.,0
+#List of TCP/UDP ports for internal communication which will be managed on all,0
+#make corrections to exec-opts later in a separate procedure (inside the upgrade role).-,1
+#exists in the DNS database. If the FQDN can be resolved,1
+#Note: During upgrade the openshift excluder is not unexcluded inside the initialize_openshift_version.yml play.,0
+#Documentation: https://roots.io/trellis/docs/vault/,0
+#egg=swift,0
+#By default the AdminServer is enabled. Disabling it will cause automated test failures.,1
+#certificate (since we deleted the original) or reapply a custom,0
+#Keystone Controller Count Comparsion Dashboards,0
+#debian-stretch seems to require a reboot for avahi-daemon to run,0
+#.. envvar:: dnsmasq__persistent_paths__dependent_paths [[[,0
+#with_list: {{ final_list }},0
+#TODO(donghm): Below tasks should be run in serial nodes to,0
+#kafka.connect:type=task-error-metrics,1
+#.. envvar:: influxdb_server__pki_realm [[[,0
+#for disk/etc monitoring,0
+#Stop to avoid unexpected blocking and for consistency with RHEL,1
+#List of Postfix capabilities enabled by default by the role.,1
+#TODO: Optimize cobbler-deploy to not remove customer customizations-,0
+#this is not a real email address and will cause issues if validation is required-,1
+#as with the vlan jobs scenario,0
+#hosts in the individual pilot deployments,0
+#base64 encoded string.,0
+#Validates that SASL SCRAM is Protocol is set.,0
+#The absolute path on the control node to the cert file to use,0
+#NOTE: 'multi-nic' is deprecated,1
+#We will look for the most specific variable files first and eventually,0
+#mcornea: bz1670513 workaround. to be removed when/if fixed,1
+#These options must be UUID4 values in string format,0
+#extra_name_identifier           Makes each AMI unique if desired Default: 0,1
+#Directory where old tasks are moved,0
+#Deployment Options:,0
+#Note: The curr_docker_version.stdout check can be removed when https://github.com/ansible/ansible/issues/33187 gets fixed.-,1
+#handlers file for sles12cis_-CIS,0
+#Alternatively:,0
+#https://lists.fedoraproject.org/pipermail/buildsys/2015-June/004780.html,0
+#maint window for the cloud,0
+#Ensure that `changeme/FIXME** is uninstalled and it's configuration is removed.,0
+#target: alias(timeShift($Cloud2.$Node2.processes.ps_state-blocked,0
+#Fall back to this processor for any formats not assigned above.,0
+#Used by non-neutron ansible playbooks create the neutron-iptables lockfile.,0
+#URL relative to the document root of this Roundcube installation,0
+#https://pulp.plan.io/issues/3707,1
+#NOTE: we create a temporary network,1
+#Specify the time in seconds between LDAP permission checks. The checks will,0
+#Object Users,0
+#e.g to add the windows label to any issue/pr with a title containing the word windows:,1
+#A prefix to use before the log message text.,1
+#To add additional domain names,0
+#Domains that should use OIDC (list),0
+#file: roles/admin_server_prep/defaults/main.yml,1
+#The variable :count is also available,0
+#index: 1        ,0
+#Password for default root admin user.,1
+#error: Sends notifications for Error and Critical events.,1
+#indefinitely.,0
+#Default: 100GB,1
+#loadtest_driver role,0
+#hdfs-datanode/tasks/main.yml,0
+#explicitly set python3 in centos7 https://bugs.launchpad.net/tripleo/+bug/1943968,1
+#Calendar Configured Object Types (calendarConfiguredObjectTypes.properties) ,0
+#When a local DNS resolver is present,1
+#default number of PGs in a pool,1
+#file: /var/log/nginx/error.log   Required,1
+#since they break the changelog generation with the error:,1
+#full URL with http:// or https:// prefix,1
+#subtask file for isam-local-bootstrap,0
+#to configure the template creation for the specific cloud provider,1
+#Ansible strategy module for rolling upgrade is finished.,0
+#pyyaml,0
+#.. envvar:: dovecot__postfix_lmtp_transport [[[,1
+#.. envvar:: rsnapshot__ssh_options [[[,0
+#TODO: Need to fix the origin and enterprise templates so that they both respect IMAGE_PREFIX-,1
+#Install an OpenShift 4 Developer Preview Release,1
+#TODO(sshnaidm): https://bugs.launchpad.net/tripleo/+bug/1792622-,1
+#list of dicts describing Tower credential input sources,0
+#Preserve default sources list for Ubuntu,1
+#relative time,0
+#Starting a single MariaDB node normally (i.e. service mysql start) will fail as this requires an existing cluster,1
+#https://review.opendev.org//c/725607/17/deploy-guide/source/features/tls-everywhere.rst,1
+#Enable automatic parsing of X-Forwarded-Proto,0
+#Adding nfs so that we can interpret it later as 'pv'-,1
+#TODO: fix: Locations you cannot remove locations that are used by hosts or inherited.,1
+#Lint the playbook.,0
+#call out to another file to include the proper terminal,0
+#can adversely affect the operation of Zookeeper and the components of,0
+#This ensures that there's a line in the file /etc/hosts to describe the new hostname.,0
+#Confirm no trailing / on the ssl file directory path,0
+#`state` -(optional) system state of the mount point. The default will omit,1
+#Configure regular automatic package updates using yum-cron,0
+#Another option is '--users '$username1 $username2' to only allow those users,0
+#osd0 ceph_crush_root=foo ceph_crush_rack=bar,0
+#image: busybox,0
+#NOTE(yoctozepto): the default policy is ACCEPT but it is nicer to get statistics,1
+#defaults file for common,1
+#$ php -r 'print_r(sha(md5(password)));echo \n;',0
+#java-1.8.0-openjdk-debuginfo,1
+#mxid Specific user,0
+#https://docs.ansible.com/ansible/latest/reference_appendices/config.htmldefault-hash-behaviour,1
+#name: Install remi repo.,0
+#koschei database on pgbdr.stg is in inconsistent state,0
+#Switch this variable to 'podman' once we run OVB jobs on CentOS8.,0
+#amplifier: 5,0
+#file-roller-nautilus,0
+#Temporary due to systemd faker in Molecule issues. Works on a real host-,1
+#As per https://github.com/eclipse/openj9/issues/3790,1
+#of the CRUSH map,0
+#1. Gerrit change branch is not equal to project branch,0
+#want to refer to the application vault's checksum in your application defaults.,1
+#How often DDNS binding is refreshed even if the IP address has not (6 hours by default),1
+#The following variable has a default value depending on operating system.,1
+#provided to users in the help text.,0
+#function: webserver,0
+#see https://wiki.gutzmann.com/confluence/display/HowTo/NTPD+-+cap_set_proc()+failed+to+drop+root+privileges%3A+Operation+not+permitted,1
+#Main network interface. Same as main network,0
+#ltpa_key_id: LTPA Key 2,0
+#auto_install: true,0
+#Specify whether you want to install NGINX,0
+#toolshed.g2.bx.psu.edu/repos/devteam/bamtools/bamtools/0.0.1,0
+#Gogs Git Server Install,0
+#TODO discuss: should it be dependent on scale_zimon_collector?,0
+#hour: */6,0
+#See https://docs.rke2.io/install/install_options/linux_agent_config/ for all configuration options.,0
+#all the transactions sent by a single shipper in the web interface.,0
+#https://issues.jenkins-ci.org/browse/JENKINS-20407,1
+#Minimum number of peers to connect to per torrent,0
+#php_default_version_debian: ,1
+#src=../templates/elasticsearch.yml.j2,1
+#osp_auth_username:,0
+#minimal                            = yum --bugfix upgrade-minimal,1
+#(Qdrouterd) integration,0
+#File containing old-style genome builds.,0
+#EDXAPP_COMPREHENSIVE_THEME_DIRS.0 can be,0
+#.. _etesync__ref_defaults:,1
+#uname,0
+#swift_rabbitmq_telemetry_use_ssl: {{ rabbitmq_use_ssl }},0
+#first.,0
+#Recursive DNS server to use for ALIAS lookups and the internal stub resolver.,1
+#firejail__group_fix_for_users: '{{ users__group_accounts|d([]) }}',1
+#If we want to do backups,1
+#yaml,0
+#Testing these variables default properly,1
+#These variable do not have a default because there is no sane default. The,1
+#See https://kubernetes.io/docs/tasks/debug-application-cluster/audit/,1
+#kubetcl must be first in the list kubeadm has dependency to kubectl without version,0
+#All-in-one network.,0
+#credentials to deploy,0
+#label: value1|value2,0
+#These lists define what UNIX system groups should be present on,0
+#NOTE(mgoddard): We are using the script module here and later to ensure,1
+#ensure the projects are correctly configured,0
+#Custom config-haproxy.cfg files used to override default settings. If this file is,1
+#public means managed in terms of OS installation guide,0
+#如果仍旧出现任务失败，重新执行一遍即可 https://github.com/ansible/ansible/issues/64903,1
+#change default admin password,1
+#infra_vm_root_format:,0
+#false.,0
+#can be set by 'ceph_nfs_service_suffix',1
+#task rarely runs,0
+#Default Prometheus node exporter configurations,1
+#ssl_yn: {{ item.ssl_yn | default('None') }},1
+#Fixing fis-karaf issue with registry.redhat.io,1
+#Set this to work around issues with kitchen-ansible erroring out: https://github.com/neillturner/kitchen-ansible/issues/295-,1
+#Reduces the Wait for container ssh error.,1
+#Dell switch LLDP workaround configuration.,1
+#Open Firewall Port 1936 for current session by adding,0
+#service that is already running and has just been masked will not be,0
+#To late to do it here (,1
+#we check the return code from sysinv to see that application-list ran successfully,0
+#javax_net_debug: all  uncomment to activate debugging,1
+#Launch the cloudformation-example.json template.  Register the output.,1
+#relative to the PKI realm directory.,0
+#{{ ansible_managed }},0
+#List of IP ranges that are allowed to perform DNS updates on all domains,0
+#make a backup of stdout and stderr for later-,1
+#set to true to skip installation completely,0
+#These Values will be randomaly generated if not defined,0
+#tasks file for postcheck,0
+#command: chsh vagrant -s /bin/zsh,0
+#`object_template` path.,1
+#Setting Variables\n  debug                   = false\n  rhn_activation_key-,1
+#defaults file for na-ontap-nas-create,1
+#defaults file for SLES12-CIS,1
+#'toolshed.g2.bx.psu.edu/repos/devteam/emboss_5/EMBOSS: chaos7/5.0.0',0
+#traefik_acme_server: https://acme-staging-v02.api.letsencrypt.org/directory  staging,0
+#supervisord_prefix: {{ _expanse_project_root }}/supervisor,1
+#id: dexseq,0
+#Register a persistent pending service update action for all nodes if,0
+#This is disabled by default,1
+#Default broker URL. See http://celery.readthedocs.org/en/latest/configuration.htmlbroker-url.,1
+#it is possible to save the result of any command in a named register.  This variable will be made,0
+#%l,0
+#The low-level package manager that's being used.,0
+#Default variables for uploading mapping rules,1
+#The Image resource will show complete in CloudFormation once your image is done building. Use this resource later in your-,1
+#version: {{ geoserver_version | default('2.14.1') }},1
+#Title:         Saltbox: Resources | Tasks | DNS | Tasker              ,0
+#another ingress,0
+#file: roles/subscription_manager/defaults/main.yml,1
+#the user would also be aware of any deprecated variables they should note to adjust,1
+#name: tensorflow-arm64-release-build-v1.15.3-py37,0
+#Render template     ,1
+#tower_image_pull_secret:,0
+#As of Cassandra 2.2,0
+#Use ansible 2.8 due to issue in 2.9.0 in the blueprint role task setting the 'cluster_template' fact-,1
+#enable_beta_workflow_modules: false,0
+#debops.preseed default variables,1
+#group_dn: *,0
+#Flannel public IP,0
+#Restart=on-failure,1
+#RealVNC Password Location,0
+#name to display facts for textfsm_parser,0
+#osd_containerized_deployment: False  backward compatibility with stable-2.2,0
+#requires --extra-vars=target='host1:host2:group etc',0
+#Setup a docker container to be run as a systemd service,0
+#The directory to use as a temporary directory (i.e. /tmp),1
+#java_opts: -Dserver.port=9100 -Dspring.cloud.config.uri=https://{{ config_server_host | default(internal_host) }}/config -Dspring.profiles.include=server,1
+#Contrail Web Storage disable by default,1
+#Issue zos command,0
+#XXX: service module doesn't do daemon-reload yet,0
+#Password protect the boot loader,0
+#symlink to that executable,0
+#Data restrictions,0
+#in order for these templates to be written out,1
+#Initial attempt,1
+#TODO this could be a temporary file-,1
+#TODO: Might be better to use synchronize here but we'll need rsync installed-,0
+#Parent EmsCluster Daily performance chart layouts,1
+#.. envvar:: postfix_pki,1
+#Components are installed from source (i.e. git clone),0
+#issue: N/A,1
+#hisat2: {cores: 8,0
+#We want to delete the one where the owningCluster name matches what we are trying to do a remote mount on,1
+#nextcloud_tls_cert_chain: /path/to/cert/chain,0
+#name: lb-mgmt-net,0
+#the archive by the jenkins build scripts.,0
+#name: Ensure files in the depot are world-readable,0
+#they will be built from source.,0
+#Fedora specific stuff Terrible hacky way to install,1
+#log.exception(An error occurred while querying influxdb. Using a weighted random candidate destination),1
+#from source only.,0
+#oep_partition_mount_point,0
+#This file is the default playbook for common actions.,1
+#List of additional APT packages that should be installed with imapproxy.,0
+#device.  As long as the number of failed devices does not,1
+#file: state=link src=/usr/lib64/python2.6/site-packages/askbot/skins/default dest=/usr/lib64/python2.6/site-packages/askbot/static/default,1
+#.. envvar:: kmod__default_modules [[[,1
+#handlers file for roles/geaccirc,0
+#is  as the domain owner intended,0
+#chrooting.,0
+#debops.docker_registry default variables,1
+#collections from galaxy. https://github.com/pre-commit-ci/issues/issues/55-,1
+#stripes_github_version: pr-23,0
+#List which contains the result of the DNS query for Icinga 2 master node,0
+#https://pulp.plan.io/issues/5768note-17,1
+#cluster_dns_ip: 10.32.0.10 ,0
+#Config vars to provision a VM using custom user inputs,0
+#is listed in /etc/hosts and associated with 127.0.0.1 (so dnsmasq uses it,0
+#Certain Synapse extensions that you can enable below auto-inject themselves into `matrix_synapse_modules` at runtime.,0
+#name: server-cert.pem,0
+#ferm__dependent_rules:,0
+#Query RM status,0
+#A default storage class is not necessarily defined in a k8s cluster. The following,1
+#List of the default APT package sources for specific distributions. These are,1
+#ansible-playbook -e ireallymeanit=yes|no shrink-rbdmirror.yml,0
+#Omit in order to use default update center,1
+#Ubuntu device drivers have to be removed before install,0
+#libffi-dev,0
+#3600 is 1 hour,0
+#vars_files: ,0
+#directories & code,0
+#pve_cluster_addr1: {{ ansible_eth1.ipv4.address }},0

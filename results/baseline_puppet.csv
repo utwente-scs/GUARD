@@ -1,0 +1,184 @@
+mattheath@puppet-php-manifests-5_3_11.pp,none,none
+SecGen@SecGen-modules-services-unix-smb-samba-manifests-params.pp,suspicious comment,3,# This class defines default parameters used by the main module class samba
+SecGen@SecGen-modules-services-unix-smb-samba-manifests-params.pp,hardcoded-secret,43,$process_user = $::operatingsystem ? {
+SecGen@SecGen-modules-services-unix-smb-samba-manifests-params.pp,suspicious comment,105,  ### General module variables that can have a site or per module default
+alphagov@govuk-puppet-modules-govuk_ci-manifests-agent-redis.pp,none,none
+boxbilling@boxbilling-puphpet-puppet-modules-yum-manifests-repo-jpackage6.pp,hardcoded-secret,12,"gpgkey         => 'http://www.jpackage.org/jpackage.asc',"
+voxpupuli@puppet-rabbitmq-examples-permissions-add.pp,none,none
+openstack@puppet-neutron-manifests-params.pp,none,none
+openstack@fuel-library-deployment-puppet-openstack_tasks-manifests-ironic-db.pp,none,none
+hubspotdevops@puppet-nexus-manifests-params.pp,none,none
+mattheath@puppet-php-manifests-version.pp,hardcoded-secret,101,"user          => $::boxen_user,"
+mattheath@puppet-php-manifests-version.pp,hardcoded-secret,102,"user_home     => ""/Users/${::boxen_user}"","
+mattheath@puppet-php-manifests-version.pp,suspicious comment,122,    # Fix permissions for php versions installed prior to 0.3.5 of this module
+mattheath@puppet-php-manifests-version.pp,suspicious comment,166,    # Set temp_dir for PEAR
+openstack@puppet-neutron-manifests-server-placement.pp,suspicious comment,25,#   Defaults to 'password'
+openstack@puppet-neutron-manifests-server-placement.pp,suspicious comment,29,#   Defaults to 'nova'
+openstack@puppet-neutron-manifests-server-placement.pp,suspicious comment,33,#   Defaults to 'default'
+openstack@puppet-neutron-manifests-server-placement.pp,suspicious comment,37,#   Defaults to 'Default'
+openstack@puppet-neutron-manifests-server-placement.pp,suspicious comment,41,#   Defaults to 'services'
+openstack@puppet-neutron-manifests-server-placement.pp,suspicious comment,45,#   Defaults to 'default'
+openstack@puppet-neutron-manifests-server-placement.pp,suspicious comment,49,#   Defaults to 'Default'
+openstack@puppet-neutron-manifests-server-placement.pp,suspicious comment,55,#   Defaults to 'http://127.0.0.1:5000'
+openstack@puppet-neutron-manifests-server-placement.pp,suspicious comment,60,#   Defaults to $::os_service_default
+openstack@puppet-neutron-manifests-server-placement.pp,suspicious comment,65,#   Defaults to $::os_service_default
+openstack@puppet-neutron-manifests-server-placement.pp,hardcoded-secret,86,'placement/username':            value => $username;
+openstack@puppet-neutron-manifests-server-placement.pp,hardcoded-secret,87,"'placement/password':            value => $password, secret => true;"
+openstack@puppet-neutron-manifests-server-placement.pp,hardcoded-secret,91,'placement/user_domain_id':      value => $user_domain_id;
+alphagov@govuk-puppet-modules-govuk_rbenv-manifests-all.pp,suspicious comment,36,  # These aliases resolve .ruby-version 2.x to an installed Ruby version.
+danofthewired@puppet-bitbucket-examples-bitbucket_mysql_java_install.pp,none,none
+alphagov@govuk-puppet-modules-govuk_mysql-manifests-server.pp,suspicious comment,4,# defaults and setup associated monitoring.
+alphagov@govuk-puppet-modules-govuk_mysql-manifests-server.pp,suspicious comment,12,#   The maximum size of internal in-memory temporary tables.
+alphagov@govuk-puppet-modules-govuk_mysql-manifests-server.pp,suspicious comment,19,"#   When innodb_file_per_table is enabled (the default), InnoDB stores the data"
+alphagov@govuk-puppet-modules-govuk_mysql-manifests-server.pp,suspicious comment,38,"#   Do not set this to anything other than 1 (default) or 2, except in CI"
+alphagov@govuk-puppet-modules-govuk_mysql-manifests-server.pp,suspicious comment,39,#   otherwise you risk losing data.
+alphagov@govuk-puppet-modules-govuk_mysql-manifests-server.pp,suspicious comment,66,"  # This preserves ""default"" behaviour and prevents us from needing to"
+voxpupuli@puppet-nginx-examples-server_ssl.pp,hardcoded-secret,7,"ssl_cert        => 'puppet:///modules/sslkey/whildcard_mydomain.crt',"
+voxpupuli@puppet-nginx-examples-server_ssl.pp,hardcoded-secret,8,"ssl_client_cert => 'puppet:///modules/sslkey/whildcard_mydomain.crt',"
+voxpupuli@puppet-nginx-examples-server_ssl.pp,hardcoded-secret,9,"ssl_key         => 'puppet:///modules/sslkey/whildcard_mydomain.key',"
+voxpupuli@puppet-nginx-examples-server_ssl.pp,hardcoded-secret,16,"ssl_cert => 'puppet:///modules/sslkey/whildcard_mydomain.crt',"
+voxpupuli@puppet-nginx-examples-server_ssl.pp,hardcoded-secret,17,"ssl_key  => 'puppet:///modules/sslkey/whildcard_mydomain.key',"
+openstack@fuel-octane-deployment-puppet-octane_tasks-modular-mysqldump_restore.pp,none,none
+SecGen@SecGen-modules-vulnerabilities-unix-access_control_misconfigurations-uid_less_root-uid_less_root.pp,hardcoded-secret,1,class {'uid_less_root::change_uid_permissions':
+cargomedia@puppet-packages-modules-capistrano-manifests-init.pp,none,none
+norcams@himlar-profile-manifests-storage-ceph-zonegroup.pp,none,none
+quintel@boxen-modules-nodejs-manifests-v0_4.pp,none,none
+norcams@himlar-profile-manifests-highavailability-loadbalancing-haproxy-list.pp,none,none
+openstack@puppet-tripleo-manifests-profile-base-aide-installdb.pp,suspicious comment,23,#   (Optional) The current step in deployment. See tripleo-heat-templates
+openstack@puppet-tripleo-manifests-profile-base-aide-installdb.pp,suspicious comment,25,#   Defaults to hiera('step')
+openstack@puppet-openstack-integration-manifests-designate.pp,suspicious comment,61,  # IPv6 doesn't work for mdns ? https://bugs.launchpad.net/designate/+bug/1501396
+cargomedia@puppet-packages-modules-backup-manifests-agent.pp,none,none
+purpleidea@puppet-gluster-manifests-simple.pp,suspicious comment,8,# (at your option) any later version.
+purpleidea@puppet-gluster-manifests-simple.pp,suspicious comment,23,"	$layout = '',		# brick layout to use (default, chained, etc...)"
+purpleidea@puppet-gluster-manifests-simple.pp,suspicious comment,64,	# Stdlib 4.6.0 deprecates 'type' in favor of 'type3x'.
+purpleidea@puppet-gluster-manifests-simple.pp,suspicious comment,71,"	# if this is a hash, then it's used as the defaults for all the bricks!"
+purpleidea@puppet-gluster-manifests-simple.pp,suspicious comment,78,"	# if this is an array, then each element is the default for each brick!"
+purpleidea@puppet-gluster-manifests-simple.pp,suspicious comment,103,"		#zone => 'net',	# defaults to net"
+purpleidea@puppet-gluster-manifests-simple.pp,suspicious comment,119,	# also specify a list of defaults for when you have common brick values
+purpleidea@puppet-gluster-manifests-simple.pp,hardcoded-secret,125,"if has_key($brick_params, ""${::fqdn}"") {"
+purpleidea@puppet-gluster-manifests-simple.pp,suspicious comment,136,"				'0' => 1,	# 0 means undefined, so use the default"
+purpleidea@puppet-gluster-manifests-simple.pp,suspicious comment,152,	# NOTE: I've kept this template split as two comment chunks for
+purpleidea@puppet-gluster-manifests-simple.pp,suspicious comment,153,	# readability. Puppet needs to fix this issue somehow! Creating
+purpleidea@puppet-gluster-manifests-simple.pp,suspicious comment,154,"	# a separate template removes the logic from the code, but as a"
+purpleidea@puppet-gluster-manifests-simple.pp,suspicious comment,155,	# large inline template it's very hard to read/write the logic!
+purpleidea@puppet-gluster-manifests-simple.pp,suspicious comment,156,	#DEFAULTS = (((i < @valid_brick_params_defaults.length) and @valid_brick_params_defaults[i].is_a?(Hash)) ? @valid_brick_params_defaults[i] : {})
+purpleidea@puppet-gluster-manifests-simple.pp,suspicious comment,157,"	#$yaml = inline_template(""<%= (0..@valid_count.to_i-1).inject(Hash.new) { |h,i| {@brick_params_names[i] => DEFAULTS.merge((i < @brick_params_list.length) ? @brick_params_list[i] : {})}.merge(h) }.to_yaml %>"")"
+purpleidea@puppet-gluster-manifests-simple.pp,suspicious comment,173,		# partial clusters missing some of the nodes with bad ordering!
+purpleidea@puppet-gluster-manifests-simple.pp,suspicious comment,174,"		#bricks => split(inline_template(""<%= @gluster_fqdns.split(',').collect {|x| x+':${valid_path}' }.join(',') %>""), ','),"
+ceph@puppet-ceph-manifests-mds.pp,suspicious comment,24,#   Optional. Defaults to 'true'.
+ceph@puppet-ceph-manifests-mds.pp,suspicious comment,27,#   Optional. Default provided by Ceph is '/var/lib/ceph/mds/$cluster-$id'.
+ceph@puppet-ceph-manifests-mds.pp,suspicious comment,30,#   Optional. Defaults to /var/lib/ceph/mds/$cluster-$id/keyring.
+voxpupuli@puppet-rabbitmq-examples-server.pp,none,none
+openstack@fuel-library-deployment-puppet-openstack_tasks-examples-heat-cfn_keystone.pp,none,none
+SecGen@SecGen-modules-services-unix-http-tomcat-manifests-instance-dependencies.pp,none,none
+Mirantis@solar-resources-cinder_puppet-actions-run.pp,none,none
+Yelp@puppet-uchiwa-manifests-repo-yum.pp,none,none
+alphagov@govuk-puppet-modules-govuk_jenkins-manifests-jobs-scrape_icinga_alerts_for_dashboard_metrics.pp,none,none
+alphagov@govuk-puppet-modules-icinga-manifests-init.pp,suspicious comment,1,# FIXME: This class needs better documentation as per https://docs.puppetlabs.com/guides/style_guide.html#puppet-doc
+fuel-infra@puppet-manifests-modules-obs_server-manifests-folders.pp,none,none
+alphagov@govuk-puppet-modules-govuk_beat-manifests-repo.pp,none,none
+puphpet@puppet-puphpet-manifests-nginx-params.pp,hardcoded-secret,36,$ssl_cert_location = $::osfamily ? {
+puphpet@puppet-puphpet-manifests-nginx-params.pp,hardcoded-secret,41,$ssl_key_location = $::osfamily ? {
+voxpupuli@puppet-rundeck-manifests-config-global-framework.pp,hardcoded-secret,12,$user           = $rundeck::config::user
+StackStorm@st2workroom-modules-profile-manifests-ec2.pp,none,none
+mattheath@puppet-php-manifests-fpm-5_3_15.pp,none,none
+openstack@puppet-tripleo-manifests-profile-base-manila-api.pp,suspicious comment,23,"#   Defaults to hiera('manila_backend_generic_enabled', false)"
+openstack@puppet-tripleo-manifests-profile-base-manila-api.pp,suspicious comment,27,"#   Defaults to hiera('manila_backend_netapp_enabled', false)"
+openstack@puppet-tripleo-manifests-profile-base-manila-api.pp,suspicious comment,31,"#   Defaults to hiera('manila_backend_vmax_enabled', false)"
+openstack@puppet-tripleo-manifests-profile-base-manila-api.pp,suspicious comment,35,"#   Defaults to hiera('manila_backend_isilon_enabled', false)"
+openstack@puppet-tripleo-manifests-profile-base-manila-api.pp,suspicious comment,39,"#   Defaults to hiera('manila_backend_unity_enabled', false)"
+openstack@puppet-tripleo-manifests-profile-base-manila-api.pp,suspicious comment,43,"#   Defaults to hiera('manila_backend_vnx_enabled', false)"
+openstack@puppet-tripleo-manifests-profile-base-manila-api.pp,suspicious comment,47,"#   Defaults to hiera('manila_backend_cephfs_enabled', false)"
+openstack@puppet-tripleo-manifests-profile-base-manila-api.pp,suspicious comment,51,#   Defaults to hiera('manila_api_short_bootstrap_node_name')
+openstack@puppet-tripleo-manifests-profile-base-manila-api.pp,suspicious comment,63,"#   Defaults to hiera('apache_certificate_specs', {})."
+openstack@puppet-tripleo-manifests-profile-base-manila-api.pp,suspicious comment,68,"#   Defaults to hiera('manila_api_network', undef)"
+openstack@puppet-tripleo-manifests-profile-base-manila-api.pp,suspicious comment,72,"#   Defaults to hiera('enable_internal_tls', false)"
+openstack@puppet-tripleo-manifests-profile-base-manila-api.pp,suspicious comment,75,#   (Optional) The current step in deployment. See tripleo-heat-templates
+openstack@puppet-tripleo-manifests-profile-base-manila-api.pp,suspicious comment,77,#   Defaults to hiera('step')
+SecGen@SecGen-modules-services-unix-database-mysql-manifests-backup-xtrabackup.pp,none,none
+wesleytodd@YeoPress-app-templates-puppet-modules-mysql-manifests-ruby.pp,none,none
+duritong@puppet-shorewall-manifests-dnat_rule.pp,suspicious comment,5,# assumption is that by default
+quintel@boxen-modules-osx-manifests-recovery_message.pp,none,none
+puppetlabs@puppetlabs-apache-manifests-mod-ssl.pp,suspicious comment,96,  # Template uses
+Juniper@contrail-puppet-contrail-environment-modules-contrail-manifests-collector-config.pp,hardcoded-secret,17,"$redis_password = $::contrail::params::redis_password,"
+Juniper@contrail-puppet-contrail-environment-modules-contrail-manifests-collector-config.pp,hardcoded-secret,23,"$kombu_ssl_ca_certs = $::contrail::params::kombu_ssl_ca_certs,"
+Juniper@contrail-puppet-contrail-environment-modules-contrail-manifests-collector-config.pp,hardcoded-secret,24,"$kombu_ssl_certfile = $::contrail::params::kombu_ssl_certfile,"
+Juniper@contrail-puppet-contrail-environment-modules-contrail-manifests-collector-config.pp,hardcoded-secret,54,contrail_collector_config { 'REDIS/password': value => $redis_password; } ->
+Juniper@contrail-puppet-contrail-environment-modules-contrail-manifests-collector-config.pp,hardcoded-secret,64,contrail_collector_config { 'REDIS/password': ensure => absent; } ->
+Juniper@contrail-puppet-contrail-environment-modules-contrail-manifests-collector-config.pp,improper ip address binding,74,'DEFAULTS/rest_api_ip'      : value => '0.0.0.0';
+thiagoarrais@gtk2hs-gtk-Graphics-UI-Gtk-Gdk-PixbufData.hs.pp,suspicious comment,55,                          {-# UNPACK #-} !(Ptr e)
+thiagoarrais@gtk2hs-gtk-Graphics-UI-Gtk-Gdk-PixbufData.hs.pp,suspicious comment,57,                          {-# UNPACK #-} !Int
+thiagoarrais@gtk2hs-gtk-Graphics-UI-Gtk-Gdk-PixbufData.hs.pp,suspicious comment,73,  {-# INLINE unsafeRead #-}
+thiagoarrais@gtk2hs-gtk-Graphics-UI-Gtk-Gdk-PixbufData.hs.pp,suspicious comment,78,  {-# INLINE unsafeWrite #-}
+cargomedia@puppet-packages-modules-mysql-manifests-server-instance.pp,none,none
+cargomedia@puppet-packages-modules-ulimit-manifests-entry.pp,none,none
+alphagov@govuk-puppet-modules-govuk_jenkins-manifests-jobs-smokey.pp,none,none
+wikimedia@mediawiki-vagrant-puppet-modules-role-manifests-notebook.pp,none,none
+redhat-openstack@puppet-galera-manifests-server.pp,suspicious comment,9,"#   Defaults to false, boolean to set cluster boostrap."
+redhat-openstack@puppet-galera-manifests-server.pp,suspicious comment,47,#  [*debug*]
+redhat-openstack@puppet-galera-manifests-server.pp,suspicious comment,51,"#   Deprecated, please use ::mysql::server class."
+redhat-openstack@puppet-galera-manifests-server.pp,suspicious comment,55,"#   Deprecated, please use ::mysql::server class."
+redhat-openstack@puppet-galera-manifests-server.pp,suspicious comment,60,"#   Deprecated, please use ::mysql::server class."
+redhat-openstack@puppet-galera-manifests-server.pp,suspicious comment,64,"#   Deprecated, please use ::mysql::server class."
+redhat-openstack@puppet-galera-manifests-server.pp,suspicious comment,67,"#   Defaults to true, boolean to set service enable."
+redhat-openstack@puppet-galera-manifests-server.pp,suspicious comment,68,"#   Deprecated, please use ::mysql::server class."
+redhat-openstack@puppet-galera-manifests-server.pp,suspicious comment,71,"#   Defaults to running, needed to set root password."
+redhat-openstack@puppet-galera-manifests-server.pp,suspicious comment,72,"#   Deprecated, please use ::mysql::server class."
+redhat-openstack@puppet-galera-manifests-server.pp,suspicious comment,76,"#   Deprecated, please use ::mysql::server class."
+redhat-openstack@puppet-galera-manifests-server.pp,suspicious comment,104,  # DEPRECATED OPTIONS
+openstack@puppet-tripleo-manifests-profile-base-manila-scheduler.pp,suspicious comment,22,#   (Optional) The current step in deployment. See tripleo-heat-templates
+openstack@puppet-tripleo-manifests-profile-base-manila-scheduler.pp,suspicious comment,24,#   Defaults to hiera('step')
+openstack@puppet-tripleo-manifests-stunnel-service_proxy.pp,suspicious comment,39,#   Defaults to 'no'
+openstack@puppet-tripleo-manifests-stunnel-service_proxy.pp,suspicious comment,43,#   Defaults to 'localhost'
+openstack@puppet-tripleo-manifests-stunnel-service_proxy.pp,suspicious comment,47,#   Defaults to 'TLSv1.2'
+puppetlabs@pltraining-userprefs-examples-npp.pp,none,none
+Icinga@puppet-icinga2-examples-hostgroup.pp,none,none
+poetic@our-boxen-manifests-site.pp,suspicious comment,61,  # fail if FDE is not enabled
+poetic@our-boxen-manifests-site.pp,suspicious comment,69,  # default ruby versions
+Automattic@vip-quickstart-puppet-manifests-sections-mail.pp,suspicious comment,1,# Postfix
+Automattic@vip-quickstart-puppet-manifests-sections-mail.pp,suspicious comment,11,# Mailtuils for sending diagnostic reports
+openstack@fuel-library-deployment-puppet-cluster-manifests-conntrackd_ocf.pp,suspicious comment,78,  # Workaround to ensure log is rotated properly
+SecGen@SecGen-modules-utilities-unix-firewall-firewall-manifests-linux-redhat.pp,suspicious comment,9,#   Default: running
+SecGen@SecGen-modules-utilities-unix-firewall-firewall-manifests-linux-redhat.pp,suspicious comment,13,#   Default: true
+SecGen@SecGen-modules-utilities-unix-firewall-firewall-manifests-linux-redhat.pp,suspicious comment,23,  # RHEL 7 and later and Fedora 15 and later require the iptables-services
+openstack@fuel-library-deployment-puppet-tweaks-manifests-ubuntu_service_override.pp,suspicious comment,9,#  Defaults to $name
+openstack@fuel-library-deployment-puppet-tweaks-manifests-ubuntu_service_override.pp,suspicious comment,14,#  Defaults to $name
+openstack@fuel-library-deployment-puppet-tweaks-manifests-ubuntu_service_override.pp,suspicious comment,18,#  Defaults to false
+camptocamp@puppet-python-manifests-pip-couchdb.pp,suspicious comment,19,  # Workaround: added a SPACE in namevar to avoid duplicate declaration
+camptocamp@puppet-python-manifests-pip-couchdb.pp,suspicious comment,20,  # with the service/package couchdb! Hoping that one day we can properly solve
+camptocamp@puppet-python-manifests-pip-couchdb.pp,suspicious comment,21,  # this problem using e.g. composite name identifier
+boxbilling@boxbilling-puphpet-puppet-modules-puphpet-manifests-php-pecl.pp,none,none
+alphagov@govuk-puppet-modules-users-manifests-felisialoukou.pp,hardcoded-secret,2,class users::felisialoukou { govuk_user { 'felisialoukou':
+wikimedia@mediawiki-vagrant-puppet-modules-ocg-manifests-init.pp,none,none
+Vizir@carnival-vagrant-modules-apt-manifests-backports.pp,suspicious comment,6,#   The ubuntu/debian release name. Defaults to $lsbdistcodename. Setting this
+Vizir@carnival-vagrant-modules-apt-manifests-backports.pp,suspicious comment,7,#   manually can cause undefined behavior. (Read: universe exploding)
+Vizir@carnival-vagrant-modules-apt-manifests-backports.pp,suspicious comment,19,"# Ben Hughes, I think. At least blame him if this goes wrong."
+alphagov@govuk-puppet-modules-govuk_elasticsearch-manifests-dump.pp,suspicious comment,1,# FIXME: This class needs better documentation as per https://docs.puppetlabs.com/guides/style_guide.html#puppet-doc
+alphagov@govuk-puppet-modules-govuk_postgresql-manifests-env_sync_user.pp,none,none
+mayflower@wasted-site-component-manifests-mongodb.pp,none,none
+openstack@fuel-library-deployment-puppet-osnailyfacter-manifests-plugins-plugins_rsync.pp,none,none
+puppetlabs@puppetlabs-mysql-manifests-server-config.pp,suspicious comment,50,      # We first check that it is undefined due to dirname throwing an error when given undef/empty strings
+openstack@puppet-tripleo-manifests-profile-base-neutron-wrappers-dibbler_client.pp,suspicious comment,30,# [*debug*]
+openstack@puppet-tripleo-manifests-profile-base-neutron-wrappers-dibbler_client.pp,suspicious comment,31,#   Enable debug messages for the wrapper script.
+openstack@puppet-monasca-manifests-virtualenv-instance.pp,suspicious comment,5,# with different policies for packages and virtualenvs.  By default the config
+openstack@puppet-monasca-manifests-virtualenv-instance.pp,suspicious comment,6,# files will be copied from the template files internal to the module.  This
+openstack@puppet-monasca-manifests-virtualenv-instance.pp,suspicious comment,7,# behavior can be overridden by providing a $config_files hash.
+openstack@puppet-monasca-manifests-virtualenv-instance.pp,suspicious comment,19,# and with different $venv_prefix options.  The monasca::agent class will allow
+openstack@puppet-monasca-manifests-virtualenv-instance.pp,suspicious comment,30,# [*ensure*] (required) Whether or not the package should be removed or
+openstack@puppet-monasca-manifests-virtualenv-instance.pp,suspicious comment,36,# changed.  Only one virtualenv can be active at a time.  Defaults to false.
+openstack@puppet-monasca-manifests-virtualenv-instance.pp,suspicious comment,42,# [*venv_prefix*] Prefix to give to virtualenv directories
+openstack@puppet-monasca-manifests-virtualenv-instance.pp,suspicious comment,44,# virtualenvs installed at the same time. Defaults to $name
+alphagov@govuk-puppet-modules-govuk_rabbitmq-manifests-monitoring.pp,suspicious comment,1,# FIXME: This class needs better documentation as per https://docs.puppetlabs.com/guides/style_guide.html#puppet-doc
+mikeedwards83@Glass.Mapper-Archived-Glass.Mapper.Umb.CastleWindsor-App_Start-GlassMapperUmb.cs.pp,none,none
+wikimedia@mediawiki-vagrant-puppet-modules-xhprofgui-manifests-init.pp,none,none
+poetic@our-boxen-modules-people-manifests-bobobhai.pp,hardcoded-secret,2,"$home         = ""/Users/${::luser}"""
+alphagov@govuk-puppet-modules-govuk-manifests-node-s_calculators_frontend.pp,suspicious comment,1,# FIXME: This class needs better documentation as per https://docs.puppetlabs.com/guides/style_guide.html#puppet-doc
+alphagov@govuk-puppet-modules-govuk-manifests-node-s_calculators_frontend.pp,suspicious comment,14,"  # If we miss all the apps, throw a 500 to be caught by the cache nginx"
+openstack@fuel-library-deployment-puppet-osnailyfacter-manifests-ssh.pp,suspicious comment,14,#   SSH protocol version to use. Defaults to 2
+openstack@fuel-library-deployment-puppet-osnailyfacter-manifests-ssh.pp,suspicious comment,18,#   Defaults to 22
+openstack@fuel-library-deployment-puppet-osnailyfacter-manifests-ssh.pp,suspicious comment,21,#   SSH daemon log level. Defaults to VERBOSE
+openstack@fuel-library-deployment-puppet-osnailyfacter-manifests-ssh.pp,suspicious comment,24,#   Use password authentication. Defaults to no
+openstack@fuel-library-deployment-puppet-osnailyfacter-manifests-ssh.pp,suspicious comment,27,#   Specifies whether root can log in using ssh. Defaults: undef (don't add an
+openstack@fuel-library-deployment-puppet-osnailyfacter-manifests-ssh.pp,hardcoded-secret,88,"require => Class['ssh::server'],"
+boxbilling@boxbilling-puphpet-puppet-modules-apache-manifests-ssl.pp,none,none
+boxbilling@boxbilling-puphpet-puppet-modules-apache-manifests-mod-pagespeed.pp,none,none
