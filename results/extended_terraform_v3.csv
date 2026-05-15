@@ -1,0 +1,161 @@
+terraform-google-modules_terraform-google-container-vm-examples-instance_with_config_file-main.tf,weak crypto,22,"  instance_name = format(""%s-%s"", var.instance_name, substr(md5(module.gce-container.container.image), 0, 8))"
+mongodb_terraform-provider-mongodbatlas-examples-aws-atlas-privatelink-serverless-aws-vpc.tf,improper ip address binding,3,"  cidr_block           = ""10.0.0.0/16"""
+mongodb_terraform-provider-mongodbatlas-examples-aws-atlas-privatelink-serverless-aws-vpc.tf,improper ip address binding,16,"  destination_cidr_block = ""0.0.0.0/0"""
+mongodb_terraform-provider-mongodbatlas-examples-aws-atlas-privatelink-serverless-aws-vpc.tf,improper ip address binding,49,    cidr_blocks = [
+mongodb_terraform-provider-mongodbatlas-examples-aws-atlas-privatelink-serverless-aws-vpc.tf,improper ip address binding,57,"    cidr_blocks = [""0.0.0.0/0""]"
+nulogy_terragrunt-modules-modules-postgres_rds-security.tf,none,none
+SiMDE-Projects_terraform-github-repositories-sparkle.tf,none,none
+sysdiglabs_terraform-aws-secure-for-cloud-modules-services-cloud-connector-apprunner-apprunner.tf,none,none
+Jason2021Liu_terraform-quickstart-301-service-fabric-apim-keyvault.tf,hardcoded-secret,49,    secret_permissions = [
+Jason2021Liu_terraform-quickstart-301-service-fabric-apim-keyvault.tf,hardcoded-secret,73,      key_size   = 2048
+Jason2021Liu_terraform-quickstart-301-service-fabric-apim-keyvault.tf,hardcoded-secret,95,"      extended_key_usage = [""1.3.6.1.5.5.7.3.1""]"
+Jason2021Liu_terraform-quickstart-301-service-fabric-apim-keyvault.tf,hardcoded-secret,127,      key_size   = 2048
+Jason2021Liu_terraform-quickstart-301-service-fabric-apim-keyvault.tf,hardcoded-secret,149,"      extended_key_usage = [""1.3.6.1.5.5.7.3.1""]"
+40net-cloud_fortinet-azure-solutions-FortiGate-Playground-MultiCloud-terraform-02-network-gcp.tf,improper ip address binding,64,"  dest_range  = ""0.0.0.0/0"""
+40net-cloud_fortinet-azure-solutions-FortiGate-Playground-MultiCloud-terraform-02-network-gcp.tf,improper ip address binding,85,"  source_ranges = [""0.0.0.0/0""]"
+40net-cloud_fortinet-azure-solutions-FortiGate-Playground-MultiCloud-terraform-02-network-gcp.tf,improper ip address binding,98,"  source_ranges = [""0.0.0.0/0""]"
+40net-cloud_fortinet-azure-solutions-FortiGate-Playground-MultiCloud-terraform-02-network-gcp.tf,improper ip address binding,111,"  source_ranges = [""0.0.0.0/0""]"
+40net-cloud_fortinet-azure-solutions-FortiGate-Playground-MultiCloud-terraform-02-network-gcp.tf,improper ip address binding,123,"  source_ranges = [""0.0.0.0/0""]"
+wardviaene_terraform-course-codepipeline-demo-iam-codedeploy.tf,none,none
+ps-interactive_labs-shared-terraform-cloudfront-main.tf,none,none
+terraform-google-modules_terraform-docs-samples-cloud_sql-instance_ha-main.tf,hardcoded-secret,58,"  root_password    = ""INSERT-PASSWORD-HERE"""
+quarkiverse_quarkiverse-devops-quarkus-togglz.tf,none,none
+nizmoham_terraform-main.tf,none,none
+kbst_terraform-kubestack-google-_modules-gke-ingress.tf,none,none
+cds-snc_notification-terraform-aws-common-iam.tf,hardcoded-secret,138,  user   = aws_iam_user.bulk_send.name
+cds-snc_notification-terraform-aws-common-iam.tf,hardcoded-secret,144,  user = aws_iam_user.bulk_send.name
+cds-snc_notification-terraform-aws-common-iam.tf,hardcoded-secret,187,  user = aws_iam_user.inspec-scanner.name
+cyralinc_terraform-provider-cyral-examples-guides-mongodb_cluster-okta_idp_user_account.tf,empty password,4,"    username = """""
+cyralinc_terraform-provider-cyral-examples-guides-mongodb_cluster-okta_idp_user_account.tf,empty password,5,"    password = """""
+cyralinc_terraform-provider-cyral-examples-guides-mongodb_cluster-okta_idp_user_account.tf,suspicious comment,11,  # all secrets with the prefix '/cyral/' in the region it is
+cyralinc_terraform-provider-cyral-examples-guides-mongodb_cluster-okta_idp_user_account.tf,hardcoded-secret,32,      secret_arn = aws_secretsmanager_secret.mongodb_creds.arn
+ContainerSolutions_terraform-examples-backends-s3-aws_s3_bucket-main.tf,none,none
+Azure_terraform-quickstart-101-sql-database-main.tf,none,none
+openclimatefix_ocf-infrastructure-terraform-modules-networking-main.tf,improper ip address binding,97,"  destination_cidr_block = ""0.0.0.0/0"""
+openclimatefix_ocf-infrastructure-terraform-modules-networking-main.tf,improper ip address binding,103,"  destination_cidr_block = ""0.0.0.0/0"""
+jawabuu_kloud-3s-provider-hcloud-main.tf,hardcoded-secret,71,  ssh_keys    = [hcloud_ssh_key.tf-kube.id]
+jawabuu_kloud-3s-provider-hcloud-main.tf,hardcoded-secret,76,"    user        = ""root"""
+ministryofjustice_hmpps-terraform-modules-components-monitoring-monitoring-server-main.tf,none,none
+ps-interactive_labs-shared-terraform-finished-labs-Azure-Build a Training Pipeline with Azure ML Designer-main.tf,none,none
+dwp_orchestration-service-terraform-modules-fargate-service-alb.tf,none,none
+pivotal_paving-aws-pks-lbs.tf,none,none
+waritta26_terraform-terraform-aws-ec2.tf,hardcoded-secret,9,  user_data = <<EOF
+waritta26_terraform-terraform-aws-ec2.tf,improper ip address binding,87,    cidr_blocks = [
+waritta26_terraform-terraform-aws-ec2.tf,improper ip address binding,94,    cidr_blocks = [
+waritta26_terraform-terraform-aws-ec2.tf,improper ip address binding,101,    cidr_blocks = [
+waritta26_terraform-terraform-aws-ec2.tf,improper ip address binding,222,"  destination_cidr_block = ""0.0.0.0/0"""
+dwp_aws-analytical-env-terraform-modules-squid_proxy-sg.tf,improper ip address binding,10,"  cidr_blocks       = [""10.0.0.0/8"", ""172.16.0.0/12"", ""192.168.0.0/16""]"
+dwp_aws-analytical-env-terraform-modules-squid_proxy-sg.tf,improper ip address binding,30,"  cidr_blocks       = [""0.0.0.0/0""]"
+dwp_aws-analytical-env-terraform-modules-squid_proxy-sg.tf,improper ip address binding,40,"  cidr_blocks       = [""0.0.0.0/0""]"
+cn-terraform_terraform-aws-ecs-fargate-task-definition-main.tf,suspicious comment,168,# TODO - Add this missing parameter
+albumprinter_eops_tf_modules-apps-lambda_function_sns_shared_vpc-sns.tf,none,none
+alphagov_govwifi-terraform-govwifi-frontend-cluster.tf,none,none
+wjrmffldrhrl_Terraform-Study-1st-personal-kevin-chapter_2-tf-main.tf,hardcoded-secret,26,  user_data = <<-EOF
+wjrmffldrhrl_Terraform-Study-1st-personal-kevin-chapter_2-tf-main.tf,improper ip address binding,63,"    cidr_blocks = [""0.0.0.0/0""]"
+wjrmffldrhrl_Terraform-Study-1st-personal-kevin-chapter_2-tf-main.tf,use of http,87,"  protocol          = ""HTTP"""
+wjrmffldrhrl_Terraform-Study-1st-personal-kevin-chapter_2-tf-main.tf,suspicious comment,89,"  # By default, return a simple 404 page"
+wjrmffldrhrl_Terraform-Study-1st-personal-kevin-chapter_2-tf-main.tf,use of http,106,"  protocol = ""HTTP"""
+wjrmffldrhrl_Terraform-Study-1st-personal-kevin-chapter_2-tf-main.tf,use of http,111,"    protocol            = ""HTTP"""
+wjrmffldrhrl_Terraform-Study-1st-personal-kevin-chapter_2-tf-main.tf,improper ip address binding,145,"    cidr_blocks = [""0.0.0.0/0""]"
+wjrmffldrhrl_Terraform-Study-1st-personal-kevin-chapter_2-tf-main.tf,improper ip address binding,153,"    cidr_blocks = [""0.0.0.0/0""]"
+pivotal_paving-aws-pas-buckets.tf,none,none
+luisfuno_terraform-quickstart-201-k8s-cluster-with-aks-applicationgateway-ingress-main.tf,none,none
+netfryer_terraform-azure-Jenkins_proj-working-WebInDeploy-webservers.tf,none,none
+moengage_tf-core-subnet_resources-nacl.tf,improper ip address binding,27,"  cidr_block     = ""0.0.0.0/0"""
+moengage_tf-core-subnet_resources-nacl.tf,improper ip address binding,37,"  cidr_block     = ""0.0.0.0/0"""
+40net-cloud_fortinet-azure-solutions-FortiGate-Playground-MultiCloud-terraform-02-network-gcp-spoke.tf,suspicious comment,9,# Terraform deployment template for Google Cloud
+40net-cloud_fortinet-azure-solutions-FortiGate-Playground-MultiCloud-terraform-02-network-gcp-spoke.tf,improper ip address binding,103,"  source_ranges = [""0.0.0.0/0""]"
+40net-cloud_fortinet-azure-solutions-FortiGate-Playground-MultiCloud-terraform-02-network-gcp-spoke.tf,improper ip address binding,115,"  source_ranges = [""0.0.0.0/0""]"
+ministryofjustice_modernisation-platform-environments-terraform-environments-laa-oem-oem_ec2_db_sg.tf,improper ip address binding,14,    cidr_blocks = [
+jbhoraniya_terraform1-aws-aws_security_group-ssh-main.tf,improper ip address binding,32,"    cidr_blocks = [""0.0.0.0/0""]"
+quarkiverse_quarkiverse-devops-quarkus-discord4j.tf,none,none
+wellcomecollection_platform-infrastructure-images-terraform-repo_pair-main.tf,none,none
+sourcegraph_terraform-aws-executors-modules-credentials-main.tf,hardcoded-secret,11,  user = aws_iam_user.metric_writer.id
+sourcegraph_terraform-aws-executors-modules-credentials-main.tf,hardcoded-secret,30,  user = aws_iam_user.metric_writer.name
+tothenew_terraform-km-s1-bhawna-main.tf,none,none
+Azure_terraform-quickstart-301-hub-spoke-spoke2.tf,none,none
+cts-terraform-modules_terraform-google-kubernetes-engine-modules-safer-cluster-main.tf,suspicious comment,17,// This file was automatically generated from a template in ./autogen/safer-cluster
+cts-terraform-modules_terraform-google-kubernetes-engine-modules-safer-cluster-main.tf,suspicious comment,20,// settings set to recommended values by default.
+cts-terraform-modules_terraform-google-kubernetes-engine-modules-safer-cluster-main.tf,suspicious comment,35,  // Nodes are created with a default version. The nodepool enables
+cts-terraform-modules_terraform-google-kubernetes-engine-modules-safer-cluster-main.tf,suspicious comment,70,"  // We suggest removing the default node pull, as it cannot be modified without"
+cts-terraform-modules_terraform-google-kubernetes-engine-modules-safer-cluster-main.tf,suspicious comment,71,  // destroying the cluster.
+cts-terraform-modules_terraform-google-kubernetes-engine-modules-safer-cluster-main.tf,suspicious comment,88,  // We never use the default service account for the cluster. The default
+cts-terraform-modules_terraform-google-kubernetes-engine-modules-safer-cluster-main.tf,suspicious comment,89,  // project/editor permissions can create problems if nodes were to be ever
+cts-terraform-modules_terraform-google-kubernetes-engine-modules-safer-cluster-main.tf,suspicious comment,90,  // compromised.
+cts-terraform-modules_terraform-google-kubernetes-engine-modules-safer-cluster-main.tf,empty password,103,"  basic_auth_username = """""
+cts-terraform-modules_terraform-google-kubernetes-engine-modules-safer-cluster-main.tf,empty password,104,"  basic_auth_password = """""
+cts-terraform-modules_terraform-google-kubernetes-engine-modules-safer-cluster-main.tf,suspicious comment,147,"  // Sandbox can also provide increased protection in other cases, at some performance cost."
+cts-terraform-modules_terraform-google-kubernetes-engine-modules-safer-cluster-main.tf,suspicious comment,155,  // We enable identity namespace by default.
+netfryer_terraform-aws-transitgateway-demo-v2-create_s3_bootstrap.tf,none,none
+tothenew_terraform-km-rahuljkm-Manan-main.tf,none,none
+terraform-google-modules_terraform-docs-samples-cloud_sql-instance_pitr-main.tf,none,none
+tablexi_terraform_modules-aws-application_load_balancer-main.tf,use of http,53,"  protocol          = ""HTTP"""
+bridgecrewio_terragoat-terraform-azure-security_center.tf,none,none
+wwce_terraform-aws-Jenkins_proj-master-WebInDeploy-loadbalancers.tf,use of http,15,"  protocol    = ""HTTP"""
+wwce_terraform-aws-Jenkins_proj-master-WebInDeploy-loadbalancers.tf,use of http,38,"  protocol          = ""HTTP"""
+wwce_terraform-aws-Jenkins_proj-master-WebInDeploy-loadbalancers.tf,use of http,75,"  protocol    = ""HTTP"""
+wwce_terraform-aws-Jenkins_proj-master-WebInDeploy-loadbalancers.tf,use of http,98,"  protocol          = ""HTTP"""
+ministryofjustice_hmpps-delius-core-terraform-modules-weblogic-admin-only-ecs.tf,hardcoded-secret,14,"    user  = ""root"""
+ministryofjustice_hmpps-delius-core-terraform-modules-weblogic-admin-only-ecs.tf,use of http,36,"    DELIUS_API_URL        = ""http://delius-api.ecs.cluster:8080"""
+ministryofjustice_hmpps-delius-core-terraform-modules-weblogic-admin-only-ecs.tf,use of http,39,"    MERGE_API_URL         = ""http://merge-api.ecs.cluster:8080/merge/api/"""
+ministryofjustice_hmpps-delius-core-terraform-modules-weblogic-admin-only-ecs.tf,use of http,40,"    MERGE_OAUTH_URL       = ""http://usermanagement.ecs.cluster:8080/umt/"""
+ministryofjustice_hmpps-delius-core-terraform-modules-weblogic-admin-only-ecs.tf,suspicious comment,63,"  health_check_timeout              = 15 # Should be greater than WebLogic's ""Connection Reserve Timeout"", which defaults to 10 seconds"
+ministryofjustice_hmpps-delius-core-terraform-modules-weblogic-admin-only-ecs.tf,suspicious comment,64,"  health_check_unhealthy_threshold  = 10 # Increased unhealthy threshold to allow longer for recovery, due to instances being stateful"
+ministryofjustice_hmpps-delius-core-terraform-modules-weblogic-admin-only-ecs.tf,suspicious comment,76,  enable_response_code_alarms = false # 500 responses are sometimes returned for normal operations e.g. OASys offender not found
+ComplianceRepo1_TerraformsWebGoat-terraform-aws-ec2.tf,hardcoded-secret,9,  user_data = <<EOF
+ComplianceRepo1_TerraformsWebGoat-terraform-aws-ec2.tf,improper ip address binding,87,    cidr_blocks = [
+ComplianceRepo1_TerraformsWebGoat-terraform-aws-ec2.tf,improper ip address binding,94,    cidr_blocks = [
+ComplianceRepo1_TerraformsWebGoat-terraform-aws-ec2.tf,improper ip address binding,101,    cidr_blocks = [
+ComplianceRepo1_TerraformsWebGoat-terraform-aws-ec2.tf,improper ip address binding,222,"  destination_cidr_block = ""0.0.0.0/0"""
+concourse_prod-iaas-redirect-dns.tf,none,none
+PacketFabric_terraform-provider-packetfabric-examples-use-cases-cloud_router_google_azure-cloud_router_connection_azure.tf,suspicious comment,83,"    type   = ""out"" # Allowed Prefixes to Cloud"
+PacketFabric_terraform-provider-packetfabric-examples-use-cases-cloud_router_google_azure-cloud_router_connection_azure.tf,suspicious comment,87,"    type   = ""in"" # Allowed Prefixes from Cloud"
+collabnix_terraform-beginners-azure-aks_cluster-main.tf,none,none
+cds-snc_forms-terraform-aws-ecr-ecr.tf,none,none
+ministryofjustice_modernisation-platform-environments-terraform-environments-performance-hub-route53.tf,none,none
+tothenew_terraform-km-s1-navjot-main.tf,none,none
+nsbno_terraform-aws-trafficinfo-terraform-aws-console-sign-in-alarm-main.tf,none,none
+pivotal-cf_terraforming-gcp-ops-manager-dns.tf,none,none
+open-craft_terraform-scripts-modules-services-analytics-emr.tf,suspicious comment,288,# Adding the elasticsearch-all policy to EMR_EC2_DefaultRole
+GoogleCloudPlatform_terraform-google-secured-data-warehouse-flex-templates-template-artifact-storage-main.tf,none,none
+openclimatefix_ocf-infrastructure-terraform-modules-services-data_visualization-s3.tf,none,none
+ministryofjustice_aws-root-account-modules-s3-main.tf,none,none
+fpco_terraform-aws-foundation-modules-ping-respond-sg-main.tf,none,none
+Vanraj8169_Terraform-main.tf,none,none
+terraform-google-modules_terraform-docs-samples-lb-shared_vpc_http_ilb_with_mig_backend_basic_example-main.tf,improper ip address binding,72,"  source_ranges = [""0.0.0.0/0""]"
+terraform-google-modules_terraform-docs-samples-lb-shared_vpc_http_ilb_with_mig_backend_basic_example-main.tf,suspicious comment,129,# [START cloudloadbalancing_shared_vpc_http_lb_mig_template]
+terraform-google-modules_terraform-docs-samples-lb-shared_vpc_http_ilb_with_mig_backend_basic_example-main.tf,suspicious comment,130,# Instance template
+terraform-google-modules_terraform-docs-samples-lb-shared_vpc_http_ilb_with_mig_backend_basic_example-main.tf,suspicious comment,168,# [END cloudloadbalancing_shared_vpc_http_lb_mig_template]
+terraform-google-modules_terraform-docs-samples-lb-shared_vpc_http_ilb_with_mig_backend_basic_example-main.tf,use of http,213,"  protocol              = ""HTTP"""
+netfryer_terraform-gcp-adv_peering_2fw_2spoke-modules-create_vmseries-main.tf,none,none
+aztfmod_terraform-azurerm-caf-modules-analytics-synapse-workspace.tf,none,none
+ComputeCanada_magic_castle-examples-advanced-spot_instances-gcp-main.tf,hardcoded-secret,13,  nb_users     = 10
+ComputeCanada_magic_castle-examples-advanced-spot_instances-gcp-main.tf,hardcoded-secret,17,"    login  = { type = ""n1-standard-2"", tags = [""login"", ""public"", ""proxy""], count = 1 }"
+plus3it_terraform-aws-remote-access-modules-rdgw-main.tf,suspicious comment,23,# https://github.com/terraform-providers/terraform-provider-aws/issues/132#issuecomment-397707776
+plus3it_terraform-aws-remote-access-modules-rdgw-main.tf,suspicious comment,24,# since the aws provider does not currently support cfn change sets cfn templates must be applied
+tothenew_terraform-km-kumarabhishek-NipunS-modules-ecr-main.tf,none,none
+mongodb_terraform-provider-mongodbatlas-examples-aws-privatelink-endpoint-serverless-instance-aws-vpc.tf,improper ip address binding,10,"  cidr_block           = ""10.0.0.0/16"""
+mongodb_terraform-provider-mongodbatlas-examples-aws-privatelink-endpoint-serverless-instance-aws-vpc.tf,improper ip address binding,21,"  destination_cidr_block = ""0.0.0.0/0"""
+mongodb_terraform-provider-mongodbatlas-examples-aws-privatelink-endpoint-serverless-instance-aws-vpc.tf,improper ip address binding,47,    cidr_blocks = [
+mongodb_terraform-provider-mongodbatlas-examples-aws-privatelink-endpoint-serverless-instance-aws-vpc.tf,improper ip address binding,55,"    cidr_blocks = [""0.0.0.0/0""]"
+cloudposse_terraform-aws-components-modules-aurora-mysql-resources-provider-mysql.tf,hardcoded-secret,12,  mysql_admin_password     = length(var.mysql_admin_password) > 0 ? var.mysql_admin_password : data.aws_ssm_parameter.admin_password[0].value
+cloudposse_terraform-aws-components-modules-aurora-mysql-resources-provider-mysql.tf,suspicious comment,28,  # Useful for debugging provider
+broadinstitute_terraform-ap-modules-mongodb-backup.tf,none,none
+jbhoraniya_terraform1-azurerm-azurerm_function_app-simple-main.tf,none,none
+cloudposse_terraform-aws-cloudfront-s3-cdn-examples-complete-context.tf,suspicious comment,14,"# to get the input variables with nulls for defaults,"
+cloudposse_terraform-aws-cloudfront-s3-cdn-examples-complete-context.tf,suspicious comment,19,"# For example, when using defaults, `module.this.context.delimiter`"
+cloudposse_terraform-aws-cloudfront-s3-cdn-examples-complete-context.tf,suspicious comment,70,    # https://github.com/hashicorp/terraform/issues/28137
+cloudposse_terraform-aws-cloudfront-s3-cdn-examples-complete-context.tf,suspicious comment,71,"    # which was not fixed until Terraform 1.0.0,"
+cloudposse_terraform-aws-cloudfront-s3-cdn-examples-complete-context.tf,suspicious comment,72,    # but we want the default to be all the labels in `label_order`
+cloudposse_terraform-aws-cloudfront-s3-cdn-examples-complete-context.tf,suspicious comment,75,"    # a different sentinel to indicate ""default"""
+waritta26_terraform-terraform-aws-iam.tf,hardcoded-secret,22,  user = aws_iam_user.user.name
+netfryer_terraform-azure-Jenkins_proj-master-WebInDeploy-kali-server.tf,none,none
+kz8s_tack-modules-s3-s3.tf,none,none
+waritta26_terraform-terraform-aws-db-app.tf,hardcoded-secret,13,"  username                = ""admin"""
+waritta26_terraform-terraform-aws-db-app.tf,improper ip address binding,149,"  cidr_blocks       = [""0.0.0.0/0""]"
+waritta26_terraform-terraform-aws-db-app.tf,hardcoded-secret,251,  user_data = <<EOF
+gedas987654_terraform-terraform-aws-ec2.tf,hardcoded-secret,9,  user_data = <<EOF
+gedas987654_terraform-terraform-aws-ec2.tf,improper ip address binding,60,    cidr_blocks = [
+gedas987654_terraform-terraform-aws-ec2.tf,improper ip address binding,67,    cidr_blocks = [
+gedas987654_terraform-terraform-aws-ec2.tf,improper ip address binding,74,    cidr_blocks = [
+gedas987654_terraform-terraform-aws-ec2.tf,improper ip address binding,140,"  destination_cidr_block = ""0.0.0.0/0"""

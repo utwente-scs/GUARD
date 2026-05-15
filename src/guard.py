@@ -1,165 +1,256 @@
+"""
+GUARD: Robust Detection of Security Smells in Infrastructure as Code.
+
+Extended to support Ansible, Puppet, and Terraform through a dispatcher
+architecture. Language-specific parsing is handled by parser modules in
+src/parsers/; detection logic (RegEx + ML) is shared across all languages.
+
+Usage:
+    python guard.py -p <path> [-f] [-c] [-o output.csv]
+
+    -p, --path     Path to a single IaC file or project folder.
+    -f, --folder   Specify that path is a folder (required for -c).
+    -c, --context  Activate contextualization (variable resolution).
+    -o, --output   Output CSV filename (default: output.csv).
+"""
+
 import csv
 import re
-from setfit import SetFitModel
 import importlib
-import csv
 import pickle
 import argparse
 import os
 import shutil
-import contexualizationPhase
 import numpy as np
 import time
 
-def find_ansible_file(folder):
+from setfit import SetFitModel
+from parsers import ParsedLine, get_parser
+
+
+# ---------------------------------------------------------------------------
+# File I/O helpers
+# ---------------------------------------------------------------------------
+
+SUPPORTED_EXTENSIONS = ('.yml', '.yaml', '.pp', '.tf')
+
+
+def find_iac_files(folder):
+    """Find all supported IaC files in a directory tree."""
     file_list = []
     for root, dirs, files in os.walk(folder):
-        for file in files:
-            if file.endswith(('.yml', '.yaml', '.tf', '.pp')):
-                file_list.append(os.path.join(root, file))
+        for f in files:
+            if f.endswith(SUPPORTED_EXTENSIONS):
+                file_list.append(os.path.join(root, f))
     return file_list
 
-def read_csv(file_path):
-    data_array = []
-    with open(file_path, 'r', newline='', encoding='utf-8') as csv_file:
-        csv_reader = csv.reader(csv_file)
-        for row in csv_reader:
-            data_array.append(row)
-    return data_array
 
-def fileReader(filePath):
-    with open(filePath, 'r') as file:
-        lines = file.readlines()
-    return lines
+def writer_csv(dataset, filepath):
+    """Write detection results to a CSV file."""
+    with open(filepath, mode='w', newline='') as f:
+        writer = csv.writer(f)
+        for row in dataset:
+            writer.writerow(row)
 
-def writer_csv(dataset, file):
-    with open(file, mode='w', newline='') as file_csv:
-        writer = csv.writer(file_csv)
-        for line in dataset:
-            writer.writerow(line)
 
-def guard_file(filePath, smells):
-    lines = fileReader(filePath)
-    filename = filePath.replace("./temp/", "")
+# ---------------------------------------------------------------------------
+# Detection logic (shared across all languages)
+# ---------------------------------------------------------------------------
+
+# RegEx patterns for pattern-matching smells
+ERRORS = {
+    'invalidBinding': r'0\.0\.0\.0',
+    'weakCrypto': [r'md5', r'sha1', r'arcfour'],
+    'http': r'http://',
+}
+
+HTTP_WHITELIST = ['localhost', '127.0.0.1']
+
+
+def detect_smells(parsed_lines, filename, smells, model_comments, model_secrets, vectorizer):
+    """Run detection on a list of ParsedLine objects.
+
+    Applies both pattern matching (RegEx) and semantic analysis (ML) to
+    each parsed line. This function is language-agnostic — all language-
+    specific logic is handled upstream by the parser.
+
+    Args:
+        parsed_lines:   List of ParsedLine objects from a language parser.
+        filename:       Display filename for output (relative path).
+        smells:         List to append detections to (mutated in place).
+        model_comments: Trained SetFit model for suspicious comment detection.
+        model_secrets:  Trained Label Propagation model for hardcoded secrets.
+        vectorizer:     Word2Vec vectorizer module.
+    """
     smell_detected = False
 
-    for line_number, row in enumerate(lines, start=1):
-        row = row.rstrip()
-        if '---' in row or not row.strip():
-            continue
-
-        if '#' in row:
-            divided = row.split('#', 1)
-            comment = divided[1].lstrip() if len(divided) > 1 else ""
-            line = divided[0]
-            commentPredict = modelComments.predict([comment])[0]
-            if commentPredict > 0:
-                smells.append([filename, 'suspicious comment', line_number, row])
+    for pl in parsed_lines:
+        # --- Comment detection (SetFit) ---
+        if pl.comment:
+            prediction = model_comments.predict([pl.comment])[0]
+            if prediction > 0:
+                smells.append([filename, 'suspicious comment', pl.line_number, pl.raw])
                 smell_detected = True
-        else:
-            line = row.lstrip('-').lstrip()
-        
-        # if '#' in row:
-        #     line = row.split('#', 1)[0]
-        # else:
-        #     line = row.lstrip('-').lstrip()
 
-        if ':' in line:
-            key, value = line.split(':', 1)
-            value = value.lstrip()
-            
-            if re.search(errors['invalindBinding'], value):
-                smells.append([filename, 'improper ip address binding', line_number, line])
+        # --- Key-value detection (RegEx + ML) ---
+        if pl.key is not None and pl.value is not None:
+            value = pl.value
+            key = pl.key
+
+            # RegEx: invalid IP binding (0.0.0.0)
+            if re.search(ERRORS['invalidBinding'], value):
+                smells.append([filename, 'improper ip address binding', pl.line_number, pl.raw])
                 smell_detected = True
-            elif 'http' in value:
-                if re.search(errors['http'], value) and not any(item in value for item in httpWhiteList):
-                    smells.append([filename, 'use of http', line_number, line])
+
+            # RegEx: HTTP without TLS
+            elif 'http' in value.lower():
+                if re.search(ERRORS['http'], value) and not any(item in value for item in HTTP_WHITELIST):
+                    smells.append([filename, 'use of http', pl.line_number, pl.raw])
                     smell_detected = True
-            elif any(re.search(weak, value) for weak in errors['weakCrypto']):
-                smells.append([filename, 'weak crypto', line_number, line])
+                # Terraform-specific: protocol = "HTTP" (not a URL, but unencrypted protocol)
+                elif key.strip() == 'protocol' and value.strip().strip('"') == 'HTTP':
+                    smells.append([filename, 'use of http', pl.line_number, pl.raw])
+                    smell_detected = True
+
+            # RegEx: weak cryptographic algorithms
+            elif any(re.search(weak, value) for weak in ERRORS['weakCrypto']):
+                smells.append([filename, 'weak crypto', pl.line_number, pl.raw])
                 smell_detected = True
+
+            # ML: hardcoded secrets + empty password (Word2Vec + Label Propagation)
             else:
                 vec = vectorizer.getVector(key)
-                secretPredict = modelSecrets.predict(np.array([vec]))
-                if secretPredict > 0 and ('{{' not in value) and len(value) > 0:
-                    smells.append([filename, 'hardcoded-secret', line_number, line])
-                    smell_detected = True
+                prediction = model_secrets.predict(np.array([vec]))
+                if prediction > 0:
+                    value_stripped = value.strip().strip("'\"")
+                    if value_stripped in ('', 'undef'):
+                        # Key looks like a credential but value is empty/undefined
+                        smells.append([filename, 'empty password', pl.line_number, pl.raw])
+                        smell_detected = True
+                    elif not pl.is_parameterized and len(value) > 0:
+                        smells.append([filename, 'hardcoded-secret', pl.line_number, pl.raw])
+                        smell_detected = True
 
     if not smell_detected:
         smells.append([filename, 'none', 'none'])
 
-def guard_files(output):
+
+# ---------------------------------------------------------------------------
+# Contextualization dispatcher
+# ---------------------------------------------------------------------------
+
+def run_contextualization(folder, extensions_present):
+    """Run language-appropriate contextualization on the working directory.
+
+    Args:
+        folder: Path to the working directory (./temp).
+        extensions_present: Set of file extensions found in the folder.
+    """
+    if '.yml' in extensions_present or '.yaml' in extensions_present:
+        import contexualizationPhase
+        contexualizationPhase.main(folder)
+
+    if '.pp' in extensions_present:
+        from contextualization import puppet_context
+        puppet_context.main(folder)
+
+    if '.tf' in extensions_present:
+        from contextualization import terraform_context
+        terraform_context.main(folder)
+
+
+# ---------------------------------------------------------------------------
+# Main pipeline
+# ---------------------------------------------------------------------------
+
+def guard_files(output, model_comments, model_secrets, vectorizer):
+    """Run GUARD on all IaC files in the working directory.
+
+    Args:
+        output:          Path for the output CSV.
+        model_comments:  Trained SetFit model.
+        model_secrets:   Trained Label Propagation model.
+        vectorizer:      Word2Vec vectorizer module.
+    """
     smells = []
 
-    global vectorizer
-    global modelComments
-    global modelSecrets
+    for filepath in find_iac_files('./temp'):
+        filename = filepath.replace('./temp/', '')
+        ext = os.path.splitext(filepath)[1]
 
-    loadtime = time.time()
-    vectorizer = importlib.import_module("vectorizer")
-    modelComments =  SetFitModel._from_pretrained('/Users/mateuzas/Desktop/ThesisCode/GUARD/src/pretrainedModels/suspCommentsModel')
-    with open('./src/pretrainedModels/hardCodedSecretModel.pkl', 'rb') as f:
-        modelSecrets = pickle.load(f)
-    loadModelTime = time.time() - loadtime
+        try:
+            parser = get_parser(ext)
+        except ValueError:
+            # No parser for this extension — skip
+            continue
 
-    
-    for filePath in find_ansible_file('./temp'):
-        guard_file(filePath, smells)
-    
+        parsed_lines = parser.parse_file(filepath)
+        detect_smells(parsed_lines, filename, smells, model_comments, model_secrets, vectorizer)
 
     writer_csv(smells, output)
 
 
 def main():
-    parser = argparse.ArgumentParser(description="GUARD: Robust Detection of Ansible Security Smells.")
-    parser.add_argument( "-p", "--path", help="path is the file or folder to analyze.", required=True)
-    parser.add_argument("-f", "--folder", action="store_true", help="specify path is a folder.")
-    parser.add_argument("-c", "--context", action="store_true", help="activate contextualizzation procedure.")
-    parser.add_argument("-o", "--output", help="name of output file.", default='output.csv')
+    parser = argparse.ArgumentParser(
+        description="GUARD: Robust Detection of Security Smells in Infrastructure as Code."
+    )
+    parser.add_argument("-p", "--path", help="Path to the file or folder to analyze.", required=True)
+    parser.add_argument("-f", "--folder", action="store_true", help="Specify that path is a folder.")
+    parser.add_argument("-c", "--context", action="store_true", help="Activate contextualization (variable resolution).")
+    parser.add_argument("-o", "--output", help="Output CSV filename.", default='output.csv')
 
     args = parser.parse_args()
 
-    global errors
-    global httpWhiteList
-
-    errors = {
-        'invalindBinding': r'0.0.0.0',
-        'weakCrypto': [r'md5', r'sha1', r'arcfour'],
-        'http': r'http://'
-    }
-
-    httpWhiteList = ['localhost', '127.0.0.1']
-    
-
     if args.context and not args.folder:
-        parser.error("Contextualization phase only work with projects not single files.")
+        parser.error("Contextualization only works with projects (folders), not single files.")
 
+    # --- Load models ---
+    load_start = time.time()
 
-    workingDirectory = './temp'
-    
+    vectorizer = importlib.import_module("vectorizer")
+
+    # Model paths (relative to src/)
+    model_dir = os.path.join(os.path.dirname(__file__), 'pretrainedModels')
+    model_comments = SetFitModel._from_pretrained(os.path.join(model_dir, 'suspCommentsModel'))
+
+    with open(os.path.join(model_dir, 'hardCodedSecretModel.pkl'), 'rb') as f:
+        model_secrets = pickle.load(f)
+
+    load_time = time.time() - load_start
+    print(f"Models loaded in {load_time:.2f}s")
+
+    # --- Prepare working directory ---
+    working_dir = './temp'
+
     try:
-        if os.path.exists(workingDirectory):
-            shutil.rmtree(workingDirectory)
+        if os.path.exists(working_dir):
+            shutil.rmtree(working_dir)
 
         if args.folder:
-            shutil.copytree(args.path, workingDirectory)
+            shutil.copytree(args.path, working_dir)
+
             if args.context:
-                contexualizationPhase.main('./temp')
-        
+                # Detect which languages are present
+                extensions = set()
+                for f in find_iac_files(working_dir):
+                    extensions.add(os.path.splitext(f)[1])
+                run_contextualization(working_dir, extensions)
         else:
-            os.mkdir(workingDirectory)
-            shutil.copy(args.path, workingDirectory)
-    
+            os.mkdir(working_dir)
+            shutil.copy(args.path, working_dir)
+
+        # --- Run detection ---
         start_time = time.time()
-        guard_files(args.output)
-        final_time = time.time() - start_time
+        guard_files(args.output, model_comments, model_secrets, vectorizer)
+        detection_time = time.time() - start_time
+        print(f"Detection completed in {detection_time:.2f}s → {args.output}")
 
-        shutil.rmtree('./temp')
+        shutil.rmtree(working_dir)
 
-    
-    except IsADirectoryError as d:
-        print(d)
-        shutil.rmtree('./temp')
+    except IsADirectoryError as e:
+        print(e)
+        if os.path.exists(working_dir):
+            shutil.rmtree(working_dir)
 
 
 if __name__ == '__main__':
