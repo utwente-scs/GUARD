@@ -1,3 +1,12 @@
+"""
+Usage:
+    python -m src.models_trainer -l --lang puppet \
+    -htrain data_extraction/per_language/puppet/hardcoded_secrets_dataset.csv \
+    -htest tests/hardcoded_secrets/parameters/sets/test_set.csv
+"""
+
+
+
 from datasets import *
 from sentence_transformers.losses import CosineSimilarityLoss
 from setfit import SetFitModel, SetFitTrainer
@@ -11,6 +20,7 @@ import pickle
 from tqdm import tqdm
 import argparse
 import pandas as pd
+import os
 
 from src.vectorizer import getVector
 
@@ -62,6 +72,10 @@ def trainSetFitModel(datasets_path, trainedModel_path):
 
 def trainLabelPropagationModel(trainingDataset, testingDataset, trainedModel_path, kernel='knn', n_neighbors=7, gamma=20):
     
+    training = pd.read_csv(trainingDataset, usecols=["word", "label"])
+    training = training.dropna(subset=["word"])
+    training["word"] = training["word"].astype(str)
+
     word_vocab = []
     word_label = []
 
@@ -84,6 +98,7 @@ def trainLabelPropagationModel(trainingDataset, testingDataset, trainedModel_pat
     modelSecrets.fit(word_embeddings, word_label)
 
     if trainedModel_path:
+        os.makedirs(trainedModel_path, exist_ok=True)
         with open(f'{trainedModel_path}/hardCodedSecretModel.pkl', 'wb') as f:
             pickle.dump(modelSecrets, f)
 
@@ -104,10 +119,15 @@ def main():
     parser.add_argument("-b", "--both", action="store_true", help="train both models.")
     parser.add_argument("-htrain", "--hardcoded_training", type=str, help="Path to the training data.")
     parser.add_argument("-htest", "--hardcoded_testing",  type=str, help="Path to the testing data.")
+    parser.add_argument("--lang", type=str, choices=["puppet", "chef"],
+                        help="Language-specific model. Saves to pretrainedModels/{lang}/")
 
     args = parser.parse_args()
 
-    trainedModel_path = './pretrainedModels'
+    if args.lang:
+        trainedModel_path = f'./src/pretrainedModels/{args.lang}'
+    else:
+        trainedModel_path = './src/pretrainedModels'
 
     trainingDataset = args.hardcoded_training
     testingDataset = args.hardcoded_testing
@@ -118,12 +138,12 @@ def main():
 
     if args.label or args.both:
         
-        print("Starting Label Propagation Training")
+        print(f"Starting Label Propagation Training → {trainedModel_path}/")
         LabelPropagationMetrics = trainLabelPropagationModel(trainingDataset, testingDataset, trainedModel_path)
         print(f"LabelPropagation acuracy: {LabelPropagationMetrics['accuracy']}, precision: {LabelPropagationMetrics['precision']}, recall: {LabelPropagationMetrics['recall']}, f1: {LabelPropagationMetrics['f1']}\n\n" )
     
     if args.setfit or args.both:
-        print("Starting SetFit Training")
+        print(f"Starting SetFit Training → {trainedModel_path}/")
         SetFitMetrics = trainSetFitModel("datasets_path", trainedModel_path)
         print(f"SetFit acuracy: {SetFitMetrics['accuracy']}, precision: {SetFitMetrics['precision']}, recall: {SetFitMetrics['recall']}, f1: {SetFitMetrics['f1']}" )
     

@@ -1,5 +1,17 @@
 datasets/puppet
 datasets/terraform
+datasets/chef-data
+datasets/new
+
+data_extraction/combined
+data_extraction/per_language
+data_extraction/training_data
+
+src/pretrainedModels
+
+results/
+
+data_extraction/training_data/
 
 GUARD/src/pretrainedModels/googleNews-vectors-negative300.bin
 GUARD/src/pretrainedModels/googleNews-vectors-negative300.bin.tar.gz
@@ -25,3 +37,4 @@ src/pretrainedModels/googleNews-vectors-negative300.bin
 temp/
 nextsteps.txt
 src/pretrainedModels/suspCommentsModel/
+context.md

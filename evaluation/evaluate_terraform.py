@@ -77,6 +77,7 @@ GUARD_TO_ORACLE = {
         "sec_hard_pass",
         "sec_hard_user",
         "sec_empty_pass",
+        "sec_def_admin"
     ],
     "use of http": [
         "sec_https",
@@ -111,7 +112,6 @@ NON_GUARD_SMELLS = {
     "sec_key_management",
     "sec_firewall_misconfig",
     "sec_integrity_policy",
-    "sec_def_admin",
     "sec_replication",
     "sec_versioning",
     "sec_public_ip",

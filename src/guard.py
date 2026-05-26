@@ -6,12 +6,14 @@ architecture. Language-specific parsing is handled by parser modules in
 src/parsers/; detection logic (RegEx + ML) is shared across all languages.
 
 Usage:
-    python guard.py -p <path> [-f] [-c] [-o output.csv]
+    python -m src.guard -p <path> [-f] [-c] [-o output.csv] [--lang puppet|chef]
 
     -p, --path     Path to a single IaC file or project folder.
     -f, --folder   Specify that path is a folder (required for -c).
     -c, --context  Activate contextualization (variable resolution).
     -o, --output   Output CSV filename (default: output.csv).
+    --lang         Use per-language models from pretrainedModels/{lang}/
+                   (default: use base models in pretrainedModels/).
 """
 
 import csv
@@ -25,14 +27,14 @@ import numpy as np
 import time
 
 from setfit import SetFitModel
-from parsers import ParsedLine, get_parser
+from src.parsers import ParsedLine, get_parser
 
 
 # ---------------------------------------------------------------------------
 # File I/O helpers
 # ---------------------------------------------------------------------------
 
-SUPPORTED_EXTENSIONS = ('.yml', '.yaml', '.pp', '.tf')
+SUPPORTED_EXTENSIONS = ('.yml', '.yaml', '.pp', '.tf', '.rb')
 
 
 def find_iac_files(folder):
@@ -147,15 +149,15 @@ def run_contextualization(folder, extensions_present):
         extensions_present: Set of file extensions found in the folder.
     """
     if '.yml' in extensions_present or '.yaml' in extensions_present:
-        import contexualizationPhase
-        contexualizationPhase.main(folder)
+        from src.contextualization import ansible_context
+        ansible_context.main(folder)
 
     if '.pp' in extensions_present:
-        from contextualization import puppet_context
+        from src.contextualization import puppet_context
         puppet_context.main(folder)
 
     if '.tf' in extensions_present:
-        from contextualization import terraform_context
+        from src.contextualization import terraform_context
         terraform_context.main(folder)
 
 
@@ -198,6 +200,9 @@ def main():
     parser.add_argument("-f", "--folder", action="store_true", help="Specify that path is a folder.")
     parser.add_argument("-c", "--context", action="store_true", help="Activate contextualization (variable resolution).")
     parser.add_argument("-o", "--output", help="Output CSV filename.", default='output.csv')
+    parser.add_argument("--lang", choices=["puppet", "chef"],
+                        help="Use per-language models from pretrainedModels/{lang}/. "
+                             "Default: use base models in pretrainedModels/.")
 
     args = parser.parse_args()
 
@@ -207,13 +212,30 @@ def main():
     # --- Load models ---
     load_start = time.time()
 
-    vectorizer = importlib.import_module("vectorizer")
+    vectorizer = importlib.import_module("src.vectorizer")
 
-    # Model paths (relative to src/)
-    model_dir = os.path.join(os.path.dirname(__file__), 'pretrainedModels')
-    model_comments = SetFitModel._from_pretrained(os.path.join(model_dir, 'suspCommentsModel'))
+    # Model paths — per-language subdirectory if --lang is specified
+    base_model_dir = os.path.join(os.path.dirname(__file__), 'pretrainedModels')
+    if args.lang:
+        model_dir = os.path.join(base_model_dir, args.lang)
+        print(f"Using {args.lang}-specific models from {model_dir}/")
+    else:
+        model_dir = base_model_dir
+        print(f"Using base models from {model_dir}/")
 
-    with open(os.path.join(model_dir, 'hardCodedSecretModel.pkl'), 'rb') as f:
+    comments_path = os.path.join(model_dir, 'suspCommentsModel')
+    secrets_path = os.path.join(model_dir, 'hardCodedSecretModel.pkl')
+
+    if not os.path.exists(comments_path):
+        print(f"ERROR: SetFit model not found at {comments_path}")
+        return
+    if not os.path.exists(secrets_path):
+        print(f"ERROR: LP model not found at {secrets_path}")
+        return
+
+    model_comments = SetFitModel._from_pretrained(comments_path)
+
+    with open(secrets_path, 'rb') as f:
         model_secrets = pickle.load(f)
 
     load_time = time.time() - load_start

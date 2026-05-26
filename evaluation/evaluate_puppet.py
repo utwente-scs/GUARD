@@ -68,6 +68,7 @@ GUARD_TO_ORACLE = {
     "hardcoded-secret": [
         "Hard-coded secret",
         "Empty password",
+        "Admin by default"
     ],
     "use of http": [
         "Use of HTTP without SSL/TLS",
@@ -82,14 +83,13 @@ GUARD_TO_ORACLE = {
         "Suspicious comment",
     ],
     "empty password": [
-        "Empty password",
+        "Empty password"
     ],
 }
 
 
 # Oracle categories outside GUARD's scope
 NON_GUARD_CATEGORIES = {
-    "Admin by default",
     "Missing Default in Case Statement",
     "No integrity check",
 }

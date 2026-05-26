@@ -1,0 +1,60 @@
+  --- Summary for sec_logging ---
+  Likely detectable (has = assignment): 0
+  Likely missing-attribute (resource/block header): 62
+  Unclear: 0
+  Total: 62
+
+  --- Summary for sec_missing_encryption ---
+  Likely detectable (has = assignment): 1
+  Likely missing-attribute (resource/block header): 30
+  Unclear: 0
+  Total: 31
+
+  --- Summary for sec_firewall_misconfig ---
+  Likely detectable (has = assignment): 4
+  Likely missing-attribute (resource/block header): 22
+  Unclear: 0
+  Total: 26
+
+  --- Summary for sec_access_control ---
+  Likely detectable (has = assignment): 1
+  Likely missing-attribute (resource/block header): 26
+  Unclear: 0
+  Total: 27
+
+  --- Summary for sec_key_management ---
+  Likely detectable (has = assignment): 0
+  Likely missing-attribute (resource/block header): 28
+  Unclear: 0
+  Total: 28
+
+  --- Summary for sec_public_ip ---
+  Likely detectable (has = assignment): 10
+  Likely missing-attribute (resource/block header): 0
+  Unclear: 0
+  Total: 10
+
+  --- Summary for sec_versioning ---
+  Likely detectable (has = assignment): 0
+  Likely missing-attribute (resource/block header): 10
+  Unclear: 0
+  Total: 10
+
+  --- Summary for sec_replication ---
+  Likely detectable (has = assignment): 0
+  Likely missing-attribute (resource/block header): 14
+  Unclear: 0
+  Total: 14
+
+  --- Summary for sec_authentication ---
+  Likely detectable (has = assignment): 3
+  Likely missing-attribute (resource/block header): 6
+  Unclear: 0
+  Total: 9
+
+  --- Summary for sec_weak_password_key_policy ---
+  Likely detectable (has = assignment): 0
+  Likely missing-attribute (resource/block header): 6
+  Unclear: 0
+  Total: 6
+

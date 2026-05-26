@@ -52,5 +52,8 @@ def get_parser(extension):
     elif extension == '.tf':
         from . import terraform_parser
         return terraform_parser
+    elif extension == '.rb':
+        from . import chef_parser
+        return chef_parser
     else:
         raise ValueError(f"No parser available for extension: {extension}")

@@ -2,13 +2,15 @@
 Retrain the SetFit suspicious comments model from susp_comments_dataset.csv.
 
 Run from the GUARD/ root directory:
-    python retrain_setfit.py
+    python retrain_setfit.py --lang puppet
+    python retrain_setfit.py --lang chef
 
 Prerequisites:
     pip install setfit==0.7.0 transformers==4.36.0 datasets==2.16.0 \
                 sentence-transformers==2.2.2 huggingface_hub==0.20.3 torch scikit-learn pandas
 """
 
+import argparse
 import os
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -29,28 +31,24 @@ def compute_metrics(y_test, y_pred):
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--lang", required=True, choices=["puppet", "chef"],
+                        help="Language to train model for")
+    args = parser.parse_args()
+
     # --- Configuration ---
-    dataset_path = "susp_comments_dataset.csv"
-    model_output_path = "src/pretrainedModels/suspCommentsModel"
+    dataset_path = f"data_extraction/per_language/{args.lang}/susp_comments_dataset.csv"
+    model_output_path = f"src/pretrainedModels/{args.lang}/suspCommentsModel"
     test_size = 0.2
     random_seed = 42
     n_per_class = 500  # SetFit is few-shot — 500 per class is plenty
 
     # --- Locate dataset ---
     if not os.path.exists(dataset_path):
-        alt_paths = [
-            "src/datasets/susp_comments_dataset.csv",
-            "susp_comments_dataset.csv",
-        ]
-        for alt in alt_paths:
-            if os.path.exists(alt):
-                dataset_path = alt
-                break
-        else:
-            print(f"ERROR: Could not find susp_comments_dataset.csv")
-            print(f"Looked in: {[dataset_path] + alt_paths}")
-            return
+        print(f"ERROR: Could not find {dataset_path}")
+        return
 
+    print(f"Training {args.lang.upper()}-only SetFit model")
     print(f"Loading dataset from: {dataset_path}")
     df = pd.read_csv(dataset_path)
 
@@ -68,8 +66,8 @@ def main():
 
     # --- Subsample for SetFit (few-shot learner, doesn't need 150k examples) ---
     sampled = pd.concat([
-    df[df["label"] == 0].sample(n=n_per_class, random_state=random_seed),
-    df[df["label"] == 1].sample(n=n_per_class, random_state=random_seed),
+        df[df["label"] == 0].sample(n=n_per_class, random_state=random_seed),
+        df[df["label"] == 1].sample(n=n_per_class, random_state=random_seed),
     ]).reset_index(drop=True)
     print(f"\nSubsampled to {len(sampled)} examples ({n_per_class} per class)")
 
@@ -85,11 +83,12 @@ def main():
     print(f"Holdout set (generalization test): {len(holdout_df)} examples")
 
     # --- Save splits for reproducibility ---
-    os.makedirs("datasets/new", exist_ok=True)
-    train_df.to_csv("datasets/new/trainingSetComments.csv", index=False)
-    test_df.to_csv("datasets/new/testSetComments.csv", index=False)
-    holdout_df.to_csv("datasets/new/holdoutSetComments.csv", index=False)
-    print("Saved splits to datasets/new/")
+    splits_dir = f"datasets/{args.lang}"
+    os.makedirs(splits_dir, exist_ok=True)
+    train_df.to_csv(f"{splits_dir}/trainingSetComments.csv", index=False)
+    test_df.to_csv(f"{splits_dir}/testSetComments.csv", index=False)
+    holdout_df.to_csv(f"{splits_dir}/holdoutSetComments.csv", index=False)
+    print(f"Saved splits to {splits_dir}/")
 
     # --- Convert to HuggingFace Datasets ---
     train_dataset = Dataset.from_pandas(train_df, preserve_index=False)

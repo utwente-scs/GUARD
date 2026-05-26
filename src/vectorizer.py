@@ -4,11 +4,11 @@ from gensim.models import KeyedVectors
 from pathlib import Path
 
 
-model_path = f'{Path.cwd()}/src/pretrainedModels/googleNews-vectors-negative300.bin'
+model_path = f'{Path.cwd()}/src/pretrainedModels/general/googleNews-vectors-negative300.bin'
 word2vec_model = KeyedVectors.load_word2vec_format(model_path, binary=True)
 
 def getVector(word: str):
-    word = word.replace("0", "").replace("1", "").replace("2", "").replace("3", "").replace("4", "").replace("5", "").replace("6", "").replace("7", "").replace("8", "").replace("9", "")
+    word = str(word).replace("0", "").replace("1", "").replace("2", "").replace("3", "").replace("4", "").replace("5", "").replace("6", "").replace("7", "").replace("8", "").replace("9", "")
     words = re.findall(r'[A-Z][a-z0-9]*|[a-z]+|\d+', word)
     composedVector = [0]*300
     

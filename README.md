@@ -1,63 +1,25 @@
-# Extending GUARD: Detecting Security Smells Across IaC Languages
+# GUARD — Multi-Language IaC Security Smell Detection
 
-Bachelor's thesis project — University of Twente, 2026.
+GUARD is a machine learning-based tool for detecting security smells in Infrastructure as Code files. Originally built for Ansible, this extended version also supports **Puppet**, **Chef**, and **Terraform**.
 
-GUARD is a machine learning-based tool for detecting security smells in Ansible Infrastructure as Code files. This project extends GUARD to support **Terraform** and **Puppet**.
+## Supported Languages
 
-## Project Structure
+| Language  | Extensions     | Parser | ML Models | Contextualization |
+|-----------|---------------|--------|-----------|-------------------|
+| Ansible   | `.yml`, `.yaml` | YAML   | Base      | Jinja2 `{{ }}`    |
+| Puppet    | `.pp`          | `=>` / `$var =` | Per-language | `$var`, `${var}`, `$module::var` |
+| Chef      | `.rb`          | Ruby `key 'value'` | Per-language | — |
+| Terraform | `.tf`          | HCL `=` assignments | Base (Ansible) | `var.`, `local.`, `${...}` |
 
-```
-ThesisCode/
-├── src/
-│   ├── guard.py                    # Main detection pipeline (dispatcher + shared detection logic)
-│   ├── parsers/
-│   │   ├── __init__.py             # ParsedLine dataclass + get_parser()
-│   │   ├── ansible_parser.py       # YAML-based Ansible parser
-│   │   ├── puppet_parser.py        # Puppet .pp parser (=> and $var = assignments)
-│   │   └── terraform_parser.py     # Terraform HCL parser (= assignments, multi-line lists)
-│   ├── contextualization/
-│   │   ├── puppet_context.py       # Puppet $variable resolution
-│   │   └── terraform_context.py    # Terraform var/local resolution
-│   ├── contexualizationPhase.py    # Original Ansible {{ variable }} resolution
-│   ├── vectorizer.py               # Word2Vec vectorization for key names
-│   ├── models_trainer.py           # ML model training (Label Propagation + SetFit)
-│   └── pretrainedModels/           # Trained models + Google News Word2Vec embeddings
-├── datasets/
-│   ├── puppet/                     # Puppet oracle dataset (GLITCH ASE 2022)
-│   ├── terraform/                  # Terraform oracle dataset (GLITCH replication package)
-│   ├── trainingSetComments.csv     # SetFit training data (suspicious comments)
-│   └── testSetComments.csv         # SetFit test data
-├── evaluation/
-│   ├── evaluate_puppet.py          # Puppet: compare GUARD output against oracle
-│   └── evaluate_terraform.py       # Terraform: compare GUARD output against oracle
-├── results/
-│   ├── baseline_puppet.csv         # RQ1: unmodified GUARD on Puppet
-│   ├── baseline_terraform.csv      # RQ1: unmodified GUARD on Terraform
-│   ├── extended_puppet.csv         # RQ2: extended GUARD on Puppet
-│   ├── extended_terraform.csv      # RQ2: extended GUARD on Terraform
-│   └── figures/
-├── retrain_setfit.py               # SetFit retraining script
-├── hardcoded_secrets_dataset.csv   # Label Propagation training data
-├── susp_comments_dataset.csv       # Suspicious comments dataset (~15k lines)
-├── requirements.txt
-└── README.md
-```
+## Detected Security Smells
 
-## Architecture
-
-The original GUARD processes only Ansible (YAML) files through a monolithic pipeline. This project refactors the architecture into a dispatcher pattern:
-
-1. **Dispatcher** (`guard.py`) — routes files to the correct parser based on extension (`.yml`/`.yaml` → Ansible, `.pp` → Puppet, `.tf` → Terraform)
-2. **Language-specific parsers** — convert raw file lines into standardised `ParsedLine` objects with key, value, comment, and parameterization metadata
-3. **Shared detection logic** — operates on `ParsedLine` objects regardless of source language, applying both RegEx pattern matching and ML-based semantic analysis
-
-This design means the detection logic (RegEx + ML) is written once and works across all three languages. Only the parsing and variable resolution layers differ per language.
-
-### Key parser adaptations
-
-- **Puppet**: handles `=>` (resource attributes) and `$variable = value` (parameter defaults); detects `$var`, `${var}`, and `$module::var` as parameterized values
-- **Terraform**: handles `=` assignments with comparison operator exclusion (`==`, `!=`, `>=`, `<=`); joins multi-line lists (`cidr_blocks = [\n"0.0.0.0/0"]`) into single values; detects `var.`, `local.`, `${...}` interpolation, and function calls as parameterized
-- **Detection extensions**: `protocol = "HTTP"` rule for Terraform load balancer configurations; empty password detection for keys with empty or `undef` values
+1. **Hardcoded secret** — passwords, tokens, keys assigned as literal values
+2. **Admin by default** — default admin/root usernames
+3. **Empty password** — empty string or `undef` password values
+4. **Suspicious comment** — TODO/FIXME/HACK comments indicating unfinished security work
+5. **Use of HTTP** — unencrypted HTTP URLs
+6. **Unrestricted IP address binding** — `0.0.0.0` bindings
+7. **Use of weak cryptography** — MD5, SHA1, arcfour references
 
 ## Setup
 
@@ -72,84 +34,206 @@ This design means the detection logic (RegEx + ML) is written once and works acr
    tar -xzf googleNews-vectors-negative300.bin.tar.gz
    ```
 
-3. Download the external datasets (see below).
+3. Download the oracle datasets for evaluation (see [External Datasets](#external-datasets)).
 
 ## Usage
 
-Run GUARD on a folder of IaC files:
+**All commands must be run from the GUARD root directory using module syntax (`python -m`).**
+
+### Basic detection
+
 ```bash
-cd src
-python guard.py -p <path-to-folder> -f -o output.csv
+# Scan a folder of IaC files (auto-detects language by extension)
+python -m src.guard -p <path-to-folder> -f -o output.csv
+
+# Scan a single file
+python -m src.guard -p <path-to-file> -o output.csv
 ```
 
-Run with contextualization (Ansible projects only):
+### Per-language models
+
+Per-language models improve precision for Puppet and Chef by using training data specific to that language:
+
 ```bash
-python guard.py -p <path-to-folder> -f -c -o output.csv
+python -m src.guard -p <path> -f -o output.csv --lang puppet
+python -m src.guard -p <path> -f -o output.csv --lang chef
 ```
 
-Evaluate against oracle datasets:
+Without `--lang`, GUARD uses the base Ansible-trained models (which still work across languages, just with lower precision).
+
+### Contextualization
+
+Contextualization resolves variable references to check whether a value is parameterized (and therefore not hardcoded):
+
 ```bash
-python evaluation/evaluate_puppet.py -g results/extended_puppet.csv -o datasets/puppet/oracle-dataset-analysis/oracle-dataset.csv
-python evaluation/evaluate_terraform.py -g results/extended_terraform.csv ...
+python -m src.guard -p <path> -f -c -o output.csv --lang puppet
 ```
 
-## Model Reproduction
+### Output format
 
-The retrained SetFit suspicious comments model is not included in the repository due to size constraints.
+GUARD outputs a CSV with three columns (no header):
 
-To reproduce the model:
-```bash
-python retrain_setfit.py
+```
+filename,smell_type,line_number
 ```
 
-## Results
+Example:
+```
+myfile.pp,hardcoded-secret,42
+myfile.pp,use of http,17
+myfile.pp,suspicious comment,5
+```
 
-### Puppet
+## Evaluation
 
-| Metric    | Baseline (RQ1) | Extended (RQ2) |
-|-----------|----------------|----------------|
-| TP        | 5              | 33             |
-| FP        | 138            | 169            |
-| FN        | 35             | 7              |
-| Precision | 0.035          | 0.163          |
-| Recall    | 0.125          | 0.825          |
-| F1        | 0.055          | 0.273          |
+Evaluate GUARD output against the GLITCH oracle datasets:
 
-Oracle: 65 total smells, 40 GUARD-compatible, 25 out-of-scope.
+```bash
+# Puppet
+python evaluation/evaluate_puppet.py \
+    -g results/retrained_puppet_v2.csv \
+    -o datasets/puppet/oracle-dataset-analysis/oracle-dataset.csv
 
-### Terraform
+# Chef
+python evaluation/evaluate_chef.py \
+    -g results/retrained_chef_v2.csv \
+    -o datasets/chef-data/oracle-dataset-analysis/oracle_dataset.csv
 
-| Metric    | Baseline (RQ1) | Extended (RQ2) |
-|-----------|----------------|----------------|
-| TP        | 0              | 52             |
-| FP        | 38             | 63             |
-| FN        | 66             | 9              |
-| Precision | 0.000          | 0.452          |
-| Recall    | 0.000          | 0.852          |
-| F1        | 0.000          | 0.591          |
+# Terraform
+python evaluation/evaluate_terraform.py \
+    -g results/extended_terraform.csv \
+    -o datasets/terraform/oracle-dataset/oracle-dataset.csv
 
-Oracle: 376 total smells, only 66 GUARD-compatible (~17.5%), 310 out-of-scope.
+# GLITCH comparison (RQ3)
+python evaluation/evaluate_glitch.py \
+    -g datasets/chef-data/oracle-dataset-analysis/GLITCH-chef-oracle.csv \
+    -o datasets/chef-data/oracle-dataset-analysis/oracle_dataset.csv \
+    --guard results/retrained_chef_v2.csv \
+    -l chef
+```
 
-### Key findings
+### Chef evaluation path
 
-1. **Parser extension is the primary driver of improvement.** Both languages went from near-zero detection to >0.8 recall through parsing alone — the underlying detection logic (RegEx + ML) transfers well once preprocessing is correct.
-2. **Taxonomy mismatch is fundamental for Terraform.** Only 17.5% of Terraform oracle smells overlap with GUARD's 7-smell taxonomy. The majority are infrastructure-level concerns (logging, IAM, encryption, firewall) absent from configuration management tools.
-3. **ML models require language-specific retraining.** The Ansible-trained SetFit and Label Propagation models produce significant false positives on Puppet and Terraform due to differing comment styles and key naming conventions. Puppet is particularly affected (~117 suspicious comment FPs).
+Point GUARD to the subdirectory containing the `.rb` files directly, not the parent — otherwise output filenames will have a prefix the evaluator can't match:
+
+```bash
+# Correct
+python -m src.guard -p datasets/chef-data/oracle-dataset/recipes -f -o results/retrained_chef_v2.csv --lang chef
+
+# Wrong — output will have 'recipes/' prefix
+python -m src.guard -p datasets/chef-data/oracle-dataset -f -o results/retrained_chef_v2.csv --lang chef
+```
+
+## Model Training
+
+The retrained per-language models are not included due to size. To reproduce them:
+
+### 1. Build per-language datasets
+
+```bash
+cd data_extraction
+python merge_per_language.py --lang puppet --balance
+python merge_per_language.py --lang chef --balance
+```
+
+### 2. Train SetFit (suspicious comments)
+
+```bash
+python retrain_setfit.py --lang puppet
+python retrain_setfit.py --lang chef
+```
+
+### 3. Train Label Propagation (hardcoded secrets)
+
+```bash
+python -m src.models_trainer -l --lang puppet \
+    -htrain data_extraction/per_language/puppet/hardcoded_secrets_dataset.csv \
+    -htest tests/hardcoded_secrets/parameters/sets/test_set.csv
+
+python -m src.models_trainer -l --lang chef \
+    -htrain data_extraction/per_language/chef/hardcoded_secrets_dataset.csv \
+    -htest tests/hardcoded_secrets/parameters/sets/test_set.csv
+```
+
+### 4. Extract new training data (optional)
+
+To extract training data from your own Chef/Puppet repositories:
+
+```bash
+python data_extraction/extract_training_data.py --tech chef <path-to-rb-files>
+python data_extraction/extract_training_data.py --tech puppet <path-to-pp-files>
+```
+
+### Dependency pinning
+
+SetFit retraining requires pinned versions:
+
+```bash
+pip install setfit==0.7.0 huggingface_hub==0.20.3 transformers==4.36.0 sentence-transformers==2.2.2
+```
+
+## Architecture
+
+```
+guard.py (dispatcher)
+  ├── parsers/
+  │   ├── ansible_parser.py   →  ParsedLine
+  │   ├── puppet_parser.py    →  ParsedLine
+  │   ├── chef_parser.py      →  ParsedLine
+  │   └── terraform_parser.py →  ParsedLine
+  ├── Detection logic (shared)
+  │   ├── RegEx patterns (HTTP, 0.0.0.0, weak crypto)
+  │   ├── Label Propagation (hardcoded secrets via Word2Vec)
+  │   └── SetFit (suspicious comments)
+  └── contextualization/
+      ├── ansible_context.py   (Jinja2)
+      ├── puppet_context.py    ($var resolution)
+      └── terraform_context.py (var/local resolution)
+```
+
+The dispatcher routes files to the correct parser based on extension. Each parser converts raw lines into standardised `ParsedLine` objects. The shared detection logic then operates on `ParsedLine` objects regardless of source language — written once, works across all four languages.
+
+## Project Structure
+
+```
+ThesisCode/
+├── src/
+│   ├── guard.py                    # Main detection pipeline
+│   ├── parsers/                    # Language-specific parsers
+│   ├── contextualization/          # Variable resolution per language
+│   ├── vectorizer.py               # Word2Vec vectorization
+│   ├── models_trainer.py           # ML model training
+│   └── pretrainedModels/           # Trained models + embeddings
+│       ├── puppet/                 # Puppet-only models
+│       └── chef/                   # Chef-only models
+├── datasets/                       # Oracle datasets (external, see below)
+├── data_extraction/                # Training data extraction + merging
+├── evaluation/                     # Evaluation scripts per language
+├── results/                        # Detection output CSVs
+├── tests/                          # LP evaluation test set
+├── retrain_setfit.py               # SetFit retraining script
+└── requirements.txt
+```
 
 ## External Datasets
 
-The evaluation datasets are too large to commit. Download them from the following sources and place them in the `datasets/` directory:
+Download and place in `datasets/`:
 
-| Dataset | Source | Size | Link |
-|---------|--------|------|------|
-| Terraform (GLITCH) | Figshare | ~94 MB | [terraform-GLITCH-replication-package.zip](https://figshare.com/articles/thesis/terraform-GLITCH-replication-package_zip/24574234) |
-| Puppet (GLITCH ASE 2022) | Figshare | ~1.7 GB | [GLITCH Replication Package](https://doi.org/10.6084/m9.figshare.19726603.v2) |
+| Dataset | Source | Link |
+|---------|--------|------|
+| Terraform oracle | Figshare | [terraform-GLITCH-replication-package.zip](https://figshare.com/articles/thesis/terraform-GLITCH-replication-package_zip/24574234) |
+| Puppet oracle | Figshare | [GLITCH Replication Package](https://doi.org/10.6084/m9.figshare.19726603.v2) |
 
-These are the same datasets used in the GLITCH papers, enabling direct comparison of detection performance (RQ3).
+## Known Issues
+
+- `vectorizer.py` line 11 needs `str(word)` cast to handle NaN values from CSVs with empty rows
+- `src/parsers/__init__.py` must use `from . import X` (not `from .parsers import X`)
+- `guard.py` importlib paths must be prefixed with `src.`
+- `models_trainer.py` `trainedModel_path` must point to `./src/pretrainedModels`
 
 ## References
 
-- **GUARD**: Grella et al., *Guard: Robust Detection of Ansible Security Smells*, 2024 (unpublished).
+- **GUARD**: Grella et al., *Guard: Robust Detection of Ansible Security Smells*, 2024.
 - **GLITCH**: Saavedra & Ferreira, *GLITCH: Automated Polyglot Security Smell Detection in Infrastructure as Code*, ASE 2022.
 - **GLITCH extended**: Saavedra et al., *Polyglot Code Smell Detection for Infrastructure as Code with GLITCH*, ASE 2023.
 - **Seven Sins**: Rahman, Parnin & Williams, *The Seven Sins: Security Smells in Infrastructure as Code Scripts*, ICSE 2019.
